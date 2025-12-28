@@ -1,0 +1,52 @@
+[
+  {
+    "name": "人工智能",
+    "value": 1721,
+    "avg_salary": 17631.44
+  },
+  {
+    "name": "数据挖掘",
+    "value": 730,
+    "avg_salary": 16926.04
+  },
+  {
+    "name": "机器学习",
+    "value": 577,
+    "avg_salary": 26872.35
+  },
+  {
+    "name": "深度学习",
+    "value": 450,
+    "avg_salary": 24639.82
+  },
+  {
+    "name": "云计算",
+    "value": 447,
+    "avg_salary": 16187.87
+  },
+  {
+    "name": "智能家居",
+    "value": 212,
+    "avg_salary": 14128.69
+  },
+  {
+    "name": "大数据分析",
+    "value": 193,
+    "avg_salary": 19230.39
+  },
+  {
+    "name": "大数据处理",
+    "value": 185,
+    "avg_salary": 20493.01
+  },
+  {
+    "name": "机器人自动化",
+    "value": 176,
+    "avg_salary": 13820.51
+  },
+  {
+    "name": "大数据平台",
+    "value": 161,
+    "avg_salary": 20492.02
+  }
+]

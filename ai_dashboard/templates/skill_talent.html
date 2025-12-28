@@ -1,0 +1,1184 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}技能与人才画像大屏{% endblock %}
+
+{% block content %}
+<style>
+  .st-page {
+    background:#f5f5f7;
+    padding:16px 20px 32px;
+    min-height:calc(100vh - 60px);
+  }
+
+  .st-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:18px;
+  }
+
+  .st-title-main {
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .st-title-sub {
+    margin-top:4px;
+    font-size:12px;
+    color:#6b7280;
+    line-height:1.6;
+  }
+
+  .st-badge {
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    font-size:11px;
+    color:#4b5563;
+  }
+
+  .st-grid {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+  }
+
+  .st-page .panel {
+    background:#ffffff;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 24px rgba(15,23,42,0.08);
+    padding:12px 14px 12px;
+    min-height:500px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .panel-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:6px;
+  }
+
+  .panel-title {
+    font-size:14px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .panel-sub {
+    font-size:11px;
+    color:#6b7280;
+    margin-top:2px;
+    line-height:1.6;
+  }
+
+  .panel-right {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11px;
+    color:#9ca3af;
+  }
+
+  .panel-pill {
+    padding:3px 8px;
+    border-radius:999px;
+    border:1px solid #e5e7eb;
+    background:#f9fafb;
+    color:#6b7280;
+    font-size:11px;
+  }
+
+  .panel-line {
+    height:1px;
+    width:100%;
+    margin:8px 0 6px;
+    background:linear-gradient(90deg,#e5e7eb,#f3f4f6);
+  }
+
+  .panel.network-card {
+  min-height: 650px; 
+}
+
+  .panel.line_box {
+  min-height: 650px; 
+}
+  .chart {
+    flex:1;
+    width:100%;
+  }
+    #st_skill_network_chart {
+      min-height:520px;
+      width: 100%;       
+      max-width: 900px;   
+      margin: 0 auto;     
+    }
+
+
+  .span-6{grid-column:span 6;}
+  .span-7{grid-column:span 7;}
+  .span-5{grid-column:span 5;}
+  .span-4{grid-column:span 4;}
+  .span-12{grid-column:span 12;}
+
+  @media (max-width:1200px){
+    .st-grid{grid-template-columns:repeat(2,1fr);}
+    .span-6,.span-7,.span-5,.span-4,.span-12{grid-column:span 2;}
+  }
+  @media (max-width:720px){
+    .st-page{padding:12px 10px 24px;}
+    .st-grid{grid-template-columns:1fr;}
+    .span-6,.span-7,.span-5,.span-4,.span-12{grid-column:span 1;}
+  }
+</style>
+
+<div class="st-page">
+  <!-- 顶部标题 -->
+  <header class="st-header">
+    <div>
+      <div class="st-title-main">技能与人才画像大屏</div>
+      <div class="st-title-sub">
+        从技能热度、岗位类型、经验学历与薪资结构多个维度，勾勒 AI 人才市场的「能力画像」和「价格带」。
+      </div>
+    </div>
+    <div class="st-badge">
+      Skill & Talent Portrait · Insight
+    </div>
+  </header>
+
+  <section class="st-grid">
+
+    <!-- 1. 技能 Top10 排行 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">技能 Top10 排行</div>
+          <div class="panel-sub">
+            统计招聘描述中出现频率最高的技能词，按出现次数由高到低排序，作为「硬技能门槛」的快速观察窗口。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">技能热度</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：技能 Top10 横向条形图 -->
+      <div id="st_skill_top10_chart" class="chart"></div>
+    </section>
+
+    <!-- 2. 岗位类型词云图 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">岗位类型词云图</div>
+          <div class="panel-sub">
+            将岗位名称与类型关键词做词云，对比技能 Top10，可以看到「岗位叫法」和「技能要求」之间的差异与呼应关系。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">岗位类型关键词</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：岗位类型词云 -->
+      <div id="st_jobtype_wordcloud_chart" class="chart"></div>
+    </section>
+
+    <!-- 3. AI 岗位类别玫瑰图 -->
+    <section class="panel span-7">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">AI 岗位类别结构 · 玫瑰图</div>
+          <div class="panel-sub">
+            按「算法 / 平台 / 应用 / 工程」等维度划分 AI 岗位，将岗位数量映射为玫瑰图半径，用一眼可读的方式展示结构重心。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">岗位类别结构</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：AI 岗位类别玫瑰图 -->
+      <div id="st_ai_category_rose_chart" class="chart"></div>
+    </section>
+
+    <!-- 4. 经验 × 学历 × 薪资 气泡图 -->
+    <section class="panel span-5">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">经验 × 学历 × 薪资 · 气泡图</div>
+          <div class="panel-sub">
+            用横轴表示工作经验、纵轴表示学历层级，泡泡大小和颜色编码薪资水平，构成人才结构的「三维画像」。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">人才结构</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：经验-学历-薪资气泡图 -->
+      <div id="st_talent_bubble_chart" class="chart"></div>
+    </section>
+
+    <!-- 5. 学历占比玫瑰图 -->
+    <section class="panel span-4">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">学历占比 · 玫瑰图</div>
+          <div class="panel-sub">
+            展示不同学历在所有岗位中的占比，用玫瑰图放大高占比区间，直观看到「学历门槛」的大致分布。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">学历结构</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：学历占比玫瑰图 -->
+      <div id="st_degree_rose_chart" class="chart"></div>
+    </section>
+
+    <!-- 6. 学历 × 薪资柱状图 -->
+    <section class="panel span-4">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">学历 × 薪资 · 柱状图</div>
+          <div class="panel-sub">
+            按学历维度汇总平均薪资，比较不同学历档之间的薪资梯度，观察「学历溢价」大致有多陡。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">学历薪资带</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：学历-薪资柱状图 -->
+      <div id="st_degree_salary_bar_chart" class="chart"></div>
+    </section>
+
+    <!-- 7. 薪资区间直方图 -->
+    <section class="panel span-4">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">薪资区间分布 · 直方图</div>
+          <div class="panel-sub">
+            将薪资划分为多个区间段，统计每个区间内的岗位数量，形成薪资分布曲线，判断整体「偏低」「偏高」还是「双峰」。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">薪资分布</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：薪资区间直方图 -->
+      <div id="st_salary_hist_chart" class="chart"></div>
+    </section>
+
+    <!-- 8. 技能共现网络图 -->
+    <section class="panel span-12 network-card">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">技能共现网络图</div>
+          <div class="panel-sub">
+            以技能为节点，岗位描述中「一起出现」的技能之间连边，形成共现网络，帮助识别常见技能组合和典型岗位技能包。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">技能联动</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：技能共现网络（force / graph） -->
+      <div id="st_skill_network_chart" class="chart"></div>
+    </section>
+
+        <!-- 8. 经验 × 薪资箱线图 -->
+    <section class="panel span-12 line_box">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">经验 × 薪资箱线图</div>
+          <div class="panel-sub">
+            展示不同经验段薪资以及方差。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">经验结构</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：经验 × 薪资箱线图 -->
+      <div id="st_experience_chart" class="chart"></div>
+    </section>
+  </section>
+</div>
+
+<div style="margin-top:18px; text-align:center; display:flex; gap:12px; justify-content:center;">
+  <a href="/skill_drill">
+    <button style="
+      min-width:300px;
+      padding:20px 26px;
+      border-radius:16px;
+      font-size:15px;
+      font-weight:600;
+      border:1px solid rgba(37,99,235,0.35);
+      background:linear-gradient(135deg,#bfdbfe 0%,#60a5fa 50%,#3b82f6 100%);
+      color:#ffffff;
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(37,99,235,0.22);
+      transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+    ">
+      进入技能深度分析
+    </button>
+  </a>
+
+
+  <a href="/skill_cockpit">
+    <button style="
+      min-width:300px;
+      padding:20px 26px;
+      border-radius:16px;
+      font-size:15px;
+      font-weight:600;
+      border:1px solid rgba(37,99,235,0.35);
+      background:linear-gradient(135deg,#dbeafe 0%,#93c5fd 50%,#3b82f6 100%);
+      color:#ffffff;
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(37,99,235,0.22);
+      transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+    ">
+      技能职业画像 Cockpit
+    </button>
+  </a>
+</div>
+
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_skill_top10_chart');
+    if (!dom) return;
+
+    const top10Chart = echarts.init(dom);
+
+    // 渐变主色：蓝色同一色系
+    const barGradient = new echarts.graphic.LinearGradient(
+      0, 0, 1, 0,
+      [
+        { offset: 0,   color: '#93c5fd' }, // 淡蓝
+        { offset: 0.4, color: '#60a5fa' }, // 中蓝
+        { offset: 1,   color: '#2563eb' }  // 深蓝
+      ]
+    );
+
+    const tooltipStyle = {
+      backgroundColor: '#020617',
+      borderColor: '#1f2937',
+      borderWidth: 1,
+      textStyle: { color: '#e5e7eb', fontSize: 12 },
+      padding: 8
+    };
+
+    fetch("{{ url_for('static', filename='data/skills_top10.json') }}")
+      .then(r => r.json())
+      .then(d => {
+        const option = {
+          backgroundColor: 'transparent',
+          tooltip: {
+            ...tooltipStyle,
+            trigger: 'axis',
+            axisPointer: { type: 'shadow' },
+            formatter: params => {
+              const p = params[0];
+              return `技能：${p.name}<br/>出现次数：${p.value}`;
+            }
+          },
+          grid: { left: '22%', right: '8%', bottom: '10%', top: '6%' },
+          xAxis: {
+            type: 'value',
+            axisLine: { lineStyle: { color: '#d1d5db' } },
+            axisTick: { show: false },
+            axisLabel: { color: '#4b5563', fontSize: 11 },
+            splitLine: { lineStyle: { color: '#e5e7eb' } }
+          },
+          yAxis: {
+            type: 'category',
+            data: (d.skills || []).slice().reverse(), // 倒序，让 Top 在上
+            axisLine: { lineStyle: { color: '#e5e7eb' } },
+            axisTick: { show: false },
+            axisLabel: { color: '#111827', fontSize: 12 }
+          },
+          series: [
+            {
+              name: '出现次数',
+              type: 'bar',
+              data: (d.counts || []).slice().reverse(),
+              barWidth: '52%',
+              itemStyle: {
+                borderRadius: [4, 4, 4, 4],
+                color: barGradient
+              }
+            }
+          ]
+        };
+        top10Chart.setOption(option);
+      });
+
+    window.addEventListener('resize', () => top10Chart.resize());
+  });
+})();
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@1.1.3/dist/echarts-wordcloud.min.js"></script>
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_jobtype_wordcloud_chart');
+    if (!dom) return;
+
+    const wcChart = echarts.init(dom);
+
+    fetch("{{ url_for('static', filename='data/wordcloud.json') }}")
+      .then(r => r.json())
+      .then(data => {
+        wcChart.setOption({
+          backgroundColor: 'transparent',
+          series: [{
+            type: 'wordCloud',
+            shape: 'circle',         // 圆形更柔和
+            gridSize: 8,
+            sizeRange: [12, 60],
+            rotationRange: [0, 0],
+            textStyle: {
+              normal: {
+                fontFamily: 'PingFang SC, Microsoft YaHei, sans-serif',
+                fontWeight: 500,
+                color: function () {
+                  const colors = [
+                    '#2d3748', // 深石墨
+                    '#4a5568', // 冷灰
+                    '#718096', // 中灰
+                    '#63b3ed', // 低饱和蓝
+                    '#68d391', // 淡薄荷绿
+                    '#b794f4', // 雾紫
+                    '#f6ad55', // 杏色
+                    '#fc8181'  // 淡珊瑚粉
+                  ];
+                  return colors[Math.floor(Math.random() * colors.length)];
+                }
+              },
+              emphasis: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(0,0,0,0.1)'
+              }
+            },
+            data: (data || []).map(d => ({
+              name: d.name,
+              value: d.value
+            }))
+          }]
+        });
+      });
+
+    window.addEventListener('resize', () => wcChart.resize());
+  });
+})();
+</script>
+
+<script>
+(function () {
+  window.addEventListener('load', async function () {
+    const dom = document.getElementById('st_ai_category_rose_chart');
+    if (!dom) return;
+
+    const chart = echarts.init(dom);
+
+    try {
+      const res = await fetch("{{ url_for('static', filename='data/rose.json') }}");
+      const list = await res.json();
+
+      const data = (list || []).map((d, i) => ({
+        name: d.name,
+        value: d.value,
+        salary: d.salary != null ? d.salary : d.avg_salary,
+        itemStyle: {
+          color: [
+            '#4F46E5', // 深晶紫
+            '#06B6D4', // 赛博青
+            '#818CF8', // 淡紫
+            '#38BDF8', // 冰蓝
+            '#2DD4BF', // 薄荷绿
+            '#6366F1', // 靛紫
+            '#0EA5E9', // 湖蓝
+            '#1E40AF', // 深海蓝
+            '#A5B4FC'  // 最浅点缀
+          ][i % 9]
+        }
+      }));
+
+      chart.setOption({
+        backgroundColor: 'transparent',
+        title: {
+          text: 'AI 岗位类别结构（玫瑰图）',
+          left: 'center',
+          top: 6,
+          textStyle: {
+            color: '#111827',
+            fontSize: 16,
+            fontWeight: 600
+          }
+        },
+        tooltip: {
+          trigger: 'item',
+          formatter: function (p) {
+            const d = p.data || {};
+            let text = `${d.name}<br/>岗位数量：${d.value}`;
+            if (d.salary != null) {
+              text += `<br/>平均薪资：${d.salary.toFixed(1)} 元`;
+            }
+            if (p.percent != null) {
+              text += `<br/>占比：${p.percent.toFixed(1)}%`;
+            }
+            return text;
+          }
+        },
+        series: [{
+          name: '岗位类别',
+          type: 'pie',
+          radius: ['38%', '75%'],
+          center: ['50%', '56%'],
+          roseType: 'radius',
+          data: data,
+          label: {
+            show: true,
+            formatter: function (p) {
+              const name = p.data.name || '';
+              const percent = p.percent != null ? p.percent.toFixed(1) + '%' : '';
+              let line1 = name;
+              let line2 = '';
+              if (name.length > 6) {
+                line1 = name.slice(0, 6);
+                line2 = name.slice(6);
+              }
+              return line2
+                ? line1 + '\n' + line2 + '\n' + percent
+                : line1 + '\n' + percent;
+            },
+            color: '#374151',
+            fontSize: 11,
+            overflow: 'break',
+            width: 70,
+            lineHeight: 14
+          },
+          labelLine: { length: 10, length2: 8 },
+          itemStyle: {
+            borderRadius: 6,
+            borderColor: '#ffffff',
+            borderWidth: 2
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 12,
+              shadowColor: 'rgba(0,0,0,0.08)'
+            }
+          }
+        }]
+      });
+
+      window.addEventListener('resize', () => chart.resize());
+    } catch (e) {
+      console.error('加载 rose.json 失败:', e);
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_talent_bubble_chart');
+    if (!dom) return;
+
+    const bubbleChart = echarts.init(dom);
+
+    const tooltipStyle = {
+      backgroundColor: '#020617',
+      borderColor: '#1f2937',
+      borderWidth: 1,
+      textStyle: { color: '#e5e7eb', fontSize: 12 },
+      padding: 8
+    };
+
+    fetch("{{ url_for('static', filename='data/exp_degree_salary_bubble.json') }}")
+      .then(r => r.json())
+      .then(json => {
+        const expLevels = json.exp_levels || [];
+        const degreeLevels = json.degree_levels || [];
+        const rawData = json.data || [];
+
+        let maxCount = 0;
+        rawData.forEach(d => {
+          if (d.count > maxCount) maxCount = d.count;
+        });
+        if (maxCount === 0) maxCount = 1;
+
+        const degreeColorMap = {};
+        const degreePalette = [
+          '#bfdbfe',
+          '#93c5fd',
+          '#60a5fa',
+          '#3b82f6',
+          '#2563eb',
+          '#1d4ed8'
+        ];
+        degreeLevels.forEach((deg, idx) => {
+          degreeColorMap[deg] = degreePalette[idx % degreePalette.length];
+        });
+
+        const series = degreeLevels.map(deg => {
+          const points = rawData
+            .filter(d => d.degree === deg)
+            .map(d => {
+              const expIndex = expLevels.indexOf(d.exp);
+              const size = 8 + 24 * (d.count / maxCount); // 8~32 像素
+              return {
+                value: [expIndex, d.avg_salary],
+                name: d.exp + '｜' + deg,
+                symbolSize: size,
+                count: d.count,
+                degree: deg,
+                exp: d.exp,
+                avg_salary: d.avg_salary
+              };
+            });
+
+          return {
+            name: deg,
+            type: 'scatter',
+            data: points,
+            itemStyle: { color: degreeColorMap[deg] }
+          };
+        });
+
+        const option = {
+          backgroundColor: 'transparent',
+          tooltip: {
+            ...tooltipStyle,
+            trigger: 'item',
+            formatter: params => {
+              const d = params.data;
+              return [
+                `经验段：${d.exp}`,
+                `学历：${d.degree}`,
+                `平均薪资：${d.avg_salary} 元`,
+                `岗位数量：${d.count}`
+              ].join('<br/>');
+            }
+          },
+          legend: {
+            top: 6,
+            right: 4,
+            textStyle: { color: '#4b5563', fontSize: 11 }
+          },
+          grid: {
+            left: '12%',
+            right: '8%',
+            bottom: '14%',
+            top: '14%'
+          },
+          xAxis: {
+            type: 'category',
+            name: '经验段',
+            data: expLevels,
+            axisLine: { lineStyle: { color: '#d1d5db' } },
+            axisTick: { show: false },
+            axisLabel: { color: '#111827', fontSize: 12 }
+          },
+          yAxis: {
+            type: 'value',
+            name: '平均月薪（元）',
+            axisLine: { lineStyle: { color: '#d1d5db' } },
+            axisTick: { show: false },
+            axisLabel: { color: '#4b5563', fontSize: 11 },
+            splitLine: { lineStyle: { color: '#e5e7eb' } }
+          },
+          series
+        };
+
+        bubbleChart.setOption(option);
+      });
+
+    window.addEventListener('resize', () => bubbleChart.resize());
+  });
+})();
+</script>
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_degree_rose_chart');
+    if (!dom) return;
+
+    const roseChart = echarts.init(dom);
+
+    const palette = [
+      '#4F46E5','#6366F1','#818CF8',
+      '#0EA5E9','#38BDF8','#06B6D4',
+      '#2DD4BF','#A5B4FC','#7DD3FC'
+    ];
+
+    const darkTooltip = {
+      backgroundColor: '#020617',
+      borderColor: '#1f2937',
+      borderWidth: 1,
+      textStyle: { color: '#e5e7eb', fontSize: 12 },
+      padding: 8
+    };
+
+    fetch("{{ url_for('static', filename='data/degree_counts.json') }}")
+      .then(r => r.json())
+      .then(d => {
+        const dataArr = d.data || d; // 兼容直接数组结构
+
+        roseChart.setOption({
+          color: palette,
+          backgroundColor: 'transparent',
+          tooltip: {
+            ...darkTooltip,
+            trigger: 'item',
+            formatter: '{b}<br/>岗位数：{c}（{d}%）'
+          },
+          legend: {
+            type: 'scroll',
+            orient: 'vertical',
+            right: '4%',
+            top: 'center',
+            textStyle: { color: '#4b5563', fontSize: 11 }
+          },
+          series: [
+            {
+              name: '学历占比',
+              type: 'pie',
+              radius: ['18%', '68%'],
+              center: ['38%', '52%'],
+              roseType: 'radius',
+              label: {
+                fontSize: 11,
+                color: '#111827',
+                formatter: '{b}\n{d}%'
+              },
+              labelLine: { length: 8, length2: 6 },
+              itemStyle: {
+                borderColor: '#f9fafb',
+                borderWidth: 1
+              },
+              data: dataArr
+            }
+          ]
+        });
+      });
+
+    window.addEventListener('resize', () => roseChart.resize());
+  });
+})();
+</script>
+
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_degree_salary_bar_chart');
+    if (!dom) return;
+
+    const barChart = echarts.init(dom);
+
+    const darkTooltip = {
+      backgroundColor: '#020617',
+      borderColor: '#1f2937',
+      borderWidth: 1,
+      textStyle: { color: '#e5e7eb', fontSize: 12 },
+      padding: 8
+    };
+
+    fetch("{{ url_for('static', filename='data/degree_salary.json') }}")
+      .then(r => r.json())
+      .then(d => {
+
+        const barGradient = new echarts.graphic.LinearGradient(
+          0, 0, 0, 1,
+          [
+            { offset: 0, color: '#60a5fa' }, // 上部亮
+            { offset: 1, color: '#1d4ed8' }  // 下部深
+          ]
+        );
+
+        barChart.setOption({
+          backgroundColor: 'transparent',
+          tooltip: {
+            ...darkTooltip,
+            trigger: 'axis',
+            axisPointer: { type: 'shadow' },
+            formatter: params => {
+              const bar = params.find(p => p.seriesName === '中位薪资');
+              const line = params.find(p => p.seriesName === '平均薪资');
+              const i = bar ? bar.dataIndex : params[0].dataIndex;
+
+              return [
+                `学历：${d.degrees[i]}`,
+                `中位薪资：${d.median[i]} 元`,
+                `平均薪资：${d.mean[i]} 元`,
+                `样本数：${d.count[i]}`
+              ].join('<br/>');
+            }
+          },
+          legend: {
+            top: 6,
+            right: 8,
+            textStyle: { color: '#4b5563', fontSize: 11 },
+            itemWidth: 12,
+            itemHeight: 8
+          },
+          grid: { left: '10%', right: '8%', bottom: '15%', top: '18%' },
+          xAxis: {
+            type: 'category',
+            data: d.degrees,
+            axisLine: { lineStyle: { color: '#d1d5db' } },
+            axisTick: { show: false },
+            axisLabel: { color: '#111827', fontSize: 12 }
+          },
+          yAxis: {
+            type: 'value',
+            name: '月薪（元）',
+            nameTextStyle: { color: '#6b7280', fontSize: 11, padding: [0, 0, 4, 0] },
+            axisLine: { show: false },
+            axisTick: { show: false },
+            axisLabel: { color: '#374151', fontSize: 11 },
+            splitLine: { lineStyle: { color: '#e5e7eb' } }
+          },
+          series: [
+            {
+              name: '中位薪资',
+              type: 'bar',
+              data: d.median,
+              barWidth: '45%',
+              itemStyle: {
+                borderRadius: [8, 8, 0, 0],
+                color: barGradient,
+                shadowBlur: 8,
+                shadowColor: 'rgba(37,99,235,0.25)'
+              },
+              z: 1
+            },
+            {
+              name: '平均薪资',
+              type: 'line',
+              data: d.mean,
+              smooth: true,
+              symbol: 'circle',
+              symbolSize: 6,
+              itemStyle: {
+                color: '#f97316'
+              },
+              lineStyle: {
+                width: 2,
+                color: '#f97316'
+              },
+              z: 2
+            }
+          ]
+        });
+      });
+
+    window.addEventListener('resize', () => barChart.resize());
+  });
+})();
+</script>
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_salary_hist_chart');
+    if (!dom) return;
+
+    const histChart = echarts.init(dom);
+
+    const darkTooltip = {
+      backgroundColor: '#020617',
+      borderColor: '#1f2937',
+      borderWidth: 1,
+      textStyle: { color: '#e5e7eb', fontSize: 12 },
+      padding: 8
+    };
+
+    fetch("{{ url_for('static', filename='data/salary_bins.json') }}")
+      .then(r => r.json())
+      .then(d => {
+
+        const barGradient = new echarts.graphic.LinearGradient(
+          0, 0, 0, 1,
+          [
+            { offset: 0, color: '#7dd3fc' }, // 上浅
+            { offset: 1, color: '#0ea5e9' }  // 下深
+          ]
+        );
+
+        histChart.setOption({
+          backgroundColor: 'transparent',
+          tooltip: {
+            ...darkTooltip,
+            trigger: 'axis',
+            axisPointer: { type: 'shadow' },
+            formatter: params => {
+              const bar = params.find(p => p.seriesType === 'bar') || params[0];
+              return `薪资区间：${bar.name}<br/>岗位数：${bar.value}`;
+            }
+          },
+          legend: {
+            top: 6,
+            right: 8,
+            textStyle: { color: '#4b5563', fontSize: 11 },
+            itemWidth: 12,
+            itemHeight: 8
+          },
+          grid: { left: '10%', right: '8%', bottom: '15%', top: '18%' },
+          xAxis: {
+            type: 'category',
+            data: d.bins,
+            axisLine: { lineStyle: { color: '#d1d5db' } },
+            axisTick: { show: false },
+            axisLabel: {
+              color: '#111827',
+              fontSize: 11,
+              rotate: 30
+            }
+          },
+          yAxis: {
+            type: 'value',
+            name: '岗位数',
+            nameTextStyle: { color: '#6b7280', fontSize: 11, padding: [0, 0, 4, 0] },
+            axisLine: { show: false },
+            axisTick: { show: false },
+            axisLabel: { color: '#374151', fontSize: 11 },
+            splitLine: { lineStyle: { color: '#e5e7eb' } }
+          },
+          series: [
+            {
+              name: '岗位数',
+              type: 'bar',
+              data: d.counts,
+              barWidth: '55%',
+              itemStyle: {
+                borderRadius: [6, 6, 0, 0],
+                color: barGradient
+              },
+              z: 1
+            },
+            {
+              name: '分布趋势',
+              type: 'line',
+              data: d.counts,
+              smooth: true,
+              symbol: 'none',
+              lineStyle: {
+                width: 2,
+                color: '#0f766e'
+              },
+              areaStyle: {
+                color: 'rgba(16,118,110,0.07)'
+              },
+              z: 2
+            }
+          ]
+        });
+      });
+
+    window.addEventListener('resize', () => histChart.resize());
+  });
+})();
+</script>
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_skill_network_chart');
+    if (!dom) return;
+
+    const graphChart = echarts.init(dom);
+
+    const tooltipStyle = {
+      backgroundColor: '#020617',
+      borderColor: '#1f2937',
+      borderWidth: 1,
+      textStyle: { color: '#e5e7eb', fontSize: 12 },
+      padding: 8
+    };
+
+    const nodeGradient = new echarts.graphic.RadialGradient(
+      0.3, 0.3, 1,
+      [
+        { offset: 0,   color: '#eff6ff' },
+        { offset: 0.5, color: '#60a5fa' },
+        { offset: 1,   color: '#1d4ed8' }
+      ]
+    );
+
+    fetch("{{ url_for('static', filename='data/skills_graph.json') }}")
+      .then(r => r.json())
+      .then(d => {
+        const option = {
+          backgroundColor: 'transparent',
+          tooltip: {
+            ...tooltipStyle,
+            trigger: 'item',
+            formatter: param => {
+              if (param.dataType === 'edge') {
+                return `共现：${param.data.source} × ${param.data.target}<br/>次数：${param.data.value}`;
+              } else {
+                return `技能：${param.data.name}<br/>出现次数：${param.data.value}`;
+              }
+            }
+          },
+          series: [
+            {
+              type: 'graph',
+              layout: 'force',
+              roam: true,
+              draggable: true,
+              data: (d.nodes || []).map(n => ({
+                ...n,
+                itemStyle: {
+                  color: nodeGradient
+                },
+                label: {
+                  show: (n.symbolSize || 0) >= 16,
+                  position: 'right',
+                  formatter: '{b}',
+                  color: '#111827',
+                  fontSize: 11
+                }
+              })),
+              links: (d.links || []).map(e => ({
+                ...e,
+                lineStyle: {
+                  width: Math.min(2.5, 0.7 + Math.log((e.value || 0) + 1)),
+                  color: '#cbd5f5',
+                  opacity: 0.8
+                }
+              })),
+              lineStyle: { curveness: 0.12 },
+              force: {
+                repulsion: 220,
+                edgeLength: [60, 180],
+                gravity: 0.1
+              },
+              emphasis: {
+                focus: 'adjacency',
+                lineStyle: {
+                  width: 3,
+                  color: '#2563eb',
+                  opacity: 0.95
+                }
+              }
+            }
+          ]
+        };
+        graphChart.setOption(option);
+      });
+
+    window.addEventListener('resize', () => graphChart.resize());
+  });
+})();
+</script>
+
+<script>
+(function () {
+  window.addEventListener('load', function () {
+    const dom = document.getElementById('st_experience_chart');
+    if (!dom) return;
+
+    const boxChart = echarts.init(dom);
+
+    const darkTooltip = {
+      backgroundColor: '#020617',
+      borderColor: '#1f2937',
+      borderWidth: 1,
+      textStyle: { color: '#e5e7eb', fontSize: 12 },
+      padding: 8
+    };
+
+    fetch("{{ url_for('static', filename='data/experience_salary_boxplot.json') }}")
+      .then(r => r.json())
+      .then(d => {
+        const categories = d.categories || [];
+        const boxData = d.boxData || [];
+
+        boxChart.setOption({
+          color: ['#0f766e'],
+          backgroundColor: 'transparent',
+          tooltip: {
+            ...darkTooltip,
+            trigger: 'item',
+            formatter: param => {
+              const dataArr = param.data;
+              const idx = param.dataIndex;
+
+              if (!Array.isArray(dataArr)) return '';
+              const [min, q1, med, q3, max] = dataArr;
+              const name = categories[idx] || '';
+
+              return [
+                `经验段：${name}`,
+                `最小值：${min}`,
+                `下四分位数：${q1}`,
+                `中位数：${med}`,
+                `上四分位数：${q3}`,
+                `最大值：${max}`
+              ].join('<br/>');
+            }
+          },
+          grid: { left: '11%', right: '6%', bottom: '16%', top: '14%' },
+          xAxis: {
+            type: 'category',
+            data: categories,
+            axisLine: { lineStyle: { color: '#d1d5db' } },
+            axisTick: { show: false },
+            axisLabel: { color: '#111827', fontSize: 11 }
+          },
+          yAxis: {
+            type: 'value',
+            name: '月薪（元）',
+            nameTextStyle: { color: '#6b7280', fontSize: 11, padding: [0, 0, 4, 0] },
+            axisLine: { lineStyle: { color: '#d1d5db' } },
+            axisTick: { show: false },
+            axisLabel: { color: '#374151', fontSize: 11 },
+            splitLine: { lineStyle: { color: '#e5e7eb' } }
+          },
+          series: [
+            {
+              name: '薪资分布',
+              type: 'boxplot',
+              data: boxData,
+              itemStyle: {
+                color: 'rgba(16,185,129,0.08)',
+                borderColor: '#0f766e',
+                borderWidth: 1.5
+              }
+            }
+          ]
+        });
+      })
+      .catch(e => {
+        console.error('加载 experience_salary_boxplot.json 失败:', e);
+      });
+
+    window.addEventListener('resize', () => boxChart.resize());
+  });
+})();
+</script>
+
+{% endblock %}

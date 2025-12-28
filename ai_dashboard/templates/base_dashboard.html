@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}AI 职场智能洞察系统{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 浅色科技感全局样式 -->
+  <style>
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* -------------- 页面整体科技浅色背景 -------------- */
+.entry-page {
+  position: relative;
+  min-height: 100vh;
+  background: 
+    radial-gradient(circle at 20% 10%, rgba(56,189,248,0.15), transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(99,102,241,0.12), transparent 52%),
+    repeating-linear-gradient(rgba(203,213,225,0.15) 0 1px, transparent 1px 40px),
+    repeating-linear-gradient(90deg, rgba(203,213,225,0.15) 0 1px, transparent 1px 40px);
+  background-size: cover;
+  padding: 20px 32px 16px;
+  overflow: hidden;
+}
+
+/* -------------- 顶部 Shell -------------- */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* -------------- Header & 宽度增强 -------------- */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.88);
+  border-bottom: 1px solid rgba(203,213,225,0.6);
+  box-shadow: 0 10px 36px rgba(15,23,42,0.04);
+  width: 100%;
+}
+
+.app-header-inner {
+  max-width: 1600px;  /* ★ 关键：更宽 */
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.app-header-inner::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(56,189,248,0.8), transparent);
+  opacity: 0.5;
+}
+
+/* -------------- 新 Logo 设计 -------------- */
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.app-logo-mark-wrap {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-logo-orbit {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px dashed rgba(56,189,248,0.6);
+  animation: spinOrbit 12s linear infinite;
+  opacity: 0.75;
+}
+
+@keyframes spinOrbit {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.app-logo-mark {
+  width: 34px;                    /* 关键：保持最终高度仍是34px */
+  height: 34px;
+  border-radius: 50%;             /* 变成圆 */
+  background: linear-gradient(135deg, #7dd3fc, #4f46e5, #60a5fa);
+  box-shadow:
+    0 0 20px rgba(56,189,248,0.4),
+    0 0 4px rgba(79,70,229,0.3) inset;
+  position: relative;
+  overflow: hidden;
+  animation: logoPulse 3.6s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); opacity: 0.92; }
+}
+
+
+.app-logo-mark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3),transparent 64%);
+  mix-blend-mode: screen;
+}
+
+.app-energy-bar {
+  position: absolute;
+  bottom: -6px;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #38bdf8, #4f46e5);
+  box-shadow: 0 0 10px rgba(56,189,248,0.5);
+  opacity: 0.9;
+}
+
+/* Logo 文字 */
+.app-logo-text-main {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.app-logo-text-sub {
+  font-size: 10px;
+  color: #64748b;
+  letter-spacing: 0.06em;
+}
+
+/* -------------- 顶部导航 -------------- */
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-nav a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #334155;
+  font-size: 12px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-out;
+  position: relative;
+  background: rgba(59,130,246,0.12);
+}
+
+
+.app-nav a:hover {
+  background: rgba(56,189,248,0.08);
+  border-color: rgba(56,189,248,0.6);
+  color: #0f172a;
+  box-shadow: 0 0 12px rgba(56,189,248,0.35);
+}
+
+/* current tab */
+.app-nav a.active {
+  border-color: rgba(79,70,229,0.25);
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  color: #111827;
+  font-weight: 650;
+  box-shadow: 0 6px 20px rgba(99,102,241,0.18);
+}
+
+.app-nav-tag {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.05);
+  color: #64748b;
+  border: 1px solid rgba(203,213,225,0.5);
+}
+
+/* -------------- Main 内容 -------------- */
+.app-main {width: 100%;flex: 1;}
+
+.app-main-inner {
+  max-width: 1600px; /* ★ 更宽的内容 */
+  margin: 0 auto;
+  padding: 14px 24px 18px;
+}
+
+/* -------------- 浅色响应式 -------------- */
+@media (max-width: 960px) {
+  .app-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app-nav {
+    flex-wrap: wrap;
+  }
+}
+
+  </style>
+
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  <div class="app-shell">
+    <!-- 顶部统一导航 -->
+    <header class="app-header">
+      <div class="app-header-inner">
+        <div class="app-logo">
+        <div class="app-logo-mark-wrap">
+            <div class="app-logo-orbit"></div>
+            <div class="app-logo-mark"></div>
+        </div>
+        <div>
+            <div class="app-logo-text-main">AI 职场智能洞察 · 中枢控制</div>
+            <div class="app-logo-text-sub"> Because control is power</div>
+        </div>
+        </div>
+
+
+        <nav class="app-nav">
+          <a href="{{ url_for('entry') }}" class="{% if active_page == 'entry' %}active{% endif %}">
+            导航页
+            <span class="app-nav-tag">Navigate</span>
+          </a>
+          <a href="{{ url_for('main_dashboard') }}" class="{% if active_page == 'main_dashboard' %}active{% endif %}">
+            主大屏
+            <span class="app-nav-tag">Overview</span>
+          </a>
+          <a href="{{ url_for('structure') }}" class="{% if active_page == 'structure' %}active{% endif %}">
+            岗位结构
+            <span class="app-nav-tag">Structure</span>
+          </a>
+          <a href="{{ url_for('city_region') }}" class="{% if active_page == 'city_region' %}active{% endif %}">
+            城市与区域
+            <span class="app-nav-tag">City &amp; Region</span>
+          </a>
+          <a href="{{ url_for('skill_talent') }}" class="{% if active_page == 'skill_talent' %}active{% endif %}">
+            技能与人才
+            <span class="app-nav-tag">Skill &amp; Talent</span>
+          </a>
+          <a href="{{ url_for('chat_page') }}" class="{% if active_page == 'chat' %}active{% endif %}">
+            智能职场对话助手
+            <span class="app-nav-tag">Chat Assistant</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 每个大屏自己的内容 -->
+    <main class="app-main">
+      <div class="app-main-inner">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+
+
+  {% block script %}{% endblock %}
+</body>
+</html>

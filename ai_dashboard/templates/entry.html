@@ -1,0 +1,499 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}AI 职场智能洞察平台{% endblock %}
+
+{% block content %}
+<style>
+  .entry-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 28px 40px 32px;
+    background: radial-gradient(circle at top left,#e0f2fe 0,#f9fafb 42%,#eef2ff 100%);
+    overflow: hidden;
+  }
+
+  .entry-page::before,
+  .entry-page::after {
+    content:'';
+    position:absolute;
+    border-radius:999px;
+    filter: blur(60px);
+    opacity:0.26;
+    pointer-events:none;
+  }
+  .entry-page::before {
+    width:340px;height:340px;
+    top:-120px;right:-80px;
+    background:radial-gradient(circle,#93c5fd,#6366f1);
+  }
+  .entry-page::after {
+    width:260px;height:260px;
+    bottom:-80px;left:-60px;
+    background:radial-gradient(circle,#6ee7b7,#22c55e);
+  }
+
+  .entry-inner {
+    position:relative;
+    z-index:1;
+    max-width:1240px;
+    width:100%;
+    margin:0 auto;
+  }
+
+  /* 顶部文字区域（不再用大框） */
+  .entry-hero {
+    text-align:center;
+    padding:4px 0 6px;
+  }
+
+  .entry-kicker {
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:#6b7280;
+    margin-bottom:4px;
+  }
+
+  .entry-title {
+    font-size:40px;     /* 放大主标题 */
+    line-height:1.12;
+    font-weight:750;
+    color:#020617;
+    margin-bottom:6px;
+  }
+
+  .entry-subtitle {
+    font-size:13px;
+    line-height:1.7;
+    color:#4b5563;
+    max-width:640px;
+    margin:0 auto;
+  }
+
+  .entry-pills {
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+  }
+
+  .entry-pill {
+    padding:5px 12px;
+    border-radius:999px;
+    border:1px solid rgba(148,163,184,0.7);
+    background:rgba(248,250,252,0.92);
+    font-size:11px;
+    color:#475569;
+    backdrop-filter:blur(6px);
+    white-space:nowrap;
+  }
+
+  /* 下方说明 + 简单数据，不用大框，只做轻量强调 */
+  .entry-hero-meta {
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    font-size:11px;
+    color:#6b7280;
+    flex-wrap:wrap;
+  }
+
+  .entry-meta-main {
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+
+  .entry-dot {
+    width:7px;height:7px;
+    border-radius:999px;
+    background:radial-gradient(circle,#22c55e,#16a34a);
+    box-shadow:0 0 0 3px rgba(34,197,94,0.28);
+  }
+
+  .entry-meta-title {
+    font-weight:600;
+    color:#0f172a;
+  }
+
+  .entry-metrics {
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .entry-metric-item {
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+  }
+  .entry-metric-label {
+    font-size:11px;
+    color:#9ca3af;
+  }
+  .entry-metric-value {
+    font-size:15px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  /* 分割线，把上面的文案和下面四个卡片分开 */
+  .entry-divider {
+    height:1px;
+    background:linear-gradient(to right,transparent,rgba(148,163,184,0.55),transparent);
+    margin:18px 0 14px;
+  }
+
+  /* 卡片区域 */
+  .entry-grid-main {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+  }
+
+  .entry-card {
+    position:relative;
+    background:rgba(255,255,255,0.97);
+    border-radius:18px;
+    border:1px solid rgba(226,232,240,0.9);
+    box-shadow:0 14px 32px rgba(15,23,42,0.08);
+    padding:18px 18px 14px;
+    overflow:hidden;
+    cursor:pointer;
+    text-decoration:none;
+    color:inherit;
+    transition:
+      transform 150ms ease-out,
+      box-shadow 150ms ease-out,
+      border-color 150ms ease-out,
+      background 150ms ease-out;
+    display:flex;
+    flex-direction:column;
+    min-height:220px;   /* 比原来高，但避免“空得发慌” */
+  }
+
+  /* 顶部细色条，增加设计感 */
+  .entry-card::before {
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    height:3px;
+    background:linear-gradient(90deg,rgba(59,130,246,0.9),rgba(129,140,248,0.4),transparent);
+    opacity:0.85;
+  }
+
+  .entry-card:hover {
+    transform:translateY(-4px);
+    box-shadow:
+      0 20px 40px rgba(15,23,42,0.14),
+      0 0 0 1px rgba(191,219,254,0.7);
+    border-color:rgba(191,219,254,0.9);
+    background:rgba(255,255,255,0.99);
+  }
+
+  .entry-card-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:8px;
+  }
+
+  .entry-card-title {
+    font-size:16px;
+    font-weight:600;
+    color:#020617;
+  }
+
+  .entry-card-sub {
+    margin-top:4px;
+    font-size:12px;
+    line-height:1.6;
+    color:#6b7280;
+  }
+
+  .entry-tag {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:4px 10px;
+    border-radius:999px;
+    background:#eff6ff;
+    color:#1d4ed8;
+    font-size:11px;
+    white-space:nowrap;
+  }
+  .entry-tag-dot {
+    width:6px;height:6px;
+    border-radius:999px;
+    background:#1d4ed8;
+  }
+
+  .entry-card-body {
+    margin-top:10px;
+    font-size:11px;
+    color:#6b7280;
+  }
+
+  .entry-card-footer {
+    margin-top:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:11px;
+    color:#9ca3af;
+    gap:12px;
+  }
+
+  .entry-card-mini-chips {
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .entry-mini-chip {
+    padding:2px 8px;
+    border-radius:999px;
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    font-size:10px;
+    color:#6b7280;
+  }
+
+  .entry-card-link {
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    color:#3b82f6;
+    font-size:11px;
+    white-space:nowrap;
+  }
+
+  .entry-card-link-icon {
+    font-size:13px;
+    transform:translateY(0.5px);
+  }
+
+  /* 响应式 */
+  @media (max-width:1024px){
+    .entry-page{padding:22px 18px 20px;}
+    .entry-grid-main{
+      grid-template-columns:1fr;
+    }
+  }
+
+  @media (max-width:640px){
+    .entry-title{
+      font-size:26px;
+    }
+    .entry-subtitle{
+      font-size:12px;
+    }
+  }
+</style>
+
+<div class="entry-page">
+  <div class="entry-inner">
+
+    <!-- 顶部：大标题 + 文案 + 小数据，全部不放框 -->
+    <section class="entry-hero">
+      <div class="entry-kicker">AI JOB INTELLIGENCE · OVERVIEW</div>
+      <div class="entry-title">AI 职场智能洞察 · 指挥中枢</div>
+      <div class="entry-subtitle">
+        一眼看清 AI 岗位的趋势、结构、城市热度与人才画像。<br>
+        从总览到细节，用四块大屏把 AI 招聘市场拆开给你看。
+      </div>
+      <div class="entry-pills">
+        <span class="entry-pill">实时岗位结构</span>
+        <span class="entry-pill">城市 &amp; 区域热力</span>
+        <span class="entry-pill">技能图谱与人才画像</span>
+        <span class="entry-pill">多维交互分析</span>
+      </div>
+
+      <div class="entry-hero-meta">
+        <div class="entry-meta-main">
+          <span class="entry-dot"></span>
+          <span class="entry-meta-title">AI 招聘数据大屏集群</span>
+          <span class="entry-meta-sub">点击任意模块进入子大屏</span>
+        </div>
+        <div class="entry-metrics">
+          <div class="entry-metric-item">
+            <span class="entry-metric-label">可视化模块</span>
+            <span class="entry-metric-value">4</span>
+          </div>
+          <div class="entry-metric-item">
+            <span class="entry-metric-label">图表视角</span>
+            <span class="entry-metric-value">20+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="entry-divider"></div>
+
+    <!-- 主入口卡片网格 -->
+    <div class="entry-grid-main">
+      <!-- ① 主大屏 Main Dashboard -->
+      <a href="{{ url_for('main_dashboard') }}" class="entry-card">
+        <div class="entry-card-header">
+          <div>
+            <div class="entry-card-title">主大屏 · AI 市场全景</div>
+            <div class="entry-card-sub">
+              纵览 AI 岗位整体走势：时间趋势、结构玫瑰图、全国 Geo 气泡图、城市排名与学历漏斗，一屏掌握市场脉搏。
+            </div>
+          </div>
+          <div class="entry-tag">
+            <span class="entry-tag-dot"></span>
+            <span>Overview</span>
+          </div>
+        </div>
+        <div class="entry-card-body">
+          适合快速判断当前 AI 招聘景气度：岗位是否在增长、哪些城市最“卷”、哪些方向正在升温。
+        </div>
+        <div class="entry-card-footer">
+          <div class="entry-card-mini-chips">
+            <span class="entry-mini-chip">AI 岗位总趋势</span>
+            <span class="entry-mini-chip">岗位类别玫瑰图</span>
+            <span class="entry-mini-chip">全国 Geo 气泡图</span>
+            <span class="entry-mini-chip">城市 Top10 排行</span>
+            <span class="entry-mini-chip">学历漏斗</span>
+            <span class="entry-mini-chip">技能 Top10</span>
+          </div>
+          <div class="entry-card-link">
+            进入主大屏
+            <span class="entry-card-link-icon">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ② 岗位结构大屏 Structure -->
+      <a href="{{ url_for('structure') }}" class="entry-card">
+        <div class="entry-card-header">
+          <div>
+            <div class="entry-card-title">岗位结构大屏 · Job Structure</div>
+            <div class="entry-card-sub">
+              把岗位拆成“类别 × 学历 × 区域 × 能力结构”，看清 AI 招聘的底层配方，哪些赛道在放量、哪些维度要求更高。
+            </div>
+          </div>
+          <div class="entry-tag" style="background:#ecfdf5;color:#15803d;">
+            <span class="entry-tag-dot" style="background:#16a34a;"></span>
+            <span>Structure</span>
+          </div>
+        </div>
+        <div class="entry-card-body">
+          用词云、漏斗、双轴柱状和 Treemap，把岗位结构从“列表”变成“画像”，帮助你理解不同类别的真实需求。
+        </div>
+        <div class="entry-card-footer">
+          <div class="entry-card-mini-chips">
+            <span class="entry-mini-chip">岗位类别词云</span>
+            <span class="entry-mini-chip">学历结构</span>
+            <span class="entry-mini-chip">规模 vs 薪资</span>
+            <span class="entry-mini-chip">岗位能力 Treemap</span>
+            <span class="entry-mini-chip">区域岗位分布</span>
+          </div>
+          <div class="entry-card-link">
+            查看岗位结构
+            <span class="entry-card-link-icon">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ③ 城市与区域大屏 City & Region -->
+      <a href="{{ url_for('city_region') }}" class="entry-card">
+        <div class="entry-card-header">
+          <div>
+            <div class="entry-card-title">城市与区域大屏 · City &amp; Region</div>
+            <div class="entry-card-sub">
+              从全国地图到城市排行，再到大区对比和城市 × 方向流向，完整刻画 AI 岗位的地理版图和能量流向。
+            </div>
+          </div>
+          <div class="entry-tag" style="background:#eef2ff;color:#4f46e5;">
+            <span class="entry-tag-dot" style="background:#4f46e5;"></span>
+            <span>Geo &amp; City</span>
+          </div>
+        </div>
+        <div class="entry-card-body">
+          想知道“去哪儿机会最多”，“哪个区域薪资更高”，“城市之间在抢什么方向的人”？在这一屏里一次看完。
+        </div>
+        <div class="entry-card-footer">
+          <div class="entry-card-mini-chips">
+            <span class="entry-mini-chip">全国 Geo 气泡图</span>
+            <span class="entry-mini-chip">城市 Top 排行</span>
+            <span class="entry-mini-chip">区域岗位结构</span>
+            <span class="entry-mini-chip">城市 × 方向 桑基图</span>
+            <span class="entry-mini-chip">城市趋势九宫格</span>
+          </div>
+          <div class="entry-card-link">
+            进入城市与区域
+            <span class="entry-card-link-icon">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ④ 技能与人才大屏 Skill & Talent Portrait -->
+      <a href="{{ url_for('skill_talent') }}" class="entry-card">
+        <div class="entry-card-header">
+          <div>
+            <div class="entry-card-title">技能与人才大屏 · Skill &amp; Talent</div>
+            <div class="entry-card-sub">
+              聚焦“人”和“技能”：看清技能 Top 排行、岗位词云、学历和经验分布、薪资区间以及技能共现网络，直接对准人才画像。
+            </div>
+          </div>
+          <div class="entry-tag" style="background:#fdf2ff;color:#a21caf;">
+            <span class="entry-tag-dot" style="background:#a21caf;"></span>
+            <span>Talent Portrait</span>
+          </div>
+        </div>
+        <div class="entry-card-body">
+          用一整屏回答两个问题：什么样的人最吃香？要具备哪些技能、学历、经验，才能站在 AI 岗位金字塔的上半部分。
+        </div>
+        <div class="entry-card-footer">
+          <div class="entry-card-mini-chips">
+            <span class="entry-mini-chip">技能 Top10 排行</span>
+            <span class="entry-mini-chip">岗位类型词云</span>
+            <span class="entry-mini-chip">经验 × 学历 × 薪资 气泡图</span>
+            <span class="entry-mini-chip">学历占比 &amp; 薪资</span>
+            <span class="entry-mini-chip">薪资直方图</span>
+            <span class="entry-mini-chip">技能共现网络</span>
+          </div>
+          <div class="entry-card-link">
+            打开人才画像
+            <span class="entry-card-link-icon">↗</span>
+          </div>
+        </div>
+      </a>
+
+    <!-- ⑤ AI 智能对话入口 -->
+      <a href="{{ url_for('chat_page') }}" class="entry-card" 
+        style="margin-top:16px; grid-column:1 / -1; min-height:140px; display:flex; flex-direction:row; align-items:center;">
+        
+        <div style="flex:1;">
+          <div class="entry-card-title" style="font-size:18px; margin-bottom:6px;">
+            AI 智能对话助手 · Ask the Data
+          </div>
+          <div class="entry-card-sub" style="max-width:600px;">
+            一个基于本平台所有数据的自然语言问答助手。你可以自由提任何与 AI 就业市场相关的问题，
+            它会结合趋势、城市、结构、技能等四大模块的数据给你“有依据”的回答。
+          </div>
+          <div style="margin-top:10px; font-size:11px; color:#6b7280;">
+            示例：哪些城市机会最多？算法岗和平台岗哪个更缺人？本科适合看哪些方向？
+          </div>
+        </div>
+
+        <div style="margin-left:20px; display:flex; align-items:center;">
+          <div class="entry-card-link" style="font-size:13px;">
+            进入对话助手 <span class="entry-card-link-icon">↗</span>
+          </div>
+        </div>
+
+      </a>
+
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,1351 @@
+{
+  "nodes": [
+    {
+      "id": "Python",
+      "name": "Python",
+      "value": 1413,
+      "symbolSize": 30.0
+    },
+    {
+      "id": "数据分析",
+      "name": "数据分析",
+      "value": 937,
+      "symbolSize": 25.63
+    },
+    {
+      "id": "数据挖掘",
+      "name": "数据挖掘",
+      "value": 704,
+      "symbolSize": 23.17
+    },
+    {
+      "id": "机器学习",
+      "name": "机器学习",
+      "value": 670,
+      "symbolSize": 22.78
+    },
+    {
+      "id": "深度学习",
+      "name": "深度学习",
+      "value": 518,
+      "symbolSize": 20.95
+    },
+    {
+      "id": "项目管理",
+      "name": "项目管理",
+      "value": 498,
+      "symbolSize": 20.7
+    },
+    {
+      "id": "SQL",
+      "name": "SQL",
+      "value": 495,
+      "symbolSize": 20.66
+    },
+    {
+      "id": "C++",
+      "name": "C++",
+      "value": 382,
+      "symbolSize": 19.12
+    },
+    {
+      "id": "云计算",
+      "name": "云计算",
+      "value": 363,
+      "symbolSize": 18.85
+    },
+    {
+      "id": "Java",
+      "name": "Java",
+      "value": 342,
+      "symbolSize": 18.54
+    },
+    {
+      "id": "PyTorch",
+      "name": "PyTorch",
+      "value": 320,
+      "symbolSize": 18.2
+    },
+    {
+      "id": "Spark",
+      "name": "Spark",
+      "value": 304,
+      "symbolSize": 17.96
+    },
+    {
+      "id": "TensorFlow",
+      "name": "TensorFlow",
+      "value": 296,
+      "symbolSize": 17.83
+    },
+    {
+      "id": "Linux",
+      "name": "Linux",
+      "value": 271,
+      "symbolSize": 17.43
+    },
+    {
+      "id": "Hadoop",
+      "name": "Hadoop",
+      "value": 264,
+      "symbolSize": 17.31
+    },
+    {
+      "id": "C/C++",
+      "name": "C/C++",
+      "value": 261,
+      "symbolSize": 17.26
+    },
+    {
+      "id": "团队协作",
+      "name": "团队协作",
+      "value": 232,
+      "symbolSize": 16.76
+    },
+    {
+      "id": "团队管理",
+      "name": "团队管理",
+      "value": 213,
+      "symbolSize": 16.43
+    },
+    {
+      "id": "沟通能力",
+      "name": "沟通能力",
+      "value": 205,
+      "symbolSize": 16.28
+    },
+    {
+      "id": "市场分析",
+      "name": "市场分析",
+      "value": 187,
+      "symbolSize": 15.94
+    },
+    {
+      "id": "人工智能",
+      "name": "人工智能",
+      "value": 181,
+      "symbolSize": 15.83
+    },
+    {
+      "id": "跨部门协作",
+      "name": "跨部门协作",
+      "value": 176,
+      "symbolSize": 15.73
+    },
+    {
+      "id": "自然语言处理",
+      "name": "自然语言处理",
+      "value": 160,
+      "symbolSize": 15.41
+    },
+    {
+      "id": "大数据分析",
+      "name": "大数据分析",
+      "value": 158,
+      "symbolSize": 15.37
+    },
+    {
+      "id": "图像处理",
+      "name": "图像处理",
+      "value": 155,
+      "symbolSize": 15.31
+    },
+    {
+      "id": "OpenCV",
+      "name": "OpenCV",
+      "value": 155,
+      "symbolSize": 15.31
+    },
+    {
+      "id": "Hive",
+      "name": "Hive",
+      "value": 150,
+      "symbolSize": 15.21
+    },
+    {
+      "id": "Excel",
+      "name": "Excel",
+      "value": 134,
+      "symbolSize": 14.87
+    },
+    {
+      "id": "MySQL",
+      "name": "MySQL",
+      "value": 133,
+      "symbolSize": 14.84
+    },
+    {
+      "id": "大数据",
+      "name": "大数据",
+      "value": 126,
+      "symbolSize": 14.69
+    }
+  ],
+  "links": [
+    {
+      "source": "Linux",
+      "target": "Python",
+      "value": 195
+    },
+    {
+      "source": "Linux",
+      "target": "数据挖掘",
+      "value": 32
+    },
+    {
+      "source": "Linux",
+      "target": "机器学习",
+      "value": 48
+    },
+    {
+      "source": "Python",
+      "target": "数据挖掘",
+      "value": 291
+    },
+    {
+      "source": "Python",
+      "target": "机器学习",
+      "value": 461
+    },
+    {
+      "source": "数据挖掘",
+      "target": "机器学习",
+      "value": 210
+    },
+    {
+      "source": "Hive",
+      "target": "Python",
+      "value": 67
+    },
+    {
+      "source": "Hive",
+      "target": "SQL",
+      "value": 64
+    },
+    {
+      "source": "Hive",
+      "target": "数据挖掘",
+      "value": 34
+    },
+    {
+      "source": "Python",
+      "target": "SQL",
+      "value": 341
+    },
+    {
+      "source": "SQL",
+      "target": "数据挖掘",
+      "value": 187
+    },
+    {
+      "source": "数据分析",
+      "target": "跨部门协作",
+      "value": 82
+    },
+    {
+      "source": "数据分析",
+      "target": "数据挖掘",
+      "value": 256
+    },
+    {
+      "source": "机器学习",
+      "target": "深度学习",
+      "value": 275
+    },
+    {
+      "source": "云计算",
+      "target": "沟通能力",
+      "value": 9
+    },
+    {
+      "source": "数据分析",
+      "target": "项目管理",
+      "value": 117
+    },
+    {
+      "source": "团队协作",
+      "target": "项目管理",
+      "value": 29
+    },
+    {
+      "source": "跨部门协作",
+      "target": "项目管理",
+      "value": 52
+    },
+    {
+      "source": "C/C++",
+      "target": "Python",
+      "value": 153
+    },
+    {
+      "source": "云计算",
+      "target": "大数据",
+      "value": 100
+    },
+    {
+      "source": "团队协作",
+      "target": "沟通能力",
+      "value": 34
+    },
+    {
+      "source": "Excel",
+      "target": "Python",
+      "value": 44
+    },
+    {
+      "source": "Excel",
+      "target": "SQL",
+      "value": 49
+    },
+    {
+      "source": "Excel",
+      "target": "机器学习",
+      "value": 16
+    },
+    {
+      "source": "SQL",
+      "target": "机器学习",
+      "value": 153
+    },
+    {
+      "source": "Excel",
+      "target": "数据挖掘",
+      "value": 67
+    },
+    {
+      "source": "云计算",
+      "target": "大数据分析",
+      "value": 19
+    },
+    {
+      "source": "云计算",
+      "target": "项目管理",
+      "value": 82
+    },
+    {
+      "source": "大数据分析",
+      "target": "项目管理",
+      "value": 26
+    },
+    {
+      "source": "团队协作",
+      "target": "数据挖掘",
+      "value": 15
+    },
+    {
+      "source": "C++",
+      "target": "团队协作",
+      "value": 7
+    },
+    {
+      "source": "C++",
+      "target": "图像处理",
+      "value": 51
+    },
+    {
+      "source": "C++",
+      "target": "数据挖掘",
+      "value": 25
+    },
+    {
+      "source": "C++",
+      "target": "机器学习",
+      "value": 92
+    },
+    {
+      "source": "团队协作",
+      "target": "图像处理",
+      "value": 5
+    },
+    {
+      "source": "团队协作",
+      "target": "机器学习",
+      "value": 10
+    },
+    {
+      "source": "图像处理",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "图像处理",
+      "target": "机器学习",
+      "value": 30
+    },
+    {
+      "source": "Java",
+      "target": "PyTorch",
+      "value": 13
+    },
+    {
+      "source": "Java",
+      "target": "Python",
+      "value": 197
+    },
+    {
+      "source": "Java",
+      "target": "TensorFlow",
+      "value": 13
+    },
+    {
+      "source": "Java",
+      "target": "深度学习",
+      "value": 18
+    },
+    {
+      "source": "Java",
+      "target": "自然语言处理",
+      "value": 19
+    },
+    {
+      "source": "PyTorch",
+      "target": "Python",
+      "value": 253
+    },
+    {
+      "source": "PyTorch",
+      "target": "TensorFlow",
+      "value": 230
+    },
+    {
+      "source": "PyTorch",
+      "target": "深度学习",
+      "value": 158
+    },
+    {
+      "source": "PyTorch",
+      "target": "自然语言处理",
+      "value": 50
+    },
+    {
+      "source": "Python",
+      "target": "TensorFlow",
+      "value": 238
+    },
+    {
+      "source": "Python",
+      "target": "深度学习",
+      "value": 344
+    },
+    {
+      "source": "Python",
+      "target": "自然语言处理",
+      "value": 108
+    },
+    {
+      "source": "TensorFlow",
+      "target": "深度学习",
+      "value": 145
+    },
+    {
+      "source": "TensorFlow",
+      "target": "自然语言处理",
+      "value": 48
+    },
+    {
+      "source": "深度学习",
+      "target": "自然语言处理",
+      "value": 78
+    },
+    {
+      "source": "OpenCV",
+      "target": "Python",
+      "value": 78
+    },
+    {
+      "source": "数据分析",
+      "target": "机器学习",
+      "value": 79
+    },
+    {
+      "source": "SQL",
+      "target": "数据分析",
+      "value": 125
+    },
+    {
+      "source": "云计算",
+      "target": "跨部门协作",
+      "value": 9
+    },
+    {
+      "source": "C/C++",
+      "target": "Linux",
+      "value": 31
+    },
+    {
+      "source": "云计算",
+      "target": "市场分析",
+      "value": 10
+    },
+    {
+      "source": "大数据",
+      "target": "项目管理",
+      "value": 28
+    },
+    {
+      "source": "C++",
+      "target": "PyTorch",
+      "value": 83
+    },
+    {
+      "source": "C++",
+      "target": "Python",
+      "value": 259
+    },
+    {
+      "source": "C++",
+      "target": "TensorFlow",
+      "value": 74
+    },
+    {
+      "source": "PyTorch",
+      "target": "图像处理",
+      "value": 21
+    },
+    {
+      "source": "Python",
+      "target": "图像处理",
+      "value": 56
+    },
+    {
+      "source": "TensorFlow",
+      "target": "图像处理",
+      "value": 25
+    },
+    {
+      "source": "Python",
+      "target": "数据分析",
+      "value": 124
+    },
+    {
+      "source": "数据挖掘",
+      "target": "项目管理",
+      "value": 37
+    },
+    {
+      "source": "TensorFlow",
+      "target": "数据挖掘",
+      "value": 24
+    },
+    {
+      "source": "TensorFlow",
+      "target": "机器学习",
+      "value": 114
+    },
+    {
+      "source": "数据挖掘",
+      "target": "深度学习",
+      "value": 71
+    },
+    {
+      "source": "数据挖掘",
+      "target": "自然语言处理",
+      "value": 33
+    },
+    {
+      "source": "机器学习",
+      "target": "自然语言处理",
+      "value": 101
+    },
+    {
+      "source": "团队管理",
+      "target": "数据分析",
+      "value": 71
+    },
+    {
+      "source": "团队管理",
+      "target": "跨部门协作",
+      "value": 20
+    },
+    {
+      "source": "C/C++",
+      "target": "OpenCV",
+      "value": 46
+    },
+    {
+      "source": "C/C++",
+      "target": "PyTorch",
+      "value": 42
+    },
+    {
+      "source": "C/C++",
+      "target": "TensorFlow",
+      "value": 38
+    },
+    {
+      "source": "OpenCV",
+      "target": "PyTorch",
+      "value": 37
+    },
+    {
+      "source": "OpenCV",
+      "target": "TensorFlow",
+      "value": 37
+    },
+    {
+      "source": "C++",
+      "target": "Linux",
+      "value": 43
+    },
+    {
+      "source": "C++",
+      "target": "深度学习",
+      "value": 113
+    },
+    {
+      "source": "Linux",
+      "target": "深度学习",
+      "value": 41
+    },
+    {
+      "source": "Python",
+      "target": "Spark",
+      "value": 179
+    },
+    {
+      "source": "SQL",
+      "target": "Spark",
+      "value": 103
+    },
+    {
+      "source": "SQL",
+      "target": "深度学习",
+      "value": 25
+    },
+    {
+      "source": "Spark",
+      "target": "数据挖掘",
+      "value": 60
+    },
+    {
+      "source": "Spark",
+      "target": "机器学习",
+      "value": 59
+    },
+    {
+      "source": "Spark",
+      "target": "深度学习",
+      "value": 34
+    },
+    {
+      "source": "图像处理",
+      "target": "深度学习",
+      "value": 57
+    },
+    {
+      "source": "Linux",
+      "target": "数据分析",
+      "value": 6
+    },
+    {
+      "source": "云计算",
+      "target": "团队协作",
+      "value": 9
+    },
+    {
+      "source": "Linux",
+      "target": "OpenCV",
+      "value": 18
+    },
+    {
+      "source": "PyTorch",
+      "target": "机器学习",
+      "value": 112
+    },
+    {
+      "source": "MySQL",
+      "target": "Python",
+      "value": 62
+    },
+    {
+      "source": "MySQL",
+      "target": "深度学习",
+      "value": 5
+    },
+    {
+      "source": "Excel",
+      "target": "数据分析",
+      "value": 56
+    },
+    {
+      "source": "Java",
+      "target": "数据分析",
+      "value": 12
+    },
+    {
+      "source": "Java",
+      "target": "数据挖掘",
+      "value": 49
+    },
+    {
+      "source": "数据分析",
+      "target": "沟通能力",
+      "value": 34
+    },
+    {
+      "source": "数据挖掘",
+      "target": "沟通能力",
+      "value": 12
+    },
+    {
+      "source": "Java",
+      "target": "SQL",
+      "value": 53
+    },
+    {
+      "source": "Hadoop",
+      "target": "Linux",
+      "value": 38
+    },
+    {
+      "source": "Hadoop",
+      "target": "Python",
+      "value": 156
+    },
+    {
+      "source": "Hadoop",
+      "target": "Spark",
+      "value": 210
+    },
+    {
+      "source": "Linux",
+      "target": "Spark",
+      "value": 39
+    },
+    {
+      "source": "团队管理",
+      "target": "市场分析",
+      "value": 24
+    },
+    {
+      "source": "Hadoop",
+      "target": "PyTorch",
+      "value": 11
+    },
+    {
+      "source": "Hadoop",
+      "target": "TensorFlow",
+      "value": 9
+    },
+    {
+      "source": "Hadoop",
+      "target": "机器学习",
+      "value": 50
+    },
+    {
+      "source": "Hadoop",
+      "target": "深度学习",
+      "value": 24
+    },
+    {
+      "source": "PyTorch",
+      "target": "Spark",
+      "value": 15
+    },
+    {
+      "source": "Spark",
+      "target": "TensorFlow",
+      "value": 20
+    },
+    {
+      "source": "C/C++",
+      "target": "深度学习",
+      "value": 53
+    },
+    {
+      "source": "OpenCV",
+      "target": "深度学习",
+      "value": 45
+    },
+    {
+      "source": "Hadoop",
+      "target": "Java",
+      "value": 69
+    },
+    {
+      "source": "Java",
+      "target": "Spark",
+      "value": 78
+    },
+    {
+      "source": "Linux",
+      "target": "SQL",
+      "value": 33
+    },
+    {
+      "source": "Linux",
+      "target": "TensorFlow",
+      "value": 28
+    },
+    {
+      "source": "SQL",
+      "target": "TensorFlow",
+      "value": 11
+    },
+    {
+      "source": "云计算",
+      "target": "人工智能",
+      "value": 91
+    },
+    {
+      "source": "人工智能",
+      "target": "大数据",
+      "value": 59
+    },
+    {
+      "source": "市场分析",
+      "target": "数据分析",
+      "value": 55
+    },
+    {
+      "source": "市场分析",
+      "target": "沟通能力",
+      "value": 8
+    },
+    {
+      "source": "市场分析",
+      "target": "项目管理",
+      "value": 22
+    },
+    {
+      "source": "沟通能力",
+      "target": "项目管理",
+      "value": 22
+    },
+    {
+      "source": "PyTorch",
+      "target": "数据挖掘",
+      "value": 24
+    },
+    {
+      "source": "C++",
+      "target": "Java",
+      "value": 55
+    },
+    {
+      "source": "PyTorch",
+      "target": "SQL",
+      "value": 8
+    },
+    {
+      "source": "数据分析",
+      "target": "自然语言处理",
+      "value": 9
+    },
+    {
+      "source": "Hive",
+      "target": "Spark",
+      "value": 113
+    },
+    {
+      "source": "Hadoop",
+      "target": "Hive",
+      "value": 77
+    },
+    {
+      "source": "Hadoop",
+      "target": "SQL",
+      "value": 104
+    },
+    {
+      "source": "大数据分析",
+      "target": "数据挖掘",
+      "value": 10
+    },
+    {
+      "source": "大数据分析",
+      "target": "跨部门协作",
+      "value": 10
+    },
+    {
+      "source": "数据挖掘",
+      "target": "跨部门协作",
+      "value": 38
+    },
+    {
+      "source": "深度学习",
+      "target": "项目管理",
+      "value": 13
+    },
+    {
+      "source": "云计算",
+      "target": "机器学习",
+      "value": 11
+    },
+    {
+      "source": "Java",
+      "target": "机器学习",
+      "value": 53
+    },
+    {
+      "source": "C++",
+      "target": "SQL",
+      "value": 8
+    },
+    {
+      "source": "团队协作",
+      "target": "数据分析",
+      "value": 56
+    },
+    {
+      "source": "Java",
+      "target": "云计算",
+      "value": 24
+    },
+    {
+      "source": "Hadoop",
+      "target": "MySQL",
+      "value": 15
+    },
+    {
+      "source": "Java",
+      "target": "MySQL",
+      "value": 45
+    },
+    {
+      "source": "MySQL",
+      "target": "Spark",
+      "value": 13
+    },
+    {
+      "source": "人工智能",
+      "target": "沟通能力",
+      "value": 7
+    },
+    {
+      "source": "人工智能",
+      "target": "项目管理",
+      "value": 42
+    },
+    {
+      "source": "Python",
+      "target": "云计算",
+      "value": 36
+    },
+    {
+      "source": "C/C++",
+      "target": "数据分析",
+      "value": 7
+    },
+    {
+      "source": "Python",
+      "target": "团队协作",
+      "value": 11
+    },
+    {
+      "source": "团队管理",
+      "target": "大数据分析",
+      "value": 9
+    },
+    {
+      "source": "Hadoop",
+      "target": "数据挖掘",
+      "value": 58
+    },
+    {
+      "source": "Linux",
+      "target": "MySQL",
+      "value": 43
+    },
+    {
+      "source": "Java",
+      "target": "Linux",
+      "value": 56
+    },
+    {
+      "source": "MySQL",
+      "target": "数据挖掘",
+      "value": 13
+    },
+    {
+      "source": "MySQL",
+      "target": "机器学习",
+      "value": 13
+    },
+    {
+      "source": "C++",
+      "target": "OpenCV",
+      "value": 61
+    },
+    {
+      "source": "机器学习",
+      "target": "项目管理",
+      "value": 22
+    },
+    {
+      "source": "Linux",
+      "target": "PyTorch",
+      "value": 36
+    },
+    {
+      "source": "Hive",
+      "target": "Java",
+      "value": 39
+    },
+    {
+      "source": "人工智能",
+      "target": "团队管理",
+      "value": 10
+    },
+    {
+      "source": "团队管理",
+      "target": "大数据",
+      "value": 6
+    },
+    {
+      "source": "团队管理",
+      "target": "项目管理",
+      "value": 44
+    },
+    {
+      "source": "SQL",
+      "target": "团队管理",
+      "value": 7
+    },
+    {
+      "source": "数据分析",
+      "target": "深度学习",
+      "value": 24
+    },
+    {
+      "source": "云计算",
+      "target": "数据挖掘",
+      "value": 5
+    },
+    {
+      "source": "Excel",
+      "target": "团队协作",
+      "value": 5
+    },
+    {
+      "source": "Hadoop",
+      "target": "数据分析",
+      "value": 16
+    },
+    {
+      "source": "Spark",
+      "target": "数据分析",
+      "value": 13
+    },
+    {
+      "source": "云计算",
+      "target": "数据分析",
+      "value": 14
+    },
+    {
+      "source": "Python",
+      "target": "人工智能",
+      "value": 14
+    },
+    {
+      "source": "Python",
+      "target": "大数据",
+      "value": 7
+    },
+    {
+      "source": "Python",
+      "target": "项目管理",
+      "value": 23
+    },
+    {
+      "source": "云计算",
+      "target": "团队管理",
+      "value": 19
+    },
+    {
+      "source": "PyTorch",
+      "target": "团队协作",
+      "value": 9
+    },
+    {
+      "source": "TensorFlow",
+      "target": "团队协作",
+      "value": 10
+    },
+    {
+      "source": "TensorFlow",
+      "target": "项目管理",
+      "value": 5
+    },
+    {
+      "source": "Hive",
+      "target": "数据分析",
+      "value": 14
+    },
+    {
+      "source": "C++",
+      "target": "Spark",
+      "value": 7
+    },
+    {
+      "source": "市场分析",
+      "target": "数据挖掘",
+      "value": 19
+    },
+    {
+      "source": "SQL",
+      "target": "跨部门协作",
+      "value": 17
+    },
+    {
+      "source": "C++",
+      "target": "自然语言处理",
+      "value": 15
+    },
+    {
+      "source": "大数据分析",
+      "target": "数据分析",
+      "value": 15
+    },
+    {
+      "source": "SQL",
+      "target": "项目管理",
+      "value": 17
+    },
+    {
+      "source": "OpenCV",
+      "target": "图像处理",
+      "value": 40
+    },
+    {
+      "source": "Hive",
+      "target": "机器学习",
+      "value": 18
+    },
+    {
+      "source": "Hive",
+      "target": "深度学习",
+      "value": 8
+    },
+    {
+      "source": "C++",
+      "target": "Hadoop",
+      "value": 7
+    },
+    {
+      "source": "C++",
+      "target": "Hive",
+      "value": 7
+    },
+    {
+      "source": "机器学习",
+      "target": "跨部门协作",
+      "value": 12
+    },
+    {
+      "source": "Linux",
+      "target": "云计算",
+      "value": 14
+    },
+    {
+      "source": "Linux",
+      "target": "自然语言处理",
+      "value": 11
+    },
+    {
+      "source": "Python",
+      "target": "大数据分析",
+      "value": 18
+    },
+    {
+      "source": "团队协作",
+      "target": "大数据分析",
+      "value": 7
+    },
+    {
+      "source": "团队协作",
+      "target": "市场分析",
+      "value": 12
+    },
+    {
+      "source": "大数据分析",
+      "target": "市场分析",
+      "value": 6
+    },
+    {
+      "source": "C/C++",
+      "target": "图像处理",
+      "value": 25
+    },
+    {
+      "source": "Excel",
+      "target": "市场分析",
+      "value": 7
+    },
+    {
+      "source": "Excel",
+      "target": "跨部门协作",
+      "value": 8
+    },
+    {
+      "source": "Python",
+      "target": "跨部门协作",
+      "value": 9
+    },
+    {
+      "source": "市场分析",
+      "target": "跨部门协作",
+      "value": 14
+    },
+    {
+      "source": "C/C++",
+      "target": "机器学习",
+      "value": 36
+    },
+    {
+      "source": "大数据分析",
+      "target": "机器学习",
+      "value": 6
+    },
+    {
+      "source": "团队管理",
+      "target": "数据挖掘",
+      "value": 23
+    },
+    {
+      "source": "OpenCV",
+      "target": "机器学习",
+      "value": 13
+    },
+    {
+      "source": "Linux",
+      "target": "图像处理",
+      "value": 6
+    },
+    {
+      "source": "人工智能",
+      "target": "大数据分析",
+      "value": 17
+    },
+    {
+      "source": "SQL",
+      "target": "大数据分析",
+      "value": 12
+    },
+    {
+      "source": "C/C++",
+      "target": "数据挖掘",
+      "value": 11
+    },
+    {
+      "source": "团队协作",
+      "target": "自然语言处理",
+      "value": 7
+    },
+    {
+      "source": "图像处理",
+      "target": "自然语言处理",
+      "value": 5
+    },
+    {
+      "source": "团队协作",
+      "target": "深度学习",
+      "value": 7
+    },
+    {
+      "source": "MySQL",
+      "target": "数据分析",
+      "value": 15
+    },
+    {
+      "source": "人工智能",
+      "target": "数据分析",
+      "value": 17
+    },
+    {
+      "source": "MySQL",
+      "target": "SQL",
+      "value": 7
+    },
+    {
+      "source": "C/C++",
+      "target": "Java",
+      "value": 14
+    },
+    {
+      "source": "Hive",
+      "target": "MySQL",
+      "value": 7
+    },
+    {
+      "source": "人工智能",
+      "target": "机器学习",
+      "value": 8
+    },
+    {
+      "source": "MySQL",
+      "target": "云计算",
+      "value": 8
+    },
+    {
+      "source": "团队管理",
+      "target": "沟通能力",
+      "value": 6
+    },
+    {
+      "source": "C++",
+      "target": "MySQL",
+      "value": 6
+    },
+    {
+      "source": "TensorFlow",
+      "target": "数据分析",
+      "value": 6
+    },
+    {
+      "source": "SQL",
+      "target": "自然语言处理",
+      "value": 11
+    },
+    {
+      "source": "自然语言处理",
+      "target": "项目管理",
+      "value": 7
+    },
+    {
+      "source": "PyTorch",
+      "target": "数据分析",
+      "value": 6
+    },
+    {
+      "source": "Java",
+      "target": "大数据",
+      "value": 5
+    },
+    {
+      "source": "C++",
+      "target": "数据分析",
+      "value": 5
+    },
+    {
+      "source": "Excel",
+      "target": "沟通能力",
+      "value": 5
+    },
+    {
+      "source": "C++",
+      "target": "项目管理",
+      "value": 5
+    },
+    {
+      "source": "Hadoop",
+      "target": "自然语言处理",
+      "value": 5
+    },
+    {
+      "source": "Spark",
+      "target": "自然语言处理",
+      "value": 6
+    },
+    {
+      "source": "Hive",
+      "target": "Linux",
+      "value": 7
+    },
+    {
+      "source": "Python",
+      "target": "团队管理",
+      "value": 6
+    }
+  ]
+}

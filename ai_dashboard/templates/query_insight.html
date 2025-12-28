@@ -1,0 +1,156 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}用户查询记录 · Demo{% endblock %}
+
+{% block head_extra %}
+<style>
+  .query-page {
+    background:#f5f5f7;
+    padding:16px 20px 32px;
+    min-height:calc(100vh - 60px);
+  }
+  .query-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:14px;
+  }
+  .query-title-main {
+    font-size:20px;
+    font-weight:600;
+    color:#111827;
+  }
+  .query-title-sub {
+    margin-top:4px;
+    font-size:12px;
+    color:#6b7280;
+  }
+  .query-badge {
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    font-size:11px;
+    color:#4b5563;
+  }
+  .panel {
+    background:#ffffff;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 8px 18px rgba(15,23,42,0.08);
+    padding:12px 14px 16px;
+  }
+  .panel-title {
+    font-size:14px;
+    font-weight:600;
+    color:#111827;
+    margin-bottom:4px;
+  }
+  .panel-sub {
+    font-size:11px;
+    color:#6b7280;
+    margin-bottom:8px;
+  }
+  .panel-line {
+    height:1px;
+    width:100%;
+    margin:6px 0 8px;
+    background:linear-gradient(90deg,#e5e7eb,#f3f4f6);
+  }
+  .query-table {
+    width:100%;
+    border-collapse:collapse;
+    font-size:11px;
+  }
+  .query-table thead {
+    background:#f9fafb;
+  }
+  .query-table th,
+  .query-table td {
+    padding:6px 8px;
+    border-bottom:1px solid #e5e7eb;
+    text-align:left;
+    white-space:nowrap;
+  }
+  .query-table th {
+    font-weight:600;
+    color:#4b5563;
+  }
+  .query-table td {
+    color:#374151;
+  }
+  .query-table tbody tr:nth-child(even) {
+    background:#fafafa;
+  }
+  .back-btn-wrapper {
+    margin-top:18px;
+    text-align:right;
+  }
+  .back-btn-wrapper a button {
+    padding:6px 12px;
+    border-radius:10px;
+    font-size:11px;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    color:#374151;
+    cursor:pointer;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="query-page">
+  <header class="query-header">
+    <div>
+      <div class="query-title-main">用户查询记录（数据库 Demo）</div>
+      <div class="query-title-sub">
+        展示职业驾驶舱最近的筛选行为，用来证明系统正在把用户操作写入数据库。
+      </div>
+    </div>
+    <div class="query-badge">
+      总记录数：{{ total_queries }}
+    </div>
+  </header>
+
+  <section class="panel">
+    <div class="panel-title">最近 20 条查询</div>
+    <div class="panel-sub">
+      每一行是一条来自职业路径驾驶舱的筛选记录：学历、经验、城市和方向都存进了数据库。
+    </div>
+    <div class="panel-line"></div>
+
+    <div style="overflow:auto; max-height:380px;">
+      <table class="query-table">
+        <thead>
+          <tr>
+            <th>时间</th>
+            <th>session</th>
+            <th>学历</th>
+            <th>经验段</th>
+            <th>城市</th>
+            <th>AI 方向</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for q in recent_queries %}
+          <tr>
+            <td>{{ q.created_at.strftime('%Y-%m-%d %H:%M:%S') if q.created_at else '' }}</td>
+            <td>{{ q.session_id }}</td>
+            <td>{{ q.degree }}</td>
+            <td>{{ q.exp }}</td>
+            <td>{{ q.city }}</td>
+            <td>{{ q.direction }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="back-btn-wrapper">
+      <a href="/skill_cockpit">
+        <button>返回职业路径驾驶舱</button>
+      </a>
+    </div>
+  </section>
+</div>
+{% endblock %}

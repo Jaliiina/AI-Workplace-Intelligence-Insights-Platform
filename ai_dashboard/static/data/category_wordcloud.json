@@ -1,0 +1,3252 @@
+[
+  {
+    "category": "人工智能",
+    "words": [
+      {
+        "name": "Python",
+        "value": 259
+      },
+      {
+        "name": "数据分析",
+        "value": 237
+      },
+      {
+        "name": "项目管理",
+        "value": 224
+      },
+      {
+        "name": "人工智能",
+        "value": 173
+      },
+      {
+        "name": "云计算",
+        "value": 146
+      },
+      {
+        "name": "机器学习",
+        "value": 110
+      },
+      {
+        "name": "深度学习",
+        "value": 106
+      },
+      {
+        "name": "市场分析",
+        "value": 96
+      },
+      {
+        "name": "团队协作",
+        "value": 89
+      },
+      {
+        "name": "沟通能力",
+        "value": 81
+      },
+      {
+        "name": "团队管理",
+        "value": 81
+      },
+      {
+        "name": "PyTorch",
+        "value": 77
+      },
+      {
+        "name": "C++",
+        "value": 73
+      },
+      {
+        "name": "大数据",
+        "value": 73
+      },
+      {
+        "name": "Java",
+        "value": 69
+      },
+      {
+        "name": "TensorFlow",
+        "value": 67
+      },
+      {
+        "name": "跨部门协作",
+        "value": 59
+      },
+      {
+        "name": "Linux",
+        "value": 56
+      },
+      {
+        "name": "团队合作",
+        "value": 54
+      },
+      {
+        "name": "沟通协调",
+        "value": 50
+      },
+      {
+        "name": "C/C++",
+        "value": 50
+      },
+      {
+        "name": "大数据分析",
+        "value": 47
+      },
+      {
+        "name": "需求分析",
+        "value": 47
+      },
+      {
+        "name": "数据挖掘",
+        "value": 46
+      },
+      {
+        "name": "自然语言处理",
+        "value": 45
+      },
+      {
+        "name": "客户沟通",
+        "value": 45
+      },
+      {
+        "name": "客户开发",
+        "value": 43
+      },
+      {
+        "name": "商务谈判",
+        "value": 41
+      },
+      {
+        "name": "客户关系维护",
+        "value": 41
+      },
+      {
+        "name": "SQL",
+        "value": 41
+      },
+      {
+        "name": "物联网",
+        "value": 40
+      },
+      {
+        "name": "客户关系管理",
+        "value": 40
+      },
+      {
+        "name": "客户服务",
+        "value": 36
+      },
+      {
+        "name": "销售技巧",
+        "value": 34
+      },
+      {
+        "name": "抗压能力",
+        "value": 33
+      },
+      {
+        "name": "竞品分析",
+        "value": 33
+      },
+      {
+        "name": "MySQL",
+        "value": 31
+      },
+      {
+        "name": "Spark",
+        "value": 29
+      },
+      {
+        "name": "Hadoop",
+        "value": 28
+      },
+      {
+        "name": "Tensorflow",
+        "value": 28
+      },
+      {
+        "name": "市场调研",
+        "value": 27
+      },
+      {
+        "name": "C#",
+        "value": 26
+      },
+      {
+        "name": "大数据处理",
+        "value": 26
+      },
+      {
+        "name": "逻辑思维",
+        "value": 26
+      },
+      {
+        "name": "Docker",
+        "value": 25
+      },
+      {
+        "name": "客户维护",
+        "value": 24
+      },
+      {
+        "name": "图像处理",
+        "value": 24
+      },
+      {
+        "name": "软件开发",
+        "value": 23
+      },
+      {
+        "name": "解决方案设计",
+        "value": 23
+      },
+      {
+        "name": "数据处理",
+        "value": 22
+      },
+      {
+        "name": "学习能力",
+        "value": 21
+      },
+      {
+        "name": "数据标注",
+        "value": 21
+      },
+      {
+        "name": "市场开拓",
+        "value": 21
+      },
+      {
+        "name": "销售策略",
+        "value": 21
+      },
+      {
+        "name": "AI工具应用",
+        "value": 21
+      },
+      {
+        "name": "人工智能技术",
+        "value": 20
+      },
+      {
+        "name": "用户体验优化",
+        "value": 19
+      },
+      {
+        "name": "敏捷开发",
+        "value": 19
+      },
+      {
+        "name": "产品规划",
+        "value": 19
+      },
+      {
+        "name": "算法优化",
+        "value": 19
+      },
+      {
+        "name": "客户管理",
+        "value": 19
+      },
+      {
+        "name": "计算机视觉",
+        "value": 19
+      },
+      {
+        "name": "数据库管理",
+        "value": 18
+      },
+      {
+        "name": "办公软件",
+        "value": 18
+      },
+      {
+        "name": "Excel",
+        "value": 18
+      },
+      {
+        "name": "人工智能应用",
+        "value": 18
+      },
+      {
+        "name": "客户需求分析",
+        "value": 17
+      },
+      {
+        "name": "JavaScript",
+        "value": 17
+      },
+      {
+        "name": "Photoshop",
+        "value": 17
+      },
+      {
+        "name": "网络安全",
+        "value": 17
+      },
+      {
+        "name": "技术文档编写",
+        "value": 17
+      },
+      {
+        "name": "C语言",
+        "value": 17
+      },
+      {
+        "name": "Linux系统",
+        "value": 17
+      },
+      {
+        "name": "Axure",
+        "value": 16
+      },
+      {
+        "name": "物联网技术",
+        "value": 16
+      },
+      {
+        "name": "数据库",
+        "value": 16
+      },
+      {
+        "name": "问题解决",
+        "value": 16
+      },
+      {
+        "name": "系统架构设计",
+        "value": 16
+      },
+      {
+        "name": "用户需求分析",
+        "value": 15
+      },
+      {
+        "name": "战略规划",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "category": "数据挖掘",
+    "words": [
+      {
+        "name": "数据挖掘",
+        "value": 436
+      },
+      {
+        "name": "数据分析",
+        "value": 421
+      },
+      {
+        "name": "SQL",
+        "value": 154
+      },
+      {
+        "name": "Python",
+        "value": 153
+      },
+      {
+        "name": "Excel",
+        "value": 77
+      },
+      {
+        "name": "跨部门协作",
+        "value": 59
+      },
+      {
+        "name": "项目管理",
+        "value": 58
+      },
+      {
+        "name": "竞品分析",
+        "value": 45
+      },
+      {
+        "name": "Spark",
+        "value": 45
+      },
+      {
+        "name": "团队管理",
+        "value": 42
+      },
+      {
+        "name": "Hadoop",
+        "value": 42
+      },
+      {
+        "name": "内容策划",
+        "value": 38
+      },
+      {
+        "name": "Hive",
+        "value": 36
+      },
+      {
+        "name": "数据可视化",
+        "value": 35
+      },
+      {
+        "name": "数据建模",
+        "value": 33
+      },
+      {
+        "name": "团队协作",
+        "value": 32
+      },
+      {
+        "name": "统计分析",
+        "value": 32
+      },
+      {
+        "name": "Java",
+        "value": 29
+      },
+      {
+        "name": "Tableau",
+        "value": 27
+      },
+      {
+        "name": "市场调研",
+        "value": 26
+      },
+      {
+        "name": "市场分析",
+        "value": 26
+      },
+      {
+        "name": "数据处理",
+        "value": 23
+      },
+      {
+        "name": "活动策划",
+        "value": 21
+      },
+      {
+        "name": "数据治理",
+        "value": 21
+      },
+      {
+        "name": "用户行为分析",
+        "value": 20
+      },
+      {
+        "name": "沟通能力",
+        "value": 20
+      },
+      {
+        "name": "MySQL",
+        "value": 19
+      },
+      {
+        "name": "机器学习",
+        "value": 19
+      },
+      {
+        "name": "用户需求分析",
+        "value": 18
+      },
+      {
+        "name": "沟通协调",
+        "value": 18
+      },
+      {
+        "name": "数据清洗",
+        "value": 18
+      },
+      {
+        "name": "Linux",
+        "value": 18
+      },
+      {
+        "name": "产品设计",
+        "value": 17
+      },
+      {
+        "name": "数据仓库",
+        "value": 16
+      },
+      {
+        "name": "逻辑思维",
+        "value": 15
+      },
+      {
+        "name": "逻辑分析",
+        "value": 15
+      },
+      {
+        "name": "新媒体运营",
+        "value": 15
+      },
+      {
+        "name": "用户调研",
+        "value": 14
+      },
+      {
+        "name": "SPSS",
+        "value": 13
+      },
+      {
+        "name": "跨部门沟通",
+        "value": 13
+      },
+      {
+        "name": "Flink",
+        "value": 13
+      },
+      {
+        "name": "用户运营",
+        "value": 13
+      },
+      {
+        "name": "Axure",
+        "value": 12
+      },
+      {
+        "name": "BI",
+        "value": 12
+      },
+      {
+        "name": "客户关系管理",
+        "value": 11
+      },
+      {
+        "name": "数据分析工具",
+        "value": 11
+      },
+      {
+        "name": "流程优化",
+        "value": 11
+      },
+      {
+        "name": "直播运营",
+        "value": 11
+      },
+      {
+        "name": "电商平台运营",
+        "value": 10
+      },
+      {
+        "name": "BI工具",
+        "value": 10
+      },
+      {
+        "name": "Oracle",
+        "value": 10
+      },
+      {
+        "name": "社交媒体运营",
+        "value": 10
+      },
+      {
+        "name": "SEO优化",
+        "value": 10
+      },
+      {
+        "name": "Google",
+        "value": 10
+      },
+      {
+        "name": "R",
+        "value": 10
+      },
+      {
+        "name": "营销策略",
+        "value": 9
+      },
+      {
+        "name": "Power",
+        "value": 9
+      },
+      {
+        "name": "抗压能力",
+        "value": 9
+      },
+      {
+        "name": "ERP系统",
+        "value": 9
+      },
+      {
+        "name": "数据监控",
+        "value": 9
+      },
+      {
+        "name": "文案撰写",
+        "value": 9
+      },
+      {
+        "name": "用户画像分析",
+        "value": 9
+      },
+      {
+        "name": "策略优化",
+        "value": 9
+      },
+      {
+        "name": "资源整合",
+        "value": 9
+      },
+      {
+        "name": "商务谈判",
+        "value": 9
+      },
+      {
+        "name": "办公软件",
+        "value": 9
+      },
+      {
+        "name": "ETL开发",
+        "value": 9
+      },
+      {
+        "name": "用户体验优化",
+        "value": 8
+      },
+      {
+        "name": "风险分析",
+        "value": 8
+      },
+      {
+        "name": "PPT",
+        "value": 8
+      },
+      {
+        "name": "统计建模",
+        "value": 8
+      },
+      {
+        "name": "预算管理",
+        "value": 8
+      },
+      {
+        "name": "沟通协作",
+        "value": 8
+      },
+      {
+        "name": "ETL",
+        "value": 8
+      },
+      {
+        "name": "视频剪辑",
+        "value": 8
+      },
+      {
+        "name": "财务分析",
+        "value": 8
+      },
+      {
+        "name": "用户增长策略",
+        "value": 8
+      },
+      {
+        "name": "用户需求挖掘",
+        "value": 8
+      },
+      {
+        "name": "Visio",
+        "value": 7
+      },
+      {
+        "name": "需求分析",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "category": "机器学习",
+    "words": [
+      {
+        "name": "机器学习",
+        "value": 412
+      },
+      {
+        "name": "Python",
+        "value": 359
+      },
+      {
+        "name": "数据挖掘",
+        "value": 170
+      },
+      {
+        "name": "SQL",
+        "value": 159
+      },
+      {
+        "name": "深度学习",
+        "value": 120
+      },
+      {
+        "name": "数据分析",
+        "value": 78
+      },
+      {
+        "name": "TensorFlow",
+        "value": 68
+      },
+      {
+        "name": "Spark",
+        "value": 64
+      },
+      {
+        "name": "PyTorch",
+        "value": 64
+      },
+      {
+        "name": "C++",
+        "value": 63
+      },
+      {
+        "name": "Java",
+        "value": 60
+      },
+      {
+        "name": "Linux",
+        "value": 48
+      },
+      {
+        "name": "Hadoop",
+        "value": 46
+      },
+      {
+        "name": "自然语言处理",
+        "value": 39
+      },
+      {
+        "name": "机器学习算法",
+        "value": 38
+      },
+      {
+        "name": "C/C++",
+        "value": 33
+      },
+      {
+        "name": "特征工程",
+        "value": 32
+      },
+      {
+        "name": "数据处理",
+        "value": 31
+      },
+      {
+        "name": "Hive",
+        "value": 30
+      },
+      {
+        "name": "数据可视化",
+        "value": 29
+      },
+      {
+        "name": "Tensorflow",
+        "value": 28
+      },
+      {
+        "name": "数据清洗",
+        "value": 25
+      },
+      {
+        "name": "统计分析",
+        "value": 23
+      },
+      {
+        "name": "R",
+        "value": 22
+      },
+      {
+        "name": "数据建模",
+        "value": 22
+      },
+      {
+        "name": "推荐系统",
+        "value": 21
+      },
+      {
+        "name": "算法优化",
+        "value": 20
+      },
+      {
+        "name": "分布式计算",
+        "value": 20
+      },
+      {
+        "name": "因果推断",
+        "value": 20
+      },
+      {
+        "name": "Docker",
+        "value": 19
+      },
+      {
+        "name": "项目管理",
+        "value": 18
+      },
+      {
+        "name": "数据结构",
+        "value": 16
+      },
+      {
+        "name": "Pytorch",
+        "value": 16
+      },
+      {
+        "name": "统计学",
+        "value": 15
+      },
+      {
+        "name": "NLP",
+        "value": 15
+      },
+      {
+        "name": "强化学习",
+        "value": 15
+      },
+      {
+        "name": "Kubernetes",
+        "value": 15
+      },
+      {
+        "name": "数学建模",
+        "value": 14
+      },
+      {
+        "name": "Excel",
+        "value": 13
+      },
+      {
+        "name": "数据结构与算法",
+        "value": 13
+      },
+      {
+        "name": "MySQL",
+        "value": 13
+      },
+      {
+        "name": "Flink",
+        "value": 13
+      },
+      {
+        "name": "图像处理",
+        "value": 12
+      },
+      {
+        "name": "运筹优化",
+        "value": 12
+      },
+      {
+        "name": "跨部门协作",
+        "value": 12
+      },
+      {
+        "name": "OpenCV",
+        "value": 12
+      },
+      {
+        "name": "Tableau",
+        "value": 11
+      },
+      {
+        "name": "算法设计",
+        "value": 11
+      },
+      {
+        "name": "团队协作",
+        "value": 11
+      },
+      {
+        "name": "大数据处理",
+        "value": 11
+      },
+      {
+        "name": "计算机视觉",
+        "value": 11
+      },
+      {
+        "name": "多线程",
+        "value": 11
+      },
+      {
+        "name": "模型优化",
+        "value": 10
+      },
+      {
+        "name": "数据预处理",
+        "value": 10
+      },
+      {
+        "name": "逻辑回归",
+        "value": 10
+      },
+      {
+        "name": "A/B测试",
+        "value": 10
+      },
+      {
+        "name": "数据仓库",
+        "value": 10
+      },
+      {
+        "name": "推荐算法",
+        "value": 9
+      },
+      {
+        "name": "模型部署",
+        "value": 9
+      },
+      {
+        "name": "分布式系统",
+        "value": 9
+      },
+      {
+        "name": "模型调优",
+        "value": 9
+      },
+      {
+        "name": "Matlab",
+        "value": 9
+      },
+      {
+        "name": "Kafka",
+        "value": 9
+      },
+      {
+        "name": "算法开发",
+        "value": 9
+      },
+      {
+        "name": "神经网络",
+        "value": 8
+      },
+      {
+        "name": "逻辑思维",
+        "value": 8
+      },
+      {
+        "name": "知识图谱",
+        "value": 8
+      },
+      {
+        "name": "云计算",
+        "value": 8
+      },
+      {
+        "name": "机器学习模型",
+        "value": 8
+      },
+      {
+        "name": "决策树",
+        "value": 8
+      },
+      {
+        "name": "模型训练",
+        "value": 8
+      },
+      {
+        "name": "Redis",
+        "value": 8
+      },
+      {
+        "name": "跨团队协作",
+        "value": 7
+      },
+      {
+        "name": "Pandas",
+        "value": 7
+      },
+      {
+        "name": "SAS",
+        "value": 7
+      },
+      {
+        "name": "Shell",
+        "value": 7
+      },
+      {
+        "name": "BI工具",
+        "value": 6
+      },
+      {
+        "name": "XGBoost",
+        "value": 6
+      },
+      {
+        "name": "编程能力",
+        "value": 6
+      },
+      {
+        "name": "C#",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "category": "深度学习",
+    "words": [
+      {
+        "name": "Python",
+        "value": 259
+      },
+      {
+        "name": "深度学习",
+        "value": 239
+      },
+      {
+        "name": "PyTorch",
+        "value": 130
+      },
+      {
+        "name": "TensorFlow",
+        "value": 112
+      },
+      {
+        "name": "C++",
+        "value": 111
+      },
+      {
+        "name": "OpenCV",
+        "value": 75
+      },
+      {
+        "name": "机器学习",
+        "value": 73
+      },
+      {
+        "name": "C/C++",
+        "value": 72
+      },
+      {
+        "name": "图像处理",
+        "value": 59
+      },
+      {
+        "name": "Tensorflow",
+        "value": 50
+      },
+      {
+        "name": "Pytorch",
+        "value": 43
+      },
+      {
+        "name": "深度学习框架",
+        "value": 38
+      },
+      {
+        "name": "Linux",
+        "value": 37
+      },
+      {
+        "name": "目标检测",
+        "value": 33
+      },
+      {
+        "name": "Halcon",
+        "value": 30
+      },
+      {
+        "name": "图像处理算法",
+        "value": 26
+      },
+      {
+        "name": "计算机视觉",
+        "value": 26
+      },
+      {
+        "name": "算法优化",
+        "value": 25
+      },
+      {
+        "name": "自然语言处理",
+        "value": 21
+      },
+      {
+        "name": "模型优化",
+        "value": 20
+      },
+      {
+        "name": "数据处理",
+        "value": 17
+      },
+      {
+        "name": "特征提取",
+        "value": 17
+      },
+      {
+        "name": "Spark",
+        "value": 15
+      },
+      {
+        "name": "C#",
+        "value": 14
+      },
+      {
+        "name": "模型训练",
+        "value": 13
+      },
+      {
+        "name": "Hadoop",
+        "value": 13
+      },
+      {
+        "name": "数据结构与算法",
+        "value": 13
+      },
+      {
+        "name": "图像分割",
+        "value": 12
+      },
+      {
+        "name": "数据挖掘",
+        "value": 12
+      },
+      {
+        "name": "算法设计",
+        "value": 12
+      },
+      {
+        "name": "数据分析",
+        "value": 12
+      },
+      {
+        "name": "强化学习",
+        "value": 12
+      },
+      {
+        "name": "Java",
+        "value": 11
+      },
+      {
+        "name": "项目管理",
+        "value": 11
+      },
+      {
+        "name": "NLP",
+        "value": 11
+      },
+      {
+        "name": "CUDA",
+        "value": 11
+      },
+      {
+        "name": "图像识别",
+        "value": 11
+      },
+      {
+        "name": "深度学习算法",
+        "value": 11
+      },
+      {
+        "name": "Docker",
+        "value": 10
+      },
+      {
+        "name": "团队协作",
+        "value": 10
+      },
+      {
+        "name": "模型部署",
+        "value": 10
+      },
+      {
+        "name": "Matlab",
+        "value": 9
+      },
+      {
+        "name": "机器视觉",
+        "value": 9
+      },
+      {
+        "name": "模式识别",
+        "value": 9
+      },
+      {
+        "name": "Transformer",
+        "value": 9
+      },
+      {
+        "name": "团队管理",
+        "value": 9
+      },
+      {
+        "name": "C++编程",
+        "value": 8
+      },
+      {
+        "name": "缺陷检测",
+        "value": 8
+      },
+      {
+        "name": "分布式训练",
+        "value": 8
+      },
+      {
+        "name": "算法开发",
+        "value": 8
+      },
+      {
+        "name": "GAN",
+        "value": 7
+      },
+      {
+        "name": "信号处理",
+        "value": 7
+      },
+      {
+        "name": "多线程",
+        "value": 7
+      },
+      {
+        "name": "Kafka",
+        "value": 7
+      },
+      {
+        "name": "YOLO",
+        "value": 6
+      },
+      {
+        "name": "Keras",
+        "value": 6
+      },
+      {
+        "name": "神经网络",
+        "value": 6
+      },
+      {
+        "name": "沟通能力",
+        "value": 6
+      },
+      {
+        "name": "机器学习算法",
+        "value": 6
+      },
+      {
+        "name": "RLHF",
+        "value": 6
+      },
+      {
+        "name": "C/C++编程",
+        "value": 6
+      },
+      {
+        "name": "数学建模",
+        "value": 6
+      },
+      {
+        "name": "图像算法",
+        "value": 5
+      },
+      {
+        "name": "MySQL",
+        "value": 5
+      },
+      {
+        "name": "Stable",
+        "value": 5
+      },
+      {
+        "name": "Diffusion",
+        "value": 5
+      },
+      {
+        "name": "VisionPro",
+        "value": 5
+      },
+      {
+        "name": "模型压缩",
+        "value": 5
+      },
+      {
+        "name": "语义分割",
+        "value": 5
+      },
+      {
+        "name": "Transformer架构",
+        "value": 5
+      },
+      {
+        "name": "Hive",
+        "value": 5
+      },
+      {
+        "name": "数据库",
+        "value": 5
+      },
+      {
+        "name": "需求分析",
+        "value": 5
+      },
+      {
+        "name": "CUDA编程",
+        "value": 5
+      },
+      {
+        "name": "ROS",
+        "value": 5
+      },
+      {
+        "name": "NLP算法",
+        "value": 5
+      },
+      {
+        "name": "Linux开发",
+        "value": 5
+      },
+      {
+        "name": "Python编程",
+        "value": 5
+      },
+      {
+        "name": "分布式系统",
+        "value": 5
+      },
+      {
+        "name": "Golang",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "category": "云计算",
+    "words": [
+      {
+        "name": "云计算",
+        "value": 194
+      },
+      {
+        "name": "Python",
+        "value": 46
+      },
+      {
+        "name": "大数据",
+        "value": 44
+      },
+      {
+        "name": "项目管理",
+        "value": 44
+      },
+      {
+        "name": "Java",
+        "value": 37
+      },
+      {
+        "name": "Docker",
+        "value": 32
+      },
+      {
+        "name": "Linux",
+        "value": 30
+      },
+      {
+        "name": "虚拟化技术",
+        "value": 27
+      },
+      {
+        "name": "网络安全",
+        "value": 26
+      },
+      {
+        "name": "MySQL",
+        "value": 26
+      },
+      {
+        "name": "Kubernetes",
+        "value": 25
+      },
+      {
+        "name": "沟通能力",
+        "value": 21
+      },
+      {
+        "name": "销售技巧",
+        "value": 21
+      },
+      {
+        "name": "云计算技术",
+        "value": 21
+      },
+      {
+        "name": "综合布线",
+        "value": 21
+      },
+      {
+        "name": "数据分析",
+        "value": 19
+      },
+      {
+        "name": "Spring",
+        "value": 19
+      },
+      {
+        "name": "产品技术理解",
+        "value": 18
+      },
+      {
+        "name": "计算机网络",
+        "value": 17
+      },
+      {
+        "name": "数据库管理",
+        "value": 17
+      },
+      {
+        "name": "Linux系统",
+        "value": 16
+      },
+      {
+        "name": "Linux系统管理",
+        "value": 16
+      },
+      {
+        "name": "团队协作",
+        "value": 15
+      },
+      {
+        "name": "分布式系统",
+        "value": 15
+      },
+      {
+        "name": "需求分析",
+        "value": 15
+      },
+      {
+        "name": "微服务架构",
+        "value": 15
+      },
+      {
+        "name": "客户关系维护",
+        "value": 14
+      },
+      {
+        "name": "市场分析",
+        "value": 14
+      },
+      {
+        "name": "客户资源管理",
+        "value": 13
+      },
+      {
+        "name": "数据库",
+        "value": 13
+      },
+      {
+        "name": "Shell脚本",
+        "value": 12
+      },
+      {
+        "name": "跨部门协作",
+        "value": 11
+      },
+      {
+        "name": "客户沟通",
+        "value": 11
+      },
+      {
+        "name": "SQL",
+        "value": 11
+      },
+      {
+        "name": "AWS",
+        "value": 11
+      },
+      {
+        "name": "团队管理",
+        "value": 11
+      },
+      {
+        "name": "抗压能力",
+        "value": 10
+      },
+      {
+        "name": "TCP/IP协议",
+        "value": 10
+      },
+      {
+        "name": "沟通协调",
+        "value": 10
+      },
+      {
+        "name": "云计算平台",
+        "value": 10
+      },
+      {
+        "name": "系统架构设计",
+        "value": 10
+      },
+      {
+        "name": "网络设备配置",
+        "value": 10
+      },
+      {
+        "name": "系统集成",
+        "value": 10
+      },
+      {
+        "name": "物联网",
+        "value": 10
+      },
+      {
+        "name": "Boot",
+        "value": 10
+      },
+      {
+        "name": "DevOps",
+        "value": 10
+      },
+      {
+        "name": "Redis",
+        "value": 10
+      },
+      {
+        "name": "操作系统",
+        "value": 10
+      },
+      {
+        "name": "商务谈判",
+        "value": 9
+      },
+      {
+        "name": "办公软件",
+        "value": 9
+      },
+      {
+        "name": "分布式存储",
+        "value": 9
+      },
+      {
+        "name": "OpenStack",
+        "value": 9
+      },
+      {
+        "name": "解决方案设计",
+        "value": 9
+      },
+      {
+        "name": "网络协议",
+        "value": 9
+      },
+      {
+        "name": "网络技术",
+        "value": 8
+      },
+      {
+        "name": "市场营销",
+        "value": 8
+      },
+      {
+        "name": "问题解决",
+        "value": 8
+      },
+      {
+        "name": "自动化运维",
+        "value": 8
+      },
+      {
+        "name": "SDN/NFV",
+        "value": 8
+      },
+      {
+        "name": "TCP/IP",
+        "value": 8
+      },
+      {
+        "name": "性能优化",
+        "value": 8
+      },
+      {
+        "name": "MongoDB",
+        "value": 8
+      },
+      {
+        "name": "C++",
+        "value": 8
+      },
+      {
+        "name": "Golang",
+        "value": 7
+      },
+      {
+        "name": "服务器管理",
+        "value": 7
+      },
+      {
+        "name": "故障处理",
+        "value": 7
+      },
+      {
+        "name": "容器技术",
+        "value": 7
+      },
+      {
+        "name": "客户关系管理",
+        "value": 7
+      },
+      {
+        "name": "Windows",
+        "value": 7
+      },
+      {
+        "name": "技术文档编写",
+        "value": 7
+      },
+      {
+        "name": "沟通表达",
+        "value": 7
+      },
+      {
+        "name": "Shell",
+        "value": 7
+      },
+      {
+        "name": "网络通信协议",
+        "value": 7
+      },
+      {
+        "name": "开源系统开发工具",
+        "value": 7
+      },
+      {
+        "name": "方案设计",
+        "value": 7
+      },
+      {
+        "name": "中间件",
+        "value": 7
+      },
+      {
+        "name": "客户资源",
+        "value": 7
+      },
+      {
+        "name": "客户服务",
+        "value": 6
+      },
+      {
+        "name": "通信技术",
+        "value": 6
+      },
+      {
+        "name": "网络规划",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "category": "智能家居",
+    "words": [
+      {
+        "name": "数据分析",
+        "value": 22
+      },
+      {
+        "name": "项目管理",
+        "value": 19
+      },
+      {
+        "name": "沟通能力",
+        "value": 18
+      },
+      {
+        "name": "客户沟通",
+        "value": 18
+      },
+      {
+        "name": "市场分析",
+        "value": 18
+      },
+      {
+        "name": "团队协作",
+        "value": 16
+      },
+      {
+        "name": "销售技巧",
+        "value": 15
+      },
+      {
+        "name": "团队管理",
+        "value": 15
+      },
+      {
+        "name": "客户服务",
+        "value": 15
+      },
+      {
+        "name": "客户关系管理",
+        "value": 14
+      },
+      {
+        "name": "销售策略",
+        "value": 12
+      },
+      {
+        "name": "客户关系维护",
+        "value": 12
+      },
+      {
+        "name": "市场调研",
+        "value": 11
+      },
+      {
+        "name": "销售管理",
+        "value": 10
+      },
+      {
+        "name": "客户开发",
+        "value": 10
+      },
+      {
+        "name": "市场开拓",
+        "value": 9
+      },
+      {
+        "name": "C语言",
+        "value": 9
+      },
+      {
+        "name": "智能家居",
+        "value": 9
+      },
+      {
+        "name": "PCB设计",
+        "value": 9
+      },
+      {
+        "name": "竞品分析",
+        "value": 8
+      },
+      {
+        "name": "智能家居销售",
+        "value": 7
+      },
+      {
+        "name": "产品规划",
+        "value": 6
+      },
+      {
+        "name": "销售策略制定",
+        "value": 6
+      },
+      {
+        "name": "抗压能力",
+        "value": 6
+      },
+      {
+        "name": "市场开发",
+        "value": 6
+      },
+      {
+        "name": "需求分析",
+        "value": 5
+      },
+      {
+        "name": "CAD",
+        "value": 5
+      },
+      {
+        "name": "产品知识",
+        "value": 5
+      },
+      {
+        "name": "市场推广",
+        "value": 5
+      },
+      {
+        "name": "商务谈判",
+        "value": 5
+      },
+      {
+        "name": "沟通协调能力",
+        "value": 5
+      },
+      {
+        "name": "团队合作",
+        "value": 5
+      },
+      {
+        "name": "电路设计",
+        "value": 4
+      },
+      {
+        "name": "产品管理",
+        "value": 4
+      },
+      {
+        "name": "英语沟通",
+        "value": 4
+      },
+      {
+        "name": "市场营销",
+        "value": 4
+      },
+      {
+        "name": "预算管理",
+        "value": 4
+      },
+      {
+        "name": "库存管理",
+        "value": 4
+      },
+      {
+        "name": "用户体验优化",
+        "value": 4
+      },
+      {
+        "name": "跨部门协作",
+        "value": 4
+      },
+      {
+        "name": "逻辑思维",
+        "value": 4
+      },
+      {
+        "name": "数字电路",
+        "value": 4
+      },
+      {
+        "name": "3D建模",
+        "value": 4
+      },
+      {
+        "name": "供应商管理",
+        "value": 4
+      },
+      {
+        "name": "Python",
+        "value": 4
+      },
+      {
+        "name": "办公软件",
+        "value": 4
+      },
+      {
+        "name": "数据库",
+        "value": 4
+      },
+      {
+        "name": "测试用例设计",
+        "value": 4
+      },
+      {
+        "name": "Linux",
+        "value": 4
+      },
+      {
+        "name": "C/C++",
+        "value": 4
+      },
+      {
+        "name": "AutoCAD",
+        "value": 4
+      },
+      {
+        "name": "C/C++编程",
+        "value": 4
+      },
+      {
+        "name": "客户维护",
+        "value": 4
+      },
+      {
+        "name": "产品演示",
+        "value": 4
+      },
+      {
+        "name": "Altium",
+        "value": 3
+      },
+      {
+        "name": "技术文档编写",
+        "value": 3
+      },
+      {
+        "name": "嵌入式系统开发",
+        "value": 3
+      },
+      {
+        "name": "市场策略制定",
+        "value": 3
+      },
+      {
+        "name": "电路分析",
+        "value": 3
+      },
+      {
+        "name": "渠道管理",
+        "value": 3
+      },
+      {
+        "name": "物联网",
+        "value": 3
+      },
+      {
+        "name": "产品生命周期管理",
+        "value": 3
+      },
+      {
+        "name": "订单处理",
+        "value": 3
+      },
+      {
+        "name": "适应能力",
+        "value": 3
+      },
+      {
+        "name": "电子数码产品知识",
+        "value": 3
+      },
+      {
+        "name": "压力承受",
+        "value": 3
+      },
+      {
+        "name": "质量检测",
+        "value": 3
+      },
+      {
+        "name": "沟通协调",
+        "value": 3
+      },
+      {
+        "name": "模拟电路",
+        "value": 3
+      },
+      {
+        "name": "沟通谈判",
+        "value": 3
+      },
+      {
+        "name": "渠道开发",
+        "value": 3
+      },
+      {
+        "name": "客户需求分析",
+        "value": 3
+      },
+      {
+        "name": "传感器技术",
+        "value": 3
+      },
+      {
+        "name": "渠道拓展",
+        "value": 3
+      },
+      {
+        "name": "大客户开发",
+        "value": 3
+      },
+      {
+        "name": "Linux操作系统",
+        "value": 3
+      },
+      {
+        "name": "结构设计",
+        "value": 3
+      },
+      {
+        "name": "驱动开发",
+        "value": 3
+      },
+      {
+        "name": "TCP/IP协议",
+        "value": 3
+      },
+      {
+        "name": "电子元器件知识",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "category": "大数据分析",
+    "words": [
+      {
+        "name": "大数据分析",
+        "value": 87
+      },
+      {
+        "name": "数据分析",
+        "value": 46
+      },
+      {
+        "name": "Python",
+        "value": 35
+      },
+      {
+        "name": "SQL",
+        "value": 28
+      },
+      {
+        "name": "项目管理",
+        "value": 21
+      },
+      {
+        "name": "Spark",
+        "value": 18
+      },
+      {
+        "name": "Hadoop",
+        "value": 15
+      },
+      {
+        "name": "数据挖掘",
+        "value": 15
+      },
+      {
+        "name": "Java",
+        "value": 13
+      },
+      {
+        "name": "数据可视化",
+        "value": 11
+      },
+      {
+        "name": "数据建模",
+        "value": 11
+      },
+      {
+        "name": "团队管理",
+        "value": 9
+      },
+      {
+        "name": "Flink",
+        "value": 9
+      },
+      {
+        "name": "Excel",
+        "value": 8
+      },
+      {
+        "name": "统计分析",
+        "value": 8
+      },
+      {
+        "name": "Hive",
+        "value": 7
+      },
+      {
+        "name": "数据接口开发",
+        "value": 7
+      },
+      {
+        "name": "市场调研",
+        "value": 7
+      },
+      {
+        "name": "跨部门协作",
+        "value": 7
+      },
+      {
+        "name": "MySQL",
+        "value": 6
+      },
+      {
+        "name": "数据库管理",
+        "value": 6
+      },
+      {
+        "name": "团队协作",
+        "value": 6
+      },
+      {
+        "name": "需求分析",
+        "value": 5
+      },
+      {
+        "name": "文档编写",
+        "value": 5
+      },
+      {
+        "name": "Spring",
+        "value": 5
+      },
+      {
+        "name": "系统测试",
+        "value": 5
+      },
+      {
+        "name": "沟通协调",
+        "value": 5
+      },
+      {
+        "name": "沟通能力",
+        "value": 5
+      },
+      {
+        "name": "数据仓库",
+        "value": 5
+      },
+      {
+        "name": "数据清洗",
+        "value": 5
+      },
+      {
+        "name": "Kafka",
+        "value": 5
+      },
+      {
+        "name": "流程优化",
+        "value": 5
+      },
+      {
+        "name": "逻辑思维",
+        "value": 5
+      },
+      {
+        "name": "Boot",
+        "value": 4
+      },
+      {
+        "name": "Redis",
+        "value": 4
+      },
+      {
+        "name": "市场分析",
+        "value": 4
+      },
+      {
+        "name": "英语沟通",
+        "value": 4
+      },
+      {
+        "name": "数据结构与算法",
+        "value": 4
+      },
+      {
+        "name": "风险识别",
+        "value": 4
+      },
+      {
+        "name": "云计算",
+        "value": 4
+      },
+      {
+        "name": "系统维护",
+        "value": 4
+      },
+      {
+        "name": "IT运维",
+        "value": 4
+      },
+      {
+        "name": "机器学习",
+        "value": 4
+      },
+      {
+        "name": "数据处理",
+        "value": 4
+      },
+      {
+        "name": "办公软件",
+        "value": 4
+      },
+      {
+        "name": "沟通协调能力",
+        "value": 4
+      },
+      {
+        "name": "数据治理",
+        "value": 4
+      },
+      {
+        "name": "风险控制",
+        "value": 4
+      },
+      {
+        "name": "CRM系统",
+        "value": 3
+      },
+      {
+        "name": "HBase",
+        "value": 3
+      },
+      {
+        "name": "抗压能力",
+        "value": 3
+      },
+      {
+        "name": "财务分析",
+        "value": 3
+      },
+      {
+        "name": "PowerBI",
+        "value": 3
+      },
+      {
+        "name": "Java开发",
+        "value": 3
+      },
+      {
+        "name": "微服务架构",
+        "value": 3
+      },
+      {
+        "name": "竞品分析",
+        "value": 3
+      },
+      {
+        "name": "数据报表管理",
+        "value": 3
+      },
+      {
+        "name": "Git",
+        "value": 3
+      },
+      {
+        "name": "Matlab",
+        "value": 3
+      },
+      {
+        "name": "内容策划",
+        "value": 3
+      },
+      {
+        "name": "品牌建设",
+        "value": 3
+      },
+      {
+        "name": "Office",
+        "value": 3
+      },
+      {
+        "name": "BI工具",
+        "value": 3
+      },
+      {
+        "name": "社群运营",
+        "value": 3
+      },
+      {
+        "name": "文案撰写",
+        "value": 3
+      },
+      {
+        "name": "市场营销策划",
+        "value": 3
+      },
+      {
+        "name": "通信行业知识",
+        "value": 3
+      },
+      {
+        "name": "大数据处理",
+        "value": 3
+      },
+      {
+        "name": "系统设计",
+        "value": 3
+      },
+      {
+        "name": "Vue",
+        "value": 3
+      },
+      {
+        "name": "C++",
+        "value": 3
+      },
+      {
+        "name": "销售谈判",
+        "value": 3
+      },
+      {
+        "name": "数字营销工具",
+        "value": 3
+      },
+      {
+        "name": "战略规划",
+        "value": 3
+      },
+      {
+        "name": "用户行为分析",
+        "value": 3
+      },
+      {
+        "name": "ETL",
+        "value": 3
+      },
+      {
+        "name": "数据安全",
+        "value": 3
+      },
+      {
+        "name": "大数据平台",
+        "value": 3
+      },
+      {
+        "name": "商业意识",
+        "value": 3
+      },
+      {
+        "name": "数据分析工具",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "category": "大数据处理",
+    "words": [
+      {
+        "name": "Spark",
+        "value": 71
+      },
+      {
+        "name": "Hadoop",
+        "value": 60
+      },
+      {
+        "name": "Python",
+        "value": 58
+      },
+      {
+        "name": "SQL",
+        "value": 53
+      },
+      {
+        "name": "Java",
+        "value": 49
+      },
+      {
+        "name": "大数据处理",
+        "value": 44
+      },
+      {
+        "name": "Hive",
+        "value": 29
+      },
+      {
+        "name": "Flink",
+        "value": 24
+      },
+      {
+        "name": "Kafka",
+        "value": 22
+      },
+      {
+        "name": "Linux",
+        "value": 21
+      },
+      {
+        "name": "Redis",
+        "value": 20
+      },
+      {
+        "name": "Spring",
+        "value": 17
+      },
+      {
+        "name": "数据分析",
+        "value": 17
+      },
+      {
+        "name": "MySQL",
+        "value": 14
+      },
+      {
+        "name": "分布式系统",
+        "value": 14
+      },
+      {
+        "name": "数据清洗",
+        "value": 13
+      },
+      {
+        "name": "数据仓库",
+        "value": 12
+      },
+      {
+        "name": "数据治理",
+        "value": 12
+      },
+      {
+        "name": "数据挖掘",
+        "value": 11
+      },
+      {
+        "name": "Spring框架",
+        "value": 11
+      },
+      {
+        "name": "微服务架构",
+        "value": 11
+      },
+      {
+        "name": "Boot",
+        "value": 9
+      },
+      {
+        "name": "HBase",
+        "value": 9
+      },
+      {
+        "name": "团队管理",
+        "value": 9
+      },
+      {
+        "name": "机器学习",
+        "value": 9
+      },
+      {
+        "name": "数据建模",
+        "value": 8
+      },
+      {
+        "name": "Linux系统",
+        "value": 8
+      },
+      {
+        "name": "MyBatis",
+        "value": 7
+      },
+      {
+        "name": "ETL",
+        "value": 7
+      },
+      {
+        "name": "数据库设计",
+        "value": 7
+      },
+      {
+        "name": "数据库优化",
+        "value": 7
+      },
+      {
+        "name": "设计模式",
+        "value": 6
+      },
+      {
+        "name": "数据处理",
+        "value": 6
+      },
+      {
+        "name": "数据仓库设计",
+        "value": 5
+      },
+      {
+        "name": "多线程",
+        "value": 5
+      },
+      {
+        "name": "数据中台",
+        "value": 5
+      },
+      {
+        "name": "沟通能力",
+        "value": 5
+      },
+      {
+        "name": "ETL开发",
+        "value": 5
+      },
+      {
+        "name": "Scala",
+        "value": 5
+      },
+      {
+        "name": "HDFS",
+        "value": 5
+      },
+      {
+        "name": "ETL工具",
+        "value": 5
+      },
+      {
+        "name": "系统架构设计",
+        "value": 5
+      },
+      {
+        "name": "Docker",
+        "value": 5
+      },
+      {
+        "name": "数据可视化",
+        "value": 5
+      },
+      {
+        "name": "大数据分析",
+        "value": 5
+      },
+      {
+        "name": "高并发处理",
+        "value": 5
+      },
+      {
+        "name": "Java开发",
+        "value": 5
+      },
+      {
+        "name": "SpringBoot",
+        "value": 5
+      },
+      {
+        "name": "项目管理",
+        "value": 5
+      },
+      {
+        "name": "客户服务",
+        "value": 4
+      },
+      {
+        "name": "Kubernetes",
+        "value": 4
+      },
+      {
+        "name": "Dubbo",
+        "value": 4
+      },
+      {
+        "name": "MQ",
+        "value": 4
+      },
+      {
+        "name": "团队合作",
+        "value": 4
+      },
+      {
+        "name": "Go",
+        "value": 4
+      },
+      {
+        "name": "Shell",
+        "value": 4
+      },
+      {
+        "name": "多线程编程",
+        "value": 4
+      },
+      {
+        "name": "大数据平台",
+        "value": 4
+      },
+      {
+        "name": "Cloud",
+        "value": 4
+      },
+      {
+        "name": "Hadoop生态",
+        "value": 4
+      },
+      {
+        "name": "数据结构",
+        "value": 4
+      },
+      {
+        "name": "数据库管理",
+        "value": 4
+      },
+      {
+        "name": "SQL优化",
+        "value": 4
+      },
+      {
+        "name": "Tableau",
+        "value": 4
+      },
+      {
+        "name": "SQL语言",
+        "value": 4
+      },
+      {
+        "name": "性能优化",
+        "value": 4
+      },
+      {
+        "name": "Storm",
+        "value": 3
+      },
+      {
+        "name": "数据模型设计",
+        "value": 3
+      },
+      {
+        "name": "数据仓库建模",
+        "value": 3
+      },
+      {
+        "name": "Mysql",
+        "value": 3
+      },
+      {
+        "name": "Tomcat",
+        "value": 3
+      },
+      {
+        "name": "客户关系管理",
+        "value": 3
+      },
+      {
+        "name": "数据结构与算法",
+        "value": 3
+      },
+      {
+        "name": "C++",
+        "value": 3
+      },
+      {
+        "name": "Python编程",
+        "value": 3
+      },
+      {
+        "name": "JVM",
+        "value": 3
+      },
+      {
+        "name": "分布式架构",
+        "value": 3
+      },
+      {
+        "name": "Doris",
+        "value": 3
+      },
+      {
+        "name": "团队协作",
+        "value": 3
+      },
+      {
+        "name": "市场分析",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "category": "机器人自动化",
+    "words": [
+      {
+        "name": "PLC编程",
+        "value": 24
+      },
+      {
+        "name": "机器人自动化",
+        "value": 20
+      },
+      {
+        "name": "项目管理",
+        "value": 17
+      },
+      {
+        "name": "AutoCAD",
+        "value": 15
+      },
+      {
+        "name": "团队合作",
+        "value": 15
+      },
+      {
+        "name": "机械设计",
+        "value": 14
+      },
+      {
+        "name": "机器人调试",
+        "value": 12
+      },
+      {
+        "name": "Python",
+        "value": 10
+      },
+      {
+        "name": "CAD",
+        "value": 10
+      },
+      {
+        "name": "沟通能力",
+        "value": 9
+      },
+      {
+        "name": "传感器应用",
+        "value": 8
+      },
+      {
+        "name": "团队协作",
+        "value": 8
+      },
+      {
+        "name": "自动化控制",
+        "value": 8
+      },
+      {
+        "name": "工业机器人",
+        "value": 7
+      },
+      {
+        "name": "Solidworks",
+        "value": 7
+      },
+      {
+        "name": "SolidWorks",
+        "value": 7
+      },
+      {
+        "name": "电气设计",
+        "value": 6
+      },
+      {
+        "name": "设备维护",
+        "value": 6
+      },
+      {
+        "name": "故障排查",
+        "value": 6
+      },
+      {
+        "name": "C++",
+        "value": 6
+      },
+      {
+        "name": "机器人编程",
+        "value": 6
+      },
+      {
+        "name": "伺服电机控制",
+        "value": 5
+      },
+      {
+        "name": "自动化设备",
+        "value": 5
+      },
+      {
+        "name": "项目研发",
+        "value": 5
+      },
+      {
+        "name": "PLC控制",
+        "value": 5
+      },
+      {
+        "name": "市场分析",
+        "value": 5
+      },
+      {
+        "name": "工业机器人应用",
+        "value": 5
+      },
+      {
+        "name": "客户沟通",
+        "value": 5
+      },
+      {
+        "name": "技术支持",
+        "value": 5
+      },
+      {
+        "name": "有限元分析",
+        "value": 5
+      },
+      {
+        "name": "MES系统",
+        "value": 4
+      },
+      {
+        "name": "数据分析",
+        "value": 4
+      },
+      {
+        "name": "销售技巧",
+        "value": 4
+      },
+      {
+        "name": "市场开拓",
+        "value": 4
+      },
+      {
+        "name": "电机控制",
+        "value": 4
+      },
+      {
+        "name": "三维建模",
+        "value": 4
+      },
+      {
+        "name": "液压系统",
+        "value": 4
+      },
+      {
+        "name": "抗压能力",
+        "value": 4
+      },
+      {
+        "name": "项目协调",
+        "value": 4
+      },
+      {
+        "name": "C/C++",
+        "value": 3
+      },
+      {
+        "name": "ROS",
+        "value": 3
+      },
+      {
+        "name": "系统调试",
+        "value": 3
+      },
+      {
+        "name": "技术文档编写",
+        "value": 3
+      },
+      {
+        "name": "机械加工工艺",
+        "value": 3
+      },
+      {
+        "name": "Auto",
+        "value": 3
+      },
+      {
+        "name": "自动化设备维护",
+        "value": 3
+      },
+      {
+        "name": "商务谈判",
+        "value": 3
+      },
+      {
+        "name": "非标自动化",
+        "value": 3
+      },
+      {
+        "name": "电气系统设计",
+        "value": 3
+      },
+      {
+        "name": "客户关系管理",
+        "value": 3
+      },
+      {
+        "name": "机器人运动控制",
+        "value": 3
+      },
+      {
+        "name": "硬件测试",
+        "value": 3
+      },
+      {
+        "name": "设备调试",
+        "value": 3
+      },
+      {
+        "name": "Git",
+        "value": 3
+      },
+      {
+        "name": "气动系统",
+        "value": 3
+      },
+      {
+        "name": "机械制造",
+        "value": 3
+      },
+      {
+        "name": "PCB设计",
+        "value": 3
+      },
+      {
+        "name": "客户关系维护",
+        "value": 3
+      },
+      {
+        "name": "机械原理",
+        "value": 3
+      },
+      {
+        "name": "Linux",
+        "value": 3
+      },
+      {
+        "name": "电气工程",
+        "value": 3
+      },
+      {
+        "name": "故障排除",
+        "value": 3
+      },
+      {
+        "name": "技术文档维护",
+        "value": 3
+      },
+      {
+        "name": "SOLIDWORKS",
+        "value": 3
+      },
+      {
+        "name": "HMI设计",
+        "value": 2
+      },
+      {
+        "name": "变频器",
+        "value": 2
+      },
+      {
+        "name": "工业机器人编程",
+        "value": 2
+      },
+      {
+        "name": "自动化机械设计",
+        "value": 2
+      },
+      {
+        "name": "机器人开发",
+        "value": 2
+      },
+      {
+        "name": "轨迹编程",
+        "value": 2
+      },
+      {
+        "name": "自动化项目",
+        "value": 2
+      },
+      {
+        "name": "电气知识",
+        "value": 2
+      },
+      {
+        "name": "焊接工艺",
+        "value": 2
+      },
+      {
+        "name": "故障诊断",
+        "value": 2
+      },
+      {
+        "name": "编程",
+        "value": 2
+      },
+      {
+        "name": "技术指导",
+        "value": 2
+      },
+      {
+        "name": "UG",
+        "value": 2
+      },
+      {
+        "name": "伺服电机驱动",
+        "value": 2
+      },
+      {
+        "name": "ERP系统",
+        "value": 2
+      },
+      {
+        "name": "自动化设计",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "category": "大数据平台",
+    "words": [
+      {
+        "name": "Hadoop",
+        "value": 53
+      },
+      {
+        "name": "Spark",
+        "value": 53
+      },
+      {
+        "name": "Python",
+        "value": 49
+      },
+      {
+        "name": "SQL",
+        "value": 44
+      },
+      {
+        "name": "Java",
+        "value": 40
+      },
+      {
+        "name": "Flink",
+        "value": 32
+      },
+      {
+        "name": "Hive",
+        "value": 30
+      },
+      {
+        "name": "大数据平台",
+        "value": 23
+      },
+      {
+        "name": "Kafka",
+        "value": 22
+      },
+      {
+        "name": "数据治理",
+        "value": 20
+      },
+      {
+        "name": "数据仓库",
+        "value": 19
+      },
+      {
+        "name": "Linux",
+        "value": 19
+      },
+      {
+        "name": "数据建模",
+        "value": 11
+      },
+      {
+        "name": "数据分析",
+        "value": 10
+      },
+      {
+        "name": "ETL",
+        "value": 10
+      },
+      {
+        "name": "设计模式",
+        "value": 9
+      },
+      {
+        "name": "ETL工具",
+        "value": 9
+      },
+      {
+        "name": "MySQL",
+        "value": 9
+      },
+      {
+        "name": "Spring框架",
+        "value": 8
+      },
+      {
+        "name": "Shell",
+        "value": 8
+      },
+      {
+        "name": "Oracle",
+        "value": 8
+      },
+      {
+        "name": "Shell脚本",
+        "value": 8
+      },
+      {
+        "name": "微服务架构",
+        "value": 7
+      },
+      {
+        "name": "数据挖掘",
+        "value": 7
+      },
+      {
+        "name": "数据清洗",
+        "value": 6
+      },
+      {
+        "name": "数据结构与算法",
+        "value": 6
+      },
+      {
+        "name": "分布式系统",
+        "value": 5
+      },
+      {
+        "name": "数据库管理",
+        "value": 5
+      },
+      {
+        "name": "Golang",
+        "value": 5
+      },
+      {
+        "name": "C++",
+        "value": 5
+      },
+      {
+        "name": "Redis",
+        "value": 5
+      },
+      {
+        "name": "Docker",
+        "value": 5
+      },
+      {
+        "name": "数据模型设计",
+        "value": 5
+      },
+      {
+        "name": "数据中台",
+        "value": 5
+      },
+      {
+        "name": "数据可视化",
+        "value": 5
+      },
+      {
+        "name": "HDFS",
+        "value": 5
+      },
+      {
+        "name": "Hadoop生态",
+        "value": 4
+      },
+      {
+        "name": "Scala",
+        "value": 4
+      },
+      {
+        "name": "需求分析",
+        "value": 4
+      },
+      {
+        "name": "Spring",
+        "value": 4
+      },
+      {
+        "name": "大数据处理",
+        "value": 4
+      },
+      {
+        "name": "项目管理",
+        "value": 4
+      },
+      {
+        "name": "HBase",
+        "value": 4
+      },
+      {
+        "name": "Tableau",
+        "value": 4
+      },
+      {
+        "name": "Doris",
+        "value": 4
+      },
+      {
+        "name": "Linux系统",
+        "value": 4
+      },
+      {
+        "name": "数据仓库设计",
+        "value": 4
+      },
+      {
+        "name": "AIGC/LLM",
+        "value": 4
+      },
+      {
+        "name": "JavaScript",
+        "value": 4
+      },
+      {
+        "name": "BI工具",
+        "value": 4
+      },
+      {
+        "name": "Yarn",
+        "value": 4
+      },
+      {
+        "name": "沟通能力",
+        "value": 3
+      },
+      {
+        "name": "数据模型",
+        "value": 3
+      },
+      {
+        "name": "商务谈判",
+        "value": 3
+      },
+      {
+        "name": "数据库",
+        "value": 3
+      },
+      {
+        "name": "客户关系管理",
+        "value": 3
+      },
+      {
+        "name": "Linux系统管理",
+        "value": 3
+      },
+      {
+        "name": "微服务",
+        "value": 3
+      },
+      {
+        "name": "数据库优化",
+        "value": 3
+      },
+      {
+        "name": "数据仓库架构",
+        "value": 3
+      },
+      {
+        "name": "YARN",
+        "value": 3
+      },
+      {
+        "name": "Java开发",
+        "value": 3
+      },
+      {
+        "name": "安全漏洞扫描",
+        "value": 3
+      },
+      {
+        "name": "自动化运维",
+        "value": 3
+      },
+      {
+        "name": "ETL开发",
+        "value": 3
+      },
+      {
+        "name": "MapReduce",
+        "value": 3
+      },
+      {
+        "name": "SpringCloud",
+        "value": 3
+      },
+      {
+        "name": "云计算",
+        "value": 2
+      },
+      {
+        "name": "大数据平台开发",
+        "value": 2
+      },
+      {
+        "name": "JAVA",
+        "value": 2
+      },
+      {
+        "name": "Cloud",
+        "value": 2
+      },
+      {
+        "name": "AGI技术预研",
+        "value": 2
+      },
+      {
+        "name": "数据资产管理",
+        "value": 2
+      },
+      {
+        "name": "Linux操作系统",
+        "value": 2
+      },
+      {
+        "name": "关系型数据库",
+        "value": 2
+      },
+      {
+        "name": "SQL语言",
+        "value": 2
+      },
+      {
+        "name": "前端开发",
+        "value": 2
+      },
+      {
+        "name": "办公软件操作",
+        "value": 2
+      },
+      {
+        "name": "SQL优化",
+        "value": 2
+      },
+      {
+        "name": "后端开发",
+        "value": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,251 @@
+{
+  "exp_levels": [
+    "3-5年",
+    "实习/应届",
+    "1-3年",
+    "5-10年",
+    "无经验要求",
+    "10年以上",
+    "2-5年",
+    "0-1年",
+    "2-3年"
+  ],
+  "degree_levels": [
+    "本科",
+    "硕士",
+    "大专",
+    "中专及以下",
+    "不限",
+    "博士"
+  ],
+  "data": [
+    {
+      "exp": "0-1年",
+      "degree": "本科",
+      "avg_salary": 25500.0,
+      "count": 4
+    },
+    {
+      "exp": "0-1年",
+      "degree": "硕士",
+      "avg_salary": 37500.0,
+      "count": 1
+    },
+    {
+      "exp": "1-3年",
+      "degree": "不限",
+      "avg_salary": 10172.0,
+      "count": 25
+    },
+    {
+      "exp": "1-3年",
+      "degree": "中专及以下",
+      "avg_salary": 8944.74,
+      "count": 57
+    },
+    {
+      "exp": "1-3年",
+      "degree": "博士",
+      "avg_salary": 27227.7,
+      "count": 15
+    },
+    {
+      "exp": "1-3年",
+      "degree": "大专",
+      "avg_salary": 10460.99,
+      "count": 395
+    },
+    {
+      "exp": "1-3年",
+      "degree": "本科",
+      "avg_salary": 15306.31,
+      "count": 739
+    },
+    {
+      "exp": "1-3年",
+      "degree": "硕士",
+      "avg_salary": 23929.09,
+      "count": 154
+    },
+    {
+      "exp": "10年以上",
+      "degree": "博士",
+      "avg_salary": 80000.0,
+      "count": 1
+    },
+    {
+      "exp": "10年以上",
+      "degree": "大专",
+      "avg_salary": 26645.83,
+      "count": 12
+    },
+    {
+      "exp": "10年以上",
+      "degree": "本科",
+      "avg_salary": 39817.19,
+      "count": 75
+    },
+    {
+      "exp": "10年以上",
+      "degree": "硕士",
+      "avg_salary": 58323.82,
+      "count": 22
+    },
+    {
+      "exp": "2-3年",
+      "degree": "中专及以下",
+      "avg_salary": 15000.0,
+      "count": 1
+    },
+    {
+      "exp": "2-3年",
+      "degree": "本科",
+      "avg_salary": 15000.0,
+      "count": 1
+    },
+    {
+      "exp": "2-5年",
+      "degree": "大专",
+      "avg_salary": 14750.0,
+      "count": 2
+    },
+    {
+      "exp": "2-5年",
+      "degree": "本科",
+      "avg_salary": 10000.0,
+      "count": 2
+    },
+    {
+      "exp": "3-5年",
+      "degree": "不限",
+      "avg_salary": 15458.33,
+      "count": 24
+    },
+    {
+      "exp": "3-5年",
+      "degree": "中专及以下",
+      "avg_salary": 10250.0,
+      "count": 47
+    },
+    {
+      "exp": "3-5年",
+      "degree": "博士",
+      "avg_salary": 32977.23,
+      "count": 11
+    },
+    {
+      "exp": "3-5年",
+      "degree": "大专",
+      "avg_salary": 12185.22,
+      "count": 309
+    },
+    {
+      "exp": "3-5年",
+      "degree": "本科",
+      "avg_salary": 20952.82,
+      "count": 1330
+    },
+    {
+      "exp": "3-5年",
+      "degree": "硕士",
+      "avg_salary": 29510.99,
+      "count": 214
+    },
+    {
+      "exp": "5-10年",
+      "degree": "不限",
+      "avg_salary": 22096.15,
+      "count": 13
+    },
+    {
+      "exp": "5-10年",
+      "degree": "中专及以下",
+      "avg_salary": 22178.57,
+      "count": 7
+    },
+    {
+      "exp": "5-10年",
+      "degree": "博士",
+      "avg_salary": 45416.55,
+      "count": 10
+    },
+    {
+      "exp": "5-10年",
+      "degree": "大专",
+      "avg_salary": 16622.73,
+      "count": 125
+    },
+    {
+      "exp": "5-10年",
+      "degree": "本科",
+      "avg_salary": 25203.47,
+      "count": 824
+    },
+    {
+      "exp": "5-10年",
+      "degree": "硕士",
+      "avg_salary": 33237.38,
+      "count": 86
+    },
+    {
+      "exp": "实习/应届",
+      "degree": "博士",
+      "avg_salary": 23466.6,
+      "count": 5
+    },
+    {
+      "exp": "实习/应届",
+      "degree": "大专",
+      "avg_salary": 13464.29,
+      "count": 14
+    },
+    {
+      "exp": "实习/应届",
+      "degree": "本科",
+      "avg_salary": 10072.71,
+      "count": 197
+    },
+    {
+      "exp": "实习/应届",
+      "degree": "硕士",
+      "avg_salary": 10882.7,
+      "count": 27
+    },
+    {
+      "exp": "无经验要求",
+      "degree": "不限",
+      "avg_salary": 10073.43,
+      "count": 100
+    },
+    {
+      "exp": "无经验要求",
+      "degree": "中专及以下",
+      "avg_salary": 12067.21,
+      "count": 46
+    },
+    {
+      "exp": "无经验要求",
+      "degree": "博士",
+      "avg_salary": 33135.63,
+      "count": 35
+    },
+    {
+      "exp": "无经验要求",
+      "degree": "大专",
+      "avg_salary": 8491.48,
+      "count": 181
+    },
+    {
+      "exp": "无经验要求",
+      "degree": "本科",
+      "avg_salary": 20654.31,
+      "count": 409
+    },
+    {
+      "exp": "无经验要求",
+      "degree": "硕士",
+      "avg_salary": 16811.78,
+      "count": 120
+    }
+  ]
+}

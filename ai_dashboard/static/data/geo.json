@@ -1,0 +1,1252 @@
+[
+  {
+    "name": "七台河",
+    "value": 3,
+    "salary": 6500.0
+  },
+  {
+    "name": "三亚",
+    "value": 4,
+    "salary": 12500.0
+  },
+  {
+    "name": "三明",
+    "value": 1,
+    "salary": 10500.0
+  },
+  {
+    "name": "三门峡",
+    "value": 2,
+    "salary": 9125.0
+  },
+  {
+    "name": "上海",
+    "value": 474,
+    "salary": 26455.977564102563
+  },
+  {
+    "name": "上海、常州",
+    "value": 1,
+    "salary": 11500.0
+  },
+  {
+    "name": "上饶",
+    "value": 6,
+    "salary": 17250.0
+  },
+  {
+    "name": "东莞",
+    "value": 106,
+    "salary": 16403.17142857143
+  },
+  {
+    "name": "东营",
+    "value": 1,
+    "salary": 10000.0
+  },
+  {
+    "name": "中卫",
+    "value": 3,
+    "salary": 9666.666666666666
+  },
+  {
+    "name": "中山",
+    "value": 58,
+    "salary": 10224.051724137931
+  },
+  {
+    "name": "临夏",
+    "value": 3,
+    "salary": 12000.0
+  },
+  {
+    "name": "临沂",
+    "value": 6,
+    "salary": 10250.0
+  },
+  {
+    "name": "丹东",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "丽水",
+    "value": 4,
+    "salary": 16145.5
+  },
+  {
+    "name": "义乌",
+    "value": 2,
+    "salary": 10500.0
+  },
+  {
+    "name": "乌兰察布",
+    "value": 3,
+    "salary": 6666.833333333333
+  },
+  {
+    "name": "乌鲁木齐",
+    "value": 8,
+    "salary": 12437.5
+  },
+  {
+    "name": "九江",
+    "value": 2,
+    "salary": 23750.0
+  },
+  {
+    "name": "云浮",
+    "value": 5,
+    "salary": 10299.8
+  },
+  {
+    "name": "亳州",
+    "value": 4,
+    "salary": 10999.625
+  },
+  {
+    "name": "伊春",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "伊犁",
+    "value": 1
+  },
+  {
+    "name": "佛山",
+    "value": 129,
+    "salary": 13552.372093023256
+  },
+  {
+    "name": "保定",
+    "value": 3,
+    "salary": 15333.333333333334
+  },
+  {
+    "name": "信阳",
+    "value": 1,
+    "salary": 11500.0
+  },
+  {
+    "name": "克孜勒苏",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "克州",
+    "value": 1
+  },
+  {
+    "name": "克拉玛依",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "六安",
+    "value": 3,
+    "salary": 8166.666666666667
+  },
+  {
+    "name": "六盘水",
+    "value": 1,
+    "salary": 9998.5
+  },
+  {
+    "name": "兰州",
+    "value": 5,
+    "salary": 11400.0
+  },
+  {
+    "name": "兴安盟",
+    "value": 1,
+    "salary": 11500.0
+  },
+  {
+    "name": "北京",
+    "value": 775,
+    "salary": 29530.12434554974
+  },
+  {
+    "name": "北海",
+    "value": 1,
+    "salary": 10000.0
+  },
+  {
+    "name": "十堰",
+    "value": 2,
+    "salary": 4500.0
+  },
+  {
+    "name": "南京",
+    "value": 220,
+    "salary": 18858.77727272727
+  },
+  {
+    "name": "南宁",
+    "value": 29,
+    "salary": 14360.07142857143
+  },
+  {
+    "name": "南平",
+    "value": 2,
+    "salary": 19083.25
+  },
+  {
+    "name": "南昌",
+    "value": 35,
+    "salary": 13114.285714285714
+  },
+  {
+    "name": "南通",
+    "value": 17,
+    "salary": 13453.125
+  },
+  {
+    "name": "南阳",
+    "value": 1,
+    "salary": 10500.0
+  },
+  {
+    "name": "厦门",
+    "value": 29,
+    "salary": 22327.58620689655
+  },
+  {
+    "name": "台州",
+    "value": 7,
+    "salary": 16571.428571428572
+  },
+  {
+    "name": "合肥",
+    "value": 99,
+    "salary": 18116.317708333332
+  },
+  {
+    "name": "吉安",
+    "value": 5,
+    "salary": 7566.6
+  },
+  {
+    "name": "吕梁",
+    "value": 2,
+    "salary": 23958.25
+  },
+  {
+    "name": "周口",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "呼和浩特",
+    "value": 7,
+    "salary": 15833.285714285714
+  },
+  {
+    "name": "和田",
+    "value": 3
+  },
+  {
+    "name": "咸宁",
+    "value": 1,
+    "salary": 5833.0
+  },
+  {
+    "name": "咸阳",
+    "value": 5,
+    "salary": 12750.0
+  },
+  {
+    "name": "哈尔滨",
+    "value": 28,
+    "salary": 12054.0
+  },
+  {
+    "name": "唐山",
+    "value": 2,
+    "salary": 16000.0
+  },
+  {
+    "name": "商丘",
+    "value": 5,
+    "salary": 16550.0
+  },
+  {
+    "name": "商洛",
+    "value": 4,
+    "salary": 10333.333333333334
+  },
+  {
+    "name": "喀什",
+    "value": 4,
+    "salary": 12000.0
+  },
+  {
+    "name": "嘉兴",
+    "value": 19,
+    "salary": 16750.0
+  },
+  {
+    "name": "塔城",
+    "value": 4,
+    "salary": 12000.0
+  },
+  {
+    "name": "大兴安岭",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "大同",
+    "value": 2,
+    "salary": 4250.0
+  },
+  {
+    "name": "大庆",
+    "value": 3,
+    "salary": 21500.0
+  },
+  {
+    "name": "大连",
+    "value": 38,
+    "salary": 14378.378378378378
+  },
+  {
+    "name": "天津",
+    "value": 40,
+    "salary": 12650.684210526315
+  },
+  {
+    "name": "太原",
+    "value": 6,
+    "salary": 10583.333333333334
+  },
+  {
+    "name": "威海",
+    "value": 6,
+    "salary": 13500.0
+  },
+  {
+    "name": "娄底",
+    "value": 3,
+    "salary": 16388.833333333332
+  },
+  {
+    "name": "孝感",
+    "value": 4,
+    "salary": 9187.5
+  },
+  {
+    "name": "宁德",
+    "value": 3,
+    "salary": 9500.0
+  },
+  {
+    "name": "宁波",
+    "value": 99,
+    "salary": 16105.267676767677
+  },
+  {
+    "name": "安康",
+    "value": 4,
+    "salary": 12000.0
+  },
+  {
+    "name": "安阳",
+    "value": 3,
+    "salary": 10000.0
+  },
+  {
+    "name": "安顺",
+    "value": 3,
+    "salary": 9166.166666666666
+  },
+  {
+    "name": "宜宾",
+    "value": 7,
+    "salary": 11202.285714285714
+  },
+  {
+    "name": "宜昌",
+    "value": 4,
+    "salary": 9375.0
+  },
+  {
+    "name": "宝鸡",
+    "value": 3,
+    "salary": 12000.0
+  },
+  {
+    "name": "宣城",
+    "value": 2,
+    "salary": 9998.5
+  },
+  {
+    "name": "宿州",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "岳阳",
+    "value": 3,
+    "salary": 13388.833333333334
+  },
+  {
+    "name": "崇左",
+    "value": 2,
+    "salary": 3375.0
+  },
+  {
+    "name": "巴彦淖尔",
+    "value": 1,
+    "salary": 5000.5
+  },
+  {
+    "name": "巴音郭楞",
+    "value": 1
+  },
+  {
+    "name": "常州",
+    "value": 43,
+    "salary": 14259.686046511628
+  },
+  {
+    "name": "常德",
+    "value": 3,
+    "salary": 12000.0
+  },
+  {
+    "name": "平凉",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "平顶山",
+    "value": 4,
+    "salary": 10187.5
+  },
+  {
+    "name": "广元",
+    "value": 2,
+    "salary": 15375.0
+  },
+  {
+    "name": "广安",
+    "value": 3,
+    "salary": 15833.333333333334
+  },
+  {
+    "name": "广州",
+    "value": 317,
+    "salary": 17323.283911671926
+  },
+  {
+    "name": "庆阳",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "廊坊",
+    "value": 5,
+    "salary": 18149.8
+  },
+  {
+    "name": "延安",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "开封",
+    "value": 4,
+    "salary": 15062.5
+  },
+  {
+    "name": "张家口",
+    "value": 2,
+    "salary": 20583.25
+  },
+  {
+    "name": "张家界",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "徐州",
+    "value": 12,
+    "salary": 19861.041666666668
+  },
+  {
+    "name": "德州",
+    "value": 1,
+    "salary": 12500.0
+  },
+  {
+    "name": "德阳",
+    "value": 4,
+    "salary": 6824.875
+  },
+  {
+    "name": "怀化",
+    "value": 2,
+    "salary": 9250.0
+  },
+  {
+    "name": "惠州",
+    "value": 44,
+    "salary": 14456.420454545454
+  },
+  {
+    "name": "成都",
+    "value": 218,
+    "salary": 16357.579069767442
+  },
+  {
+    "name": "扬州",
+    "value": 6,
+    "salary": 12000.0
+  },
+  {
+    "name": "拉萨",
+    "value": 5,
+    "salary": 11400.0
+  },
+  {
+    "name": "揭阳",
+    "value": 1,
+    "salary": 13500.0
+  },
+  {
+    "name": "攀枝花",
+    "value": 1,
+    "salary": 9000.0
+  },
+  {
+    "name": "新乡",
+    "value": 4,
+    "salary": 11687.5
+  },
+  {
+    "name": "新余",
+    "value": 3,
+    "salary": 7416.666666666667
+  },
+  {
+    "name": "无锡",
+    "value": 117,
+    "salary": 16404.53846153846
+  },
+  {
+    "name": "日喀则",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "日照",
+    "value": 2,
+    "salary": 9750.0
+  },
+  {
+    "name": "昆明",
+    "value": 73,
+    "salary": 11508.19014084507
+  },
+  {
+    "name": "昌吉",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "昌都",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "昭通",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "曲靖",
+    "value": 3,
+    "salary": 6333.333333333333
+  },
+  {
+    "name": "朝阳",
+    "value": 2,
+    "salary": 15500.0
+  },
+  {
+    "name": "本溪",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "来宾",
+    "value": 1,
+    "salary": 30000.0
+  },
+  {
+    "name": "杭州",
+    "value": 258,
+    "salary": 21981.36274509804
+  },
+  {
+    "name": "林芝",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "枣庄",
+    "value": 4,
+    "salary": 16229.125
+  },
+  {
+    "name": "柳州",
+    "value": 6,
+    "salary": 14833.25
+  },
+  {
+    "name": "株洲",
+    "value": 3,
+    "salary": 13500.0
+  },
+  {
+    "name": "桂林",
+    "value": 8,
+    "salary": 7156.25
+  },
+  {
+    "name": "梧州",
+    "value": 2,
+    "salary": 15250.0
+  },
+  {
+    "name": "楚雄",
+    "value": 1,
+    "salary": 12500.0
+  },
+  {
+    "name": "榆林",
+    "value": 3,
+    "salary": 14250.0
+  },
+  {
+    "name": "武汉",
+    "value": 202,
+    "salary": 15809.519900497513
+  },
+  {
+    "name": "永州",
+    "value": 1,
+    "salary": 23000.0
+  },
+  {
+    "name": "汉中",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "汕头",
+    "value": 6,
+    "salary": 7350.0
+  },
+  {
+    "name": "汕尾",
+    "value": 2,
+    "salary": 7999.25
+  },
+  {
+    "name": "江门",
+    "value": 8,
+    "salary": 12750.0
+  },
+  {
+    "name": "池州",
+    "value": 1,
+    "salary": 9998.5
+  },
+  {
+    "name": "沈阳",
+    "value": 39,
+    "salary": 12212.958333333334
+  },
+  {
+    "name": "沧州",
+    "value": 5,
+    "salary": 13800.0
+  },
+  {
+    "name": "河池",
+    "value": 2,
+    "salary": 10000.0
+  },
+  {
+    "name": "河源",
+    "value": 2,
+    "salary": 16000.0
+  },
+  {
+    "name": "泉州",
+    "value": 9,
+    "salary": 10574.055555555555
+  },
+  {
+    "name": "泰安",
+    "value": 5,
+    "salary": 7450.0
+  },
+  {
+    "name": "泰州",
+    "value": 9,
+    "salary": 10055.555555555555
+  },
+  {
+    "name": "泸州",
+    "value": 3,
+    "salary": 17305.333333333332
+  },
+  {
+    "name": "洋浦经济开发区",
+    "value": 1,
+    "salary": 7500.0
+  },
+  {
+    "name": "洛阳",
+    "value": 3,
+    "salary": 11166.666666666666
+  },
+  {
+    "name": "济南",
+    "value": 41,
+    "salary": 15040.576923076924
+  },
+  {
+    "name": "济宁",
+    "value": 6,
+    "salary": 8333.333333333334
+  },
+  {
+    "name": "海南",
+    "value": 2,
+    "salary": 7500.0
+  },
+  {
+    "name": "海口",
+    "value": 4,
+    "salary": 13250.0
+  },
+  {
+    "name": "淄博",
+    "value": 3,
+    "salary": 12666.666666666666
+  },
+  {
+    "name": "淮南",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "淮安",
+    "value": 4,
+    "salary": 10500.0
+  },
+  {
+    "name": "深圳",
+    "value": 582,
+    "salary": 22691.375862068966
+  },
+  {
+    "name": "清远",
+    "value": 7,
+    "salary": 12357.142857142857
+  },
+  {
+    "name": "温州",
+    "value": 17,
+    "salary": 15485.29411764706
+  },
+  {
+    "name": "渭南",
+    "value": 4,
+    "salary": 9333.333333333334
+  },
+  {
+    "name": "湖州",
+    "value": 19,
+    "salary": 13713.157894736842
+  },
+  {
+    "name": "湘潭",
+    "value": 5,
+    "salary": 11400.0
+  },
+  {
+    "name": "湛江",
+    "value": 12,
+    "salary": 10708.333333333334
+  },
+  {
+    "name": "滁州",
+    "value": 3,
+    "salary": 24166.666666666668
+  },
+  {
+    "name": "滨州",
+    "value": 5,
+    "salary": 13833.3
+  },
+  {
+    "name": "漯河",
+    "value": 2,
+    "salary": 8250.0
+  },
+  {
+    "name": "漳州",
+    "value": 2,
+    "salary": 11625.0
+  },
+  {
+    "name": "潍坊",
+    "value": 6,
+    "salary": 13444.416666666666
+  },
+  {
+    "name": "潮州",
+    "value": 3,
+    "salary": 8166.666666666667
+  },
+  {
+    "name": "澄迈",
+    "value": 1,
+    "salary": 5500.0
+  },
+  {
+    "name": "烟台",
+    "value": 9,
+    "salary": 11833.333333333334
+  },
+  {
+    "name": "玉林",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "玉溪",
+    "value": 4,
+    "salary": 6750.0
+  },
+  {
+    "name": "珠海",
+    "value": 57,
+    "salary": 18402.01754385965
+  },
+  {
+    "name": "甘南",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "百色",
+    "value": 2
+  },
+  {
+    "name": "益阳",
+    "value": 1,
+    "salary": 12500.0
+  },
+  {
+    "name": "盐城",
+    "value": 5,
+    "salary": 10500.0
+  },
+  {
+    "name": "眉山",
+    "value": 3,
+    "salary": 11444.333333333334
+  },
+  {
+    "name": "石嘴山",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "石家庄",
+    "value": 11,
+    "salary": 10136.363636363636
+  },
+  {
+    "name": "福州",
+    "value": 36,
+    "salary": 15414.271428571428
+  },
+  {
+    "name": "秦皇岛",
+    "value": 2,
+    "salary": 17250.0
+  },
+  {
+    "name": "红河州",
+    "value": 1,
+    "salary": 3000.5
+  },
+  {
+    "name": "绍兴",
+    "value": 11,
+    "salary": 13227.272727272728
+  },
+  {
+    "name": "绵阳",
+    "value": 9,
+    "salary": 15472.222222222223
+  },
+  {
+    "name": "聊城",
+    "value": 6,
+    "salary": 16333.333333333334
+  },
+  {
+    "name": "肇庆",
+    "value": 13,
+    "salary": 6973.076923076923
+  },
+  {
+    "name": "自贡",
+    "value": 8,
+    "salary": 9166.5
+  },
+  {
+    "name": "舟山",
+    "value": 3,
+    "salary": 11666.666666666666
+  },
+  {
+    "name": "芜湖",
+    "value": 23,
+    "salary": 15235.478260869566
+  },
+  {
+    "name": "苏州",
+    "value": 225,
+    "salary": 19358.51793721973
+  },
+  {
+    "name": "茂名",
+    "value": 2,
+    "salary": 15000.0
+  },
+  {
+    "name": "荆州",
+    "value": 2,
+    "salary": 8291.5
+  },
+  {
+    "name": "荆门",
+    "value": 4,
+    "salary": 7875.0
+  },
+  {
+    "name": "菏泽",
+    "value": 6,
+    "salary": 12200.0
+  },
+  {
+    "name": "营口",
+    "value": 2,
+    "salary": 17000.0
+  },
+  {
+    "name": "葫芦岛",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "蚌埠",
+    "value": 1,
+    "salary": 5500.0
+  },
+  {
+    "name": "衡水",
+    "value": 1,
+    "salary": 7500.0
+  },
+  {
+    "name": "衡阳",
+    "value": 8,
+    "salary": 11437.4375
+  },
+  {
+    "name": "襄阳",
+    "value": 3,
+    "salary": 4500.0
+  },
+  {
+    "name": "西宁",
+    "value": 8,
+    "salary": 14562.5
+  },
+  {
+    "name": "西安",
+    "value": 114,
+    "salary": 15052.05238095238
+  },
+  {
+    "name": "西昌",
+    "value": 1,
+    "salary": 18750.0
+  },
+  {
+    "name": "许昌",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "贵港",
+    "value": 2,
+    "salary": 12000.0
+  },
+  {
+    "name": "贵阳",
+    "value": 24,
+    "salary": 11239.583333333334
+  },
+  {
+    "name": "贺州",
+    "value": 1
+  },
+  {
+    "name": "赣州",
+    "value": 10,
+    "salary": 13285.0
+  },
+  {
+    "name": "赤峰",
+    "value": 1,
+    "salary": 8000.0
+  },
+  {
+    "name": "辽阳",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "达州",
+    "value": 1,
+    "salary": 22500.0
+  },
+  {
+    "name": "运城",
+    "value": 2,
+    "salary": 19083.25
+  },
+  {
+    "name": "连云港",
+    "value": 7,
+    "salary": 17928.571428571428
+  },
+  {
+    "name": "迪庆",
+    "value": 3,
+    "salary": 8166.666666666667
+  },
+  {
+    "name": "通辽",
+    "value": 1,
+    "salary": 8500.0
+  },
+  {
+    "name": "邢台",
+    "value": 2,
+    "salary": 18750.0
+  },
+  {
+    "name": "那曲",
+    "value": 7,
+    "salary": 12000.0
+  },
+  {
+    "name": "邯郸",
+    "value": 3,
+    "salary": 8333.333333333334
+  },
+  {
+    "name": "邵阳",
+    "value": 2,
+    "salary": 6750.0
+  },
+  {
+    "name": "郑州",
+    "value": 75,
+    "salary": 12554.433333333332
+  },
+  {
+    "name": "郴州",
+    "value": 3,
+    "salary": 10166.666666666666
+  },
+  {
+    "name": "鄂尔多斯",
+    "value": 3,
+    "salary": 7000.166666666667
+  },
+  {
+    "name": "鄂州",
+    "value": 3,
+    "salary": 13250.0
+  },
+  {
+    "name": "酒泉",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "重庆",
+    "value": 144,
+    "salary": 15173.207142857143
+  },
+  {
+    "name": "金华",
+    "value": 10,
+    "salary": 15291.6
+  },
+  {
+    "name": "钦州",
+    "value": 3,
+    "salary": 12000.0
+  },
+  {
+    "name": "铜川",
+    "value": 3,
+    "salary": 18750.0
+  },
+  {
+    "name": "银川",
+    "value": 6,
+    "salary": 19416.666666666668
+  },
+  {
+    "name": "镇江",
+    "value": 7,
+    "salary": 15714.285714285714
+  },
+  {
+    "name": "长春",
+    "value": 14,
+    "salary": 11797.607142857143
+  },
+  {
+    "name": "长沙",
+    "value": 116,
+    "salary": 15788.477876106195
+  },
+  {
+    "name": "长治",
+    "value": 1,
+    "salary": 10500.0
+  },
+  {
+    "name": "阜新",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "阜阳",
+    "value": 2,
+    "salary": 13000.0
+  },
+  {
+    "name": "阳江",
+    "value": 2,
+    "salary": 6250.0
+  },
+  {
+    "name": "阿克苏",
+    "value": 1
+  },
+  {
+    "name": "阿里",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "陇南",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "陕西",
+    "value": 1,
+    "salary": 16000.0
+  },
+  {
+    "name": "随州",
+    "value": 1,
+    "salary": 12000.0
+  },
+  {
+    "name": "雄安新区",
+    "value": 6,
+    "salary": 14000.0
+  },
+  {
+    "name": "青岛",
+    "value": 38,
+    "salary": 13370.361111111111
+  },
+  {
+    "name": "韶关",
+    "value": 2,
+    "salary": 13750.0
+  },
+  {
+    "name": "香港",
+    "value": 1,
+    "salary": 7500.0
+  },
+  {
+    "name": "马鞍山",
+    "value": 3,
+    "salary": 14500.0
+  },
+  {
+    "name": "驻马店",
+    "value": 6,
+    "salary": 7500.0
+  },
+  {
+    "name": "鸡西",
+    "value": 1
+  },
+  {
+    "name": "鹤岗",
+    "value": 1
+  },
+  {
+    "name": "鹰潭",
+    "value": 2,
+    "salary": 12250.0
+  },
+  {
+    "name": "黄冈",
+    "value": 1,
+    "salary": 18750.0
+  },
+  {
+    "name": "黄山",
+    "value": 2,
+    "salary": 10999.25
+  },
+  {
+    "name": "黄石",
+    "value": 1,
+    "salary": 11500.0
+  },
+  {
+    "name": "黑河",
+    "value": 1
+  },
+  {
+    "name": "龙岩",
+    "value": 1,
+    "salary": 18750.0
+  }
+]

@@ -1,0 +1,695 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}岗位结构大屏{% endblock %}
+
+{% block content %}
+<style>
+  .structure-page {
+    background:#f5f5f7;
+    padding:16px 20px 32px;
+    min-height:calc(100vh - 60px);
+  }
+
+  .structure-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:18px;
+  }
+
+  .structure-title-main {
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .structure-title-sub {
+    margin-top:4px;
+    font-size:12px;
+    color:#6b7280;
+  }
+
+  .structure-badge {
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    font-size:11px;
+    color:#4b5563;
+  }
+
+  .structure-grid {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+  }
+
+  .structure-page .panel {
+    background:#ffffff;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 24px rgba(15,23,42,0.08);
+    padding:12px 14px 12px;
+    min-height:450px;
+    display:flex;
+    flex-direction:column;
+  }
+  .structure-page .panel.heatmap-card {
+    min-height:700px;  
+  }
+
+  .panel-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:6px;
+  }
+
+  .panel-title {
+    font-size:14px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .panel-sub {
+    font-size:11px;
+    color:#6b7280;
+    margin-top:2px;
+    line-height:1.5;
+  }
+
+  .panel-right {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11px;
+    color:#9ca3af;
+  }
+
+  .panel-pill {
+    padding:3px 8px;
+    border-radius:999px;
+    border:1px solid #e5e7eb;
+    background:#f9fafb;
+    color:#6b7280;
+    font-size:11px;
+  }
+
+  .panel-line {
+    height:1px;
+    width:100%;
+    margin:8px 0 6px;
+    background:linear-gradient(90deg,#e5e7eb,#f3f4f6);
+  }
+
+  .chart {
+    flex:1;
+    width:100%;
+  }
+
+  .span-7{grid-column:span 7;}
+  .span-5{grid-column:span 5;}
+  .span-6{grid-column:span 6;}
+  .span-12{grid-column:span 12;}
+
+  @media (max-width:1200px){
+    .structure-grid{grid-template-columns:repeat(2,1fr);}
+    .span-7,.span-5,.span-6,.span-12{grid-column:span 2;}
+  }
+  @media (max-width:720px){
+    .structure-page{padding:12px 10px 24px;}
+    .structure-grid{grid-template-columns:1fr;}
+    .span-7,.span-5,.span-6,.span-12{grid-column:span 1;}
+  }
+</style>
+
+<div class="structure-page">
+  <!-- 顶部标题区 -->
+  <header class="structure-header">
+    <div>
+      <div class="structure-title-main">岗位结构大屏</div>
+      <div class="structure-title-sub">
+        从岗位类别、学历结构、薪资规模、能力画像与区域分布五个维度拆解 AI 岗位结构
+      </div>
+    </div>
+    <div class="structure-badge">
+      Structure View · Job Composition
+    </div>
+  </header>
+
+  <section class="structure-grid">
+
+    <!-- 1. 岗位类别词云图 -->
+    <section class="panel span-7">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">岗位类别关键词词云</div>
+          <div class="panel-sub">
+            以词云形式展示不同岗位类别下的高频关键词，观察各方向的技能与职责侧重点。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">类别 × 关键词</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：结构词云图 -->
+      <div id="structure_category_wordcloud_chart" class="chart"></div>
+    </section>
+
+    <!-- 2. 学历漏斗图（保留） -->
+    <section class="panel span-5">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">学历层级结构 · 漏斗图</div>
+          <div class="panel-sub">
+            对比不同学历要求的岗位数量，从结构上判断“高学历岗 vs 普通岗”的占比关系。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">学历分布</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：复用学历漏斗，只是容器 id 换成结构页 -->
+      <div id="structure_degree_funnel_chart" class="chart"></div>
+    </section>
+
+    <!-- 3. 岗位规模 vs 薪资 双轴柱状图 -->
+    <section class="panel span-7">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">岗位规模 vs 平均薪资 · 双轴柱状图</div>
+          <div class="panel-sub">
+            同时展示各岗位类别的岗位数量与平均薪资，对比“高薪小众”和“低薪大众”方向。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">数量 × 薪资</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：双轴柱状图 -->
+      <div id="structure_job_compare_chart" class="chart"></div>
+    </section>
+
+    <!-- 4. 区域岗位分布 Donut -->
+    <section class="panel span-5">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">区域岗位分布 · Donut 图</div>
+          <div class="panel-sub">
+            以环形图统计不同大区的岗位占比，辅助判断岗位需求的区域结构与重心倾斜。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">区域结构</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：区域 Donut -->
+      <div id="structure_region_donut_chart" class="chart"></div>
+    </section>
+
+    <!-- 5. 岗位能力 Treemap -->
+    <section class="panel span-12 heatmap-card">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">岗位能力结构 · Treemap</div>
+          <div class="panel-sub">
+            将岗位类别与对应能力维度映射为矩形树图，从面积与颜色两维度呈现能力重要性与层级。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">能力画像</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <!-- JS：Treemap 能力结构 -->
+      <div id="structure_ability_treemap_chart" class="chart"></div>
+    </section>
+
+  </section>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@1.1.3/dist/echarts-wordcloud.min.js"></script>
+
+<script>
+  function initStructureWordcloud() {
+    const dom = document.getElementById('structure_category_wordcloud_chart');
+    if (!dom) {
+      console.error('找不到 structure_category_wordcloud_chart 容器');
+      return;
+    }
+    const chart = echarts.init(dom);
+
+    fetch("{{ url_for('static', filename='data/wordcloud.json') }}")
+      .then(r => r.json())
+      .then(data => {
+        chart.setOption({
+          backgroundColor: 'transparent',
+          series: [{
+            type: 'wordCloud',
+            shape: 'circle',
+            gridSize: 8,
+            sizeRange: [12, 60],
+            rotationRange: [0, 0],
+            textStyle: {
+              normal: {
+                fontFamily: 'PingFang SC, Microsoft YaHei, sans-serif',
+                fontWeight: 500,
+                color: function () {
+                  const colors = [
+                    '#2d3748',
+                    '#4a5568',
+                    '#718096',
+                    '#63b3ed',
+                    '#68d391',
+                    '#b794f4',
+                    '#f6ad55',
+                    '#fc8181'
+                  ];
+                  return colors[Math.floor(Math.random() * colors.length)];
+                }
+              },
+              emphasis: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(0,0,0,0.1)'
+              }
+            },
+            data: (data || []).map(d => ({
+              name: d.name,
+              value: d.value
+            }))
+          }]
+        });
+
+        window.addEventListener('resize', () => chart.resize());
+      })
+      .catch(e => {
+        console.error('岗位类别词云加载失败:', e);
+      });
+  }
+
+  window.addEventListener('load', initStructureWordcloud);
+</script>
+
+<script>
+  function initStructureDegreeDonut() {
+    const dom = document.getElementById('structure_degree_funnel_chart');
+    if (!dom) {
+      console.error('找不到 structure_degree_funnel_chart 容器');
+      return;
+    }
+
+    const chart = echarts.init(dom);
+
+    fetch("{{ url_for('static', filename='data/degree_counts.json') }}")
+      .then(r => r.json())
+      .then(d => {
+        const sorted = [...(d.data || [])].sort((a,b)=>b.value-a.value);
+
+        const pieData = sorted.map(i => ({
+          name: i.name,
+          value: i.value
+        }));
+
+        chart.setOption({
+          backgroundColor: 'transparent',
+          color: [
+            '#4F46E5','#6366F1','#818CF8',
+            '#0EA5E9','#38BDF8','#06B6D4',
+            '#2DD4BF','#A5B4FC'
+          ],
+          tooltip: {
+            trigger: 'item',
+            formatter: params => {
+              return `${params.name}<br/>岗位数：${params.value}<br/>占比：${params.percent}%`;
+            }
+          },
+          legend: {
+            orient: 'vertical',
+            left: 'left',
+            top: 'middle',
+            textStyle: {
+              color: '#4b5563',
+              fontSize: 12
+            }
+          },
+          series: [
+            {
+              type: 'pie',
+              radius: ['45%', '70%'],  // Donut
+              center: ['60%', '52%'],
+              data: pieData,
+              itemStyle: {
+                borderRadius: 8,
+                borderColor: '#fff',
+                borderWidth: 2
+              },
+              label: {
+                formatter: '{b}\n{d}%',
+                color: '#111827',
+                fontSize: 11
+              },
+              labelLine: {
+                length: 10,
+                length2: 8
+              },
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 14,
+                  shadowColor: 'rgba(0,0,0,0.14)'
+                }
+              }
+            }
+          ]
+        });
+
+        window.addEventListener('resize', () => chart.resize());
+      })
+      .catch(e => {
+        console.error("学历 Donut 图加载失败:", e);
+      });
+  }
+
+  window.addEventListener('load', initStructureDegreeDonut);
+</script>
+
+<script>
+  async function initStructureJobCompare() {
+    const dom = document.getElementById('structure_job_compare_chart');
+    if (!dom) {
+      console.error('找不到 structure_job_compare_chart 容器');
+      return;
+    }
+
+    const chart = echarts.init(dom);
+
+    try {
+      const res = await fetch("{{ url_for('static', filename='data/job_category_compare.json') }}");
+      const data = await res.json();
+
+      const cats = data.categories || [];
+      const jobCount = data.job_count || [];
+      const avgSalary = data.avg_salary || [];
+
+      chart.setOption({
+        backgroundColor: 'transparent',
+        color: ['#4F46E5', '#06B6D4'],
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { type: 'shadow' },
+          formatter: function (params) {
+            const c = params[0].axisValue;
+            const jobs = params[0].data;
+            const salary = params[1].data;
+            let text = `${c}<br/>岗位数量：${jobs}`;
+            if (salary != null) {
+              text += `<br/>平均薪资：${salary.toFixed(0)} 元`;
+            }
+            return text;
+          }
+        },
+        legend: {
+          top: 8,
+          textStyle: { color: '#4b5563', fontSize: 12 }
+        },
+        grid: {
+          left: 60,
+          right: 60,
+          top: 60,
+          bottom: 50
+        },
+        xAxis: {
+          type: 'category',
+          data: cats,
+          axisLabel: {
+            color: '#6b7280',
+            fontSize: 11,
+            interval: 0,
+            rotate: 30
+          },
+          axisLine: { lineStyle: { color: '#d1d5db' } },
+          axisTick: { show: false }
+        },
+        yAxis: [
+          {
+            type: 'value',
+            name: '岗位数量',
+            position: 'left',
+            axisLine: { show: false },
+            axisTick: { show: false },
+            splitLine: { lineStyle: { color: '#e5e7eb' } },
+            axisLabel: { color: '#6b7280', fontSize: 11 },
+            nameTextStyle: { color: '#4b5563', fontSize: 12 }
+          },
+          {
+            type: 'value',
+            name: '平均薪资（元）',
+            position: 'right',
+            axisLine: { show: false },
+            axisTick: { show: false },
+            splitLine: { show: false },
+            axisLabel: { color: '#6b7280', fontSize: 11 },
+            nameTextStyle: { color: '#4b5563', fontSize: 12 }
+          }
+        ],
+        series: [
+          {
+            name: '岗位数量',
+            type: 'bar',
+            data: jobCount,
+            yAxisIndex: 0,
+            barWidth: 14,
+            itemStyle: {
+              borderRadius: [6, 6, 0, 0]
+            }
+          },
+          {
+            name: '平均薪资',
+            type: 'bar',
+            data: avgSalary,
+            yAxisIndex: 1,
+            barWidth: 14,
+            itemStyle: {
+              borderRadius: [6, 6, 0, 0]
+            }
+          }
+        ]
+      });
+
+      window.addEventListener('resize', () => chart.resize());
+    } catch (e) {
+      console.error('结构页 job_category_compare.json 加载失败:', e);
+    }
+  }
+
+  window.addEventListener('load', initStructureJobCompare);
+</script>
+
+<script>
+  async function initStructureAbilityTreemap() {
+    const dom = document.getElementById('structure_ability_treemap_chart');
+    if (!dom) {
+      console.error('找不到 structure_ability_treemap_chart 容器');
+      return;
+    }
+
+    const chart = echarts.init(dom);
+
+    try {
+      // 按你实际文件名改，这里先用 job_category_rose.json
+      const res = await fetch("{{ url_for('static', filename='data/job_category_rose.json') }}");
+      const list = await res.json();
+
+      const data = (list || []).map(d => ({
+        name: d.name,
+        job_count: d.value,
+        avg_salary: d.avg_salary,
+        value: [d.value, d.avg_salary || 0]
+      }));
+
+      const salaries = data
+        .map(d => d.avg_salary)
+        .filter(v => v != null && !isNaN(v));
+
+      const minSalary = salaries.length ? Math.min(...salaries) : 0;
+      const maxSalary = salaries.length ? Math.max(...salaries) : 1;
+
+      chart.setOption({
+        backgroundColor: 'transparent',
+        tooltip: {
+          formatter: function (p) {
+            const d = p.data;
+            let text = `${d.name}<br/>岗位数量：${d.job_count}`;
+            if (d.avg_salary != null) {
+              text += `<br/>平均薪资：${d.avg_salary.toFixed(0)} 元`;
+            }
+            return text;
+          }
+        },
+        visualMap: {
+          type: 'continuous',
+          min: minSalary,
+          max: maxSalary,
+          dimension: 1,
+          orient: 'horizontal',
+          left: 'center',
+          bottom: 18,
+          text: ['高薪', '低薪'],
+          textStyle: { color: '#4b5563', fontSize: 11 },
+          inRange: {
+            color: ['#dbeafe', '#60a5fa', '#2563eb', '#1d4ed8', '#0b1120']
+          },
+          calculable: false
+        },
+        series: [
+          {
+            name: '岗位能力结构',
+            type: 'treemap',
+            roam: false,
+            nodeClick: false,
+            breadcrumb: { show: false },
+            label: {
+              show: true,
+              formatter: function (p) {
+                const d = p.data;
+                const name = d.name.length > 6
+                  ? d.name.slice(0, 6) + '\n' + d.name.slice(6)
+                  : d.name;
+                return `${name}\n${d.job_count} 个`;
+              },
+              color: '#f9fafb',
+              fontSize: 11
+            },
+            upperLabel: { show: false },
+            itemStyle: {
+              borderColor: '#ffffff',
+              borderWidth: 2,
+              borderRadius: 6
+            },
+            levels: [
+              {
+                colorSaturation: [0.3, 0.9]
+              }
+            ],
+            data: data
+          }
+        ]
+      });
+
+      window.addEventListener('resize', () => chart.resize());
+    } catch (e) {
+      console.error('岗位能力 Treemap 加载失败:', e);
+    }
+  }
+
+  window.addEventListener('load', initStructureAbilityTreemap);
+</script>
+
+<script>
+  async function initStructureRegionDonut() {
+    const dom = document.getElementById('structure_region_donut_chart');
+    if (!dom) {
+      console.error('找不到 structure_region_donut_chart 容器');
+      return;
+    }
+
+    const chart = echarts.init(dom);
+
+    try {
+      const res = await fetch("{{ url_for('static', filename='data/region_summary_pie.json') }}");
+      const raw = await res.json();
+
+      const list = Array.isArray(raw) ? raw : (Array.isArray(raw.data) ? raw.data : []);
+
+      const pieData = list.map(d => ({
+        name: d.name || d.region || '',
+        value: d.job_count ?? d.value ?? 0,
+        avg_salary: d.avg_salary ?? d.salary ?? null
+      }));
+
+      if (!pieData.length) {
+        console.warn('区域岗位分布数据为空');
+        return;
+      }
+
+      chart.setOption({
+        backgroundColor: 'transparent',
+        color: [
+          '#4F46E5','#6366F1','#818CF8',
+          '#0EA5E9','#38BDF8','#06B6D4',
+          '#2DD4BF','#A5B4FC','#7DD3FC'
+        ],
+        tooltip: {
+          trigger: 'item',
+          formatter: function (p) {
+            const d = p.data;
+            let text = `${d.name}<br/>岗位数量：${d.value}`;
+            if (d.avg_salary != null) {
+              text += `<br/>平均中位月薪：${Number(d.avg_salary).toFixed(0)} 元`;
+            }
+            const percent = p.percent != null ? p.percent.toFixed(1) : null;
+            if (percent) {
+              text += `<br/>区域占比：${percent}%`;
+            }
+            return text;
+          }
+        },
+        legend: {
+          orient: 'vertical',
+          left: 'left',
+          top: 'middle',
+          textStyle: {
+            color: '#4b5563',
+            fontSize: 12
+          }
+        },
+        series: [
+          {
+            name: '区域岗位数量',
+            type: 'pie',
+            radius: ['45%', '70%'],
+            center: ['60%', '52%'],
+            avoidLabelOverlap: true,
+            itemStyle: {
+              borderRadius: 8,
+              borderColor: '#ffffff',
+              borderWidth: 2
+            },
+            label: {
+              show: true,
+              formatter: '{b}\n{d}%',
+              color: '#111827',
+              fontSize: 11
+            },
+            labelLine: {
+              length: 10,
+              length2: 8
+            },
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 12,
+                shadowColor: 'rgba(15,23,42,0.18)'
+              },
+              label: {
+                fontWeight: 600
+              }
+            },
+            data: pieData
+          }
+        ]
+      });
+
+      window.addEventListener('resize', () => chart.resize());
+    } catch (e) {
+      console.error('区域岗位分布 Donut 加载失败:', e);
+    }
+  }
+
+  window.addEventListener('load', initStructureRegionDonut);
+</script>
+
+{% endblock %}

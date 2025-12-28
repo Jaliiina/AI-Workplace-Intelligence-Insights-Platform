@@ -1,0 +1,42 @@
+[
+  {
+    "name": "华东",
+    "job_count": 1869,
+    "avg_salary": 20097.48
+  },
+  {
+    "name": "华南",
+    "job_count": 1468,
+    "avg_salary": 18031.08
+  },
+  {
+    "name": "华北",
+    "job_count": 857,
+    "avg_salary": 27927.91
+  },
+  {
+    "name": "华中",
+    "job_count": 455,
+    "avg_salary": 14823.71
+  },
+  {
+    "name": "其他地区",
+    "job_count": 424,
+    "avg_salary": 12527.88
+  },
+  {
+    "name": "西南",
+    "job_count": 407,
+    "avg_salary": 15465.86
+  },
+  {
+    "name": "西北",
+    "job_count": 152,
+    "avg_salary": 14792.01
+  },
+  {
+    "name": "东北",
+    "job_count": 122,
+    "avg_salary": 12905.94
+  }
+]

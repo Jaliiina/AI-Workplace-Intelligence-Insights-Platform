@@ -1,0 +1,547 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}技能深度洞察 · AI 职场{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+<style>
+  .skill-drill-page {
+    background:#f5f5f7;
+    padding:16px 20px 32px;
+    min-height:calc(100vh - 60px);
+  }
+
+  .skill-drill-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:14px;
+  }
+
+  .skill-drill-title-main {
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .skill-drill-title-sub {
+    margin-top:4px;
+    font-size:12px;
+    color:#6b7280;
+    line-height:1.6;
+  }
+
+  .skill-drill-badge {
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    font-size:11px;
+    color:#4b5563;
+  }
+
+  .skill-drill-grid {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+  }
+
+  .skill-drill-page .panel {
+    background:#ffffff;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 24px rgba(15,23,42,0.08);
+    padding:12px 14px 12px;
+    min-height:360px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .panel-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:6px;
+  }
+
+  .panel-title {
+    font-size:14px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .panel-sub {
+    font-size:11px;
+    color:#6b7280;
+    margin-top:2px;
+    line-height:1.5;
+  }
+
+  .panel-right {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11px;
+    color:#9ca3af;
+  }
+
+  .panel-pill {
+    padding:3px 8px;
+    border-radius:999px;
+    border:1px solid #e5e7eb;
+    background:#f9fafb;
+    color:#6b7280;
+    font-size:11px;
+  }
+
+  .panel-line {
+    height:1px;
+    width:100%;
+    margin:8px 0 6px;
+    background:linear-gradient(90deg,#e5e7eb,#f3f4f6);
+  }
+
+  .chart {
+    flex:1;
+    width:100%;
+  }
+
+  .span-6 { grid-column:span 6; }
+  .span-12 { grid-column:span 12; }
+
+  @media (max-width:1200px){
+    .skill-drill-grid{grid-template-columns:repeat(2,1fr);}
+    .span-6,.span-12{grid-column:span 2;}
+  }
+  @media (max-width:720px){
+    .skill-drill-page{padding:12px 10px 24px;}
+    .skill-drill-grid{grid-template-columns:1fr;}
+    .span-6,.span-12{grid-column:span 1;}
+  }
+
+  .skill-select-wrapper {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    color:#4b5563;
+  }
+
+  #skill_select {
+    min-width:200px;
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#fff;
+    font-size:12px;
+    color:#111827;
+    outline:none;
+  }
+
+  #skill_select:focus {
+    border-color:#2563eb;
+    box-shadow:0 0 0 1px rgba(37,99,235,.2);
+  }
+
+  #skill_meta_text {
+    font-size:11px;
+    color:#9ca3af;
+  }
+
+  .back-btn-wrapper {
+    margin-top:24px;
+    text-align:center;
+  }
+
+  .back-btn-wrapper button {
+    min-width:180px;
+    padding:10px 18px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:500;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    color:#374151;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(15,23,42,0.06);
+    transition:.15s;
+  }
+
+  .back-btn-wrapper button:hover {
+    box-shadow:0 6px 16px rgba(15,23,42,0.12);
+    transform:translateY(-1px);
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="skill-drill-page">
+  <header class="skill-drill-header">
+    <div>
+      <div class="skill-drill-title-main">技能深度洞察</div>
+      <div class="skill-drill-title-sub">
+        选择一个核心技能，查看它的薪资区间、成长路径、城市需求分布与岗位方向结构。
+      </div>
+    </div>
+    <div class="skill-drill-badge">
+      Skill Drill-down · Talent Insight
+    </div>
+  </header>
+
+  <!-- 技能选择栏 -->
+  <section style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+    <div class="skill-select-wrapper">
+      <span>选择技能：</span>
+      <select id="skill_select">
+        <option value="">加载中…</option>
+      </select>
+    </div>
+    <div id="skill_meta_text">
+      请选择一个技能查看深度分析
+    </div>
+  </section>
+
+  <!-- 主网格 -->
+  <section class="skill-drill-grid">
+
+    <!-- 1. 薪资箱线图 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">薪资区间 · 箱线图</div>
+          <div class="panel-sub">
+            基于中位月薪计算的箱线图，展示该技能关联岗位的整体薪资分布与中位水平。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">Salary Range</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="sd_salary_box_chart" class="chart"></div>
+    </section>
+
+    <!-- 2. 经验 × 薪资 成长曲线 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">经验 × 薪资 · 成长曲线</div>
+          <div class="panel-sub">
+            以经验段为横轴，展示掌握该技能的岗位在不同经验阶段的平均薪资变化。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">Growth Path</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="sd_exp_line_chart" class="chart"></div>
+    </section>
+
+    <!-- 3. 城市 Top10 需求 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">城市需求 Top10 · 横向条形图</div>
+          <div class="panel-sub">
+            统计该技能在各城市的岗位数量，观察需求最集中的城市分布。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">City Demand</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="sd_city_bar_chart" class="chart"></div>
+    </section>
+
+    <!-- 4. AI 方向结构玫瑰图 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">AI 方向结构 · 玫瑰图</div>
+          <div class="panel-sub">
+            展示该技能更多出现在怎样的 AI 方向岗位中，例如算法、应用、大数据等。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">Role Mapping</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="sd_direction_rose_chart" class="chart"></div>
+    </section>
+
+  </section>
+
+  <!-- 返回按钮 -->
+  <div class="back-btn-wrapper">
+    <a href="/skill_talent">
+      <button>返回技能与人才大屏</button>
+    </a>
+  </div>
+</div>
+
+<script>
+(function(){
+  const salaryDom   = document.getElementById('sd_salary_box_chart');
+  const expDom      = document.getElementById('sd_exp_line_chart');
+  const cityDom     = document.getElementById('sd_city_bar_chart');
+  const dirDom      = document.getElementById('sd_direction_rose_chart');
+
+  const salaryChart = echarts.init(salaryDom);
+  const expChart    = echarts.init(expDom);
+  const cityChart   = echarts.init(cityDom);
+  const dirChart    = echarts.init(dirDom);
+
+  const skillSelect = document.getElementById('skill_select');
+  const metaText    = document.getElementById('skill_meta_text');
+
+  let globalData = null;
+
+  // 拉取 skill_drill.json
+  fetch("{{ url_for('static', filename='data/skill_drill.json') }}")
+    .then(r => r.json())
+    .then(data => {
+      globalData = data || {};
+      const skills = globalData.skills || [];
+      skillSelect.innerHTML = "";
+
+      if (!skills.length) {
+        const opt = document.createElement("option");
+        opt.value = "";
+        opt.textContent = "暂无技能数据";
+        skillSelect.appendChild(opt);
+        return;
+      }
+
+      // 填充下拉（按出现顺序）
+      skills.forEach((s, idx) => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        skillSelect.appendChild(opt);
+      });
+
+      // 默认选第一个（比如 Python）
+      const defaultSkill = skills.includes("Python") ? "Python" : skills[0];
+      skillSelect.value = defaultSkill;
+      updateAllCharts(defaultSkill);
+    })
+    .catch(err => {
+      console.error(err);
+      skillSelect.innerHTML = "";
+      const opt = document.createElement("option");
+      opt.value = "";
+      opt.textContent = "数据加载失败";
+      skillSelect.appendChild(opt);
+      metaText.textContent = "技能数据加载失败，请检查 skill_drill.json";
+    });
+
+  skillSelect.addEventListener("change", function(){
+    const s = this.value;
+    if (!s) return;
+    updateAllCharts(s);
+  });
+
+  function updateAllCharts(skillName){
+    if (!globalData) return;
+    const sd = (globalData.skill_data || {})[skillName];
+    if (!sd) return;
+
+    metaText.textContent = `${skillName} · 共 ${sd.total_jobs || 0} 条岗位，薪资样本 ${sd.salary_sample_size || 0} 条`;
+
+    updateSalaryBox(skillName, sd);
+    updateExpLine(skillName, sd, globalData.experience_order || []);
+    updateCityBar(sd);
+    updateDirectionRose(sd);
+  }
+
+  function updateSalaryBox(skillName, sd){
+    const box = sd.salary_box;
+    if (!box || box.length !== 5) {
+      salaryChart.setOption({
+        title:{text:'薪资数据不足',left:'center',top:'middle',textStyle:{color:'#9ca3af',fontSize:12}},
+        xAxis:{show:false},
+        yAxis:{show:false},
+        series:[]
+      }, true);
+      return;
+    }
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'item',
+        formatter: params => {
+          const v = params.data;
+          if (!v) return '';
+          return [
+            `${skillName} 薪资箱线`,
+            `最小值：${v[0].toFixed ? v[0].toFixed(0) : v[0]}`,
+            `Q1：${v[1].toFixed ? v[1].toFixed(0) : v[1]}`,
+            `中位数：${v[2].toFixed ? v[2].toFixed(0) : v[2]}`,
+            `Q3：${v[3].toFixed ? v[3].toFixed(0) : v[3]}`,
+            `最大值：${v[4].toFixed ? v[4].toFixed(0) : v[4]}`
+          ].join('<br/>');
+        }
+      },
+      grid:{left:'16%',right:'12%',top:'10%',bottom:'15%'},
+      xAxis:{
+        type:'category',
+        data:[skillName],
+        axisLine:{lineStyle:{color:'#d1d5db'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#4b5563',fontSize:11}
+      },
+      yAxis:{
+        type:'value',
+        axisLine:{show:false},
+        axisTick:{show:false},
+        splitLine:{lineStyle:{color:'#e5e7eb'}},
+        axisLabel:{color:'#6b7280',fontSize:11}
+      },
+      series:[
+        {
+          name:'薪资箱线',
+          type:'boxplot',
+          data:[box]
+        }
+      ]
+    };
+    salaryChart.setOption(option,true);
+  }
+
+  function updateExpLine(skillName, sd, expOrder){
+    const expData = sd.exp_salary || {};
+    const x = [];
+    const y = [];
+    (expOrder || []).forEach(e => {
+      if (expData[e] != null) {
+        x.push(e);
+        y.push(expData[e]);
+      }
+    });
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'axis',
+        formatter: params => {
+          const p = params[0];
+          return [
+            `${skillName} · 经验-薪资`,
+            `经验段：${p.axisValue}`,
+            `平均中位月薪：${p.value.toFixed ? p.value.toFixed(0) : p.value} 元`
+          ].join('<br/>');
+        }
+      },
+      grid:{left:'12%',right:'12%',top:'12%',bottom:'16%'},
+      xAxis:{
+        type:'category',
+        data:x,
+        axisLine:{lineStyle:{color:'#d1d5db'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#4b5563',fontSize:11}
+      },
+      yAxis:{
+        type:'value',
+        axisLine:{show:false},
+        axisTick:{show:false},
+        splitLine:{lineStyle:{color:'#e5e7eb'}},
+        axisLabel:{color:'#6b7280',fontSize:11}
+      },
+      series:[
+        {
+          name:'平均薪资',
+          type:'line',
+          smooth:true,
+          data:y,
+          symbol:'circle',
+          symbolSize:4,
+          areaStyle:{opacity:0.18}
+        }
+      ]
+    };
+    expChart.setOption(option,true);
+  }
+
+  function updateCityBar(sd){
+    const list = sd.city_counts || [];
+    const names  = list.map(d => d.name).reverse();
+    const values = list.map(d => d.value).reverse();
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'axis',
+        axisPointer:{type:'shadow'},
+        formatter: params => {
+          const p = params[0];
+          return `城市：${p.name}<br/>岗位数：${p.value}`;
+        }
+      },
+      grid:{left:'24%',right:'10%',top:'8%',bottom:'10%'},
+      xAxis:{
+        type:'value',
+        axisLine:{show:false},
+        axisTick:{show:false},
+        splitLine:{lineStyle:{color:'#e5e7eb'}},
+        axisLabel:{color:'#6b7280',fontSize:11}
+      },
+      yAxis:{
+        type:'category',
+        data:names,
+        axisLine:{lineStyle:{color:'#e5e7eb'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#111827',fontSize:11}
+      },
+      series:[
+        {
+          type:'bar',
+          data:values,
+          barWidth:12,
+          itemStyle:{
+            borderRadius:[4,4,4,4]
+          }
+        }
+      ]
+    };
+    cityChart.setOption(option,true);
+  }
+
+  function updateDirectionRose(sd){
+    const data = sd.direction_counts || [];
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'item',
+        formatter:'{b}：{c} 个岗位（{d}%）'
+      },
+      legend:{
+        top:6,
+        left:'center',
+        textStyle:{fontSize:11,color:'#4b5563'}
+      },
+      series:[
+        {
+          type:'pie',
+          radius:['25%','65%'],
+          center:['50%','58%'],
+          roseType:'radius',
+          data:data
+        }
+      ]
+    };
+    dirChart.setOption(option,true);
+  }
+
+  window.addEventListener('resize', function(){
+    salaryChart.resize();
+    expChart.resize();
+    cityChart.resize();
+    dirChart.resize();
+  });
+})();
+</script>
+{% endblock %}

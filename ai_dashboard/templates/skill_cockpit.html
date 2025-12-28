@@ -1,0 +1,715 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}职业路径驾驶舱 · AI 职场{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+<style>
+  .cockpit-page {
+    background:#f5f5f7;
+    padding:16px 20px 32px;
+    min-height:calc(100vh - 60px);
+  }
+
+  .cockpit-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:14px;
+  }
+
+  .cockpit-title-main {
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .cockpit-title-sub {
+    margin-top:4px;
+    font-size:12px;
+    color:#6b7280;
+    line-height:1.6;
+  }
+
+  .cockpit-badge {
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    font-size:11px;
+    color:#4b5563;
+  }
+
+  .cockpit-layout {
+    display:grid;
+    grid-template-columns:280px minmax(0,1fr);
+    gap:18px;
+  }
+
+  @media (max-width:960px){
+    .cockpit-layout {
+      grid-template-columns:1fr;
+    }
+  }
+
+  .panel {
+    background:#ffffff;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 24px rgba(15,23,42,0.08);
+    padding:12px 14px 12px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .panel-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:6px;
+  }
+
+  .panel-title {
+    font-size:14px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .panel-sub {
+    font-size:11px;
+    color:#6b7280;
+    margin-top:2px;
+    line-height:1.5;
+  }
+
+  .panel-right {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11px;
+    color:#9ca3af;
+  }
+
+  .panel-pill {
+    padding:3px 8px;
+    border-radius:999px;
+    border:1px solid #e5e7eb;
+    background:#f9fafb;
+    color:#6b7280;
+    font-size:11px;
+  }
+
+  .panel-line {
+    height:1px;
+    width:100%;
+    margin:8px 0 6px;
+    background:linear-gradient(90deg,#e5e7eb,#f3f4f6);
+  }
+
+  .chart {
+    flex:1;
+    width:100%;
+    min-height:220px;
+  }
+
+  .filter-form label {
+    display:block;
+    font-size:12px;
+    color:#4b5563;
+    margin-bottom:4px;
+    margin-top:8px;
+  }
+
+  .filter-form select {
+    width:100%;
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#f9fafb;
+    font-size:12px;
+    color:#111827;
+    outline:none;
+  }
+
+  .filter-form select:focus {
+    border-color:#2563eb;
+    box-shadow:0 0 0 1px rgba(37,99,235,.18);
+  }
+
+  .filter-run-btn {
+    margin-top:14px;
+    width:100%;
+    padding:9px 12px;
+    border-radius:999px;
+    border:none;
+    background:linear-gradient(135deg,#bfdbfe,#60a5fa,#3b82f6);
+    color:#0f172a;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(37,99,235,0.22);
+    transition:.16s;
+  }
+
+  .filter-run-btn:hover {
+    transform:translateY(-1px);
+    box-shadow:0 10px 24px rgba(37,99,235,0.28);
+  }
+
+  .filter-meta {
+    margin-top:8px;
+    font-size:11px;
+    color:#9ca3af;
+    line-height:1.5;
+  }
+
+  .right-grid {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:16px;
+  }
+
+  .span-6 { grid-column:span 6; }
+  .span-12 { grid-column:span 12; }
+
+  @media (max-width:1040px){
+    .right-grid {
+      grid-template-columns:repeat(2,1fr);
+    }
+    .span-6,.span-12 { grid-column:span 2; }
+  }
+  @media (max-width:720px){
+    .right-grid {
+      grid-template-columns:1fr;
+    }
+    .span-6,.span-12 { grid-column:span 1; }
+  }
+
+  .back-btn-wrapper {
+    margin-top:24px;
+    text-align:center;
+  }
+
+  .back-btn-wrapper button {
+    min-width:180px;
+    padding:10px 18px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:500;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    color:#374151;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(15,23,42,0.06);
+    transition:.15s;
+  }
+
+  .back-btn-wrapper button:hover {
+    box-shadow:0 6px 16px rgba(15,23,42,0.12);
+    transform:translateY(-1px);
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="cockpit-page">
+  <header class="cockpit-header">
+    <div>
+      <div class="cockpit-title-main">职业路径驾驶舱</div>
+      <div class="cockpit-title-sub">
+        选定学历、经验、城市与方向，系统基于岗位样本给出预估薪资区间、推荐岗位方向以及建议补充的技能。
+      </div>
+    </div>
+    <div class="cockpit-badge">
+      Career Cockpit · AI Job Insight
+    </div>
+  </header>
+
+  <section class="cockpit-layout">
+
+    <!-- 左侧筛选表单 -->
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">筛选条件</div>
+          <div class="panel-sub">
+            先锁定你的基础条件，再生成对应的职业画像和建议。
+          </div>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+
+      <div class="filter-form">
+        <label for="degree_select">学历</label>
+        <select id="degree_select"></select>
+
+        <label for="exp_select">经验段</label>
+        <select id="exp_select"></select>
+
+        <label for="city_select">城市</label>
+        <select id="city_select"></select>
+
+        <label for="direction_select">AI 方向</label>
+        <select id="direction_select"></select>
+
+        <button id="run_btn" class="filter-run-btn">生成职业画像</button>
+
+        <div id="filter_meta" class="filter-meta">
+          等你点一下上面的按钮。
+        </div>
+      </div>
+    </section>
+
+    <!-- 右侧结果展示 -->
+    <section>
+      <div class="right-grid">
+
+        <!-- 预估薪资仪表盘 -->
+        <section class="panel span-6">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">预估薪资区间 · 仪表盘</div>
+              <div class="panel-sub">
+                基于匹配岗位样本的薪资分布，给出当前组合的中位水平和大致区间。
+              </div>
+            </div>
+            <div class="panel-right">
+              <span class="panel-pill">Gauge</span>
+            </div>
+          </div>
+          <div class="panel-line"></div>
+          <div id="gauge_salary_chart" class="chart"></div>
+        </section>
+
+        <!-- 推荐岗位方向 Top3 -->
+        <section class="panel span-6">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">推荐岗位方向 · Top3</div>
+              <div class="panel-sub">
+                在同学历 & 经验 & 城市下，根据岗位数量和薪资综合推荐更合适的岗位方向。
+              </div>
+            </div>
+            <div class="panel-right">
+              <span class="panel-pill">Direction Suggestion</span>
+            </div>
+          </div>
+          <div class="panel-line"></div>
+          <div id="direction_bar_chart" class="chart"></div>
+        </section>
+
+        <!-- 建议补充的技能 -->
+        <section class="panel span-12">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">建议补充的技能 · 高频 TOP</div>
+              <div class="panel-sub">
+                在当前条件下高频出现的技能，适合作为“补课清单”，强化匹配度与谈判空间。
+              </div>
+            </div>
+            <div class="panel-right">
+              <span class="panel-pill">Skill Suggestion</span>
+            </div>
+          </div>
+          <div class="panel-line"></div>
+          <div id="skill_bar_chart" class="chart"></div>
+        </section>
+
+      </div>
+    </section>
+  </section>
+
+<div style="margin-top:18px; text-align:center; display:flex; gap:10px; justify-content:center;">
+  <a href="/skill_talent">
+    <button style="
+      min-width:180px;
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:500;
+      border:1px solid rgba(37,99,235,0.4);
+            background:linear-gradient(135deg,#dbeafe,#93c5fd,#60a5fa);
+      color:#374151;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(15,23,42,0.06);
+    ">
+      返回技能与人才大屏
+    </button>
+  </a>
+
+  <a href="/query_insight">
+    <button style="
+      min-width:180px;
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:500;
+      border:1px solid rgba(37,99,235,0.4);
+      background:linear-gradient(135deg,#dbeafe,#93c5fd,#60a5fa);
+      color:#0f172a;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(37,99,235,0.18);
+    ">
+      查看查询记录（DB）
+    </button>
+  </a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const degreeSelect   = document.getElementById('degree_select');
+  const expSelect      = document.getElementById('exp_select');
+  const citySelect     = document.getElementById('city_select');
+  const dirSelect      = document.getElementById('direction_select');
+  const runBtn         = document.getElementById('run_btn');
+  const filterMeta     = document.getElementById('filter_meta');
+
+  const gaugeDom       = document.getElementById('gauge_salary_chart');
+  const dirBarDom      = document.getElementById('direction_bar_chart');
+  const skillBarDom    = document.getElementById('skill_bar_chart');
+
+  const gaugeChart     = echarts.init(gaugeDom);
+  const dirBarChart    = echarts.init(dirBarDom);
+  const skillBarChart  = echarts.init(skillBarDom);
+
+  let globalData = null;
+
+  fetch("{{ url_for('static', filename='data/skill_cockpit.json') }}")
+    .then(r => r.json())
+    .then(data => {
+      globalData = data || {};
+
+      const degreeList    = globalData.degree_list    || [];
+      const expList       = globalData.exp_list       || [];
+      const cityList      = globalData.city_list      || [];
+      const directionList = globalData.direction_list || [];
+
+      degreeSelect.innerHTML = "";
+      degreeList.forEach(d => {
+        const opt = document.createElement("option");
+        opt.value = d;
+        opt.textContent = d;
+        degreeSelect.appendChild(opt);
+      });
+
+      expSelect.innerHTML = "";
+      expList.forEach(e => {
+        const opt = document.createElement("option");
+        opt.value = e;
+        opt.textContent = e;
+        expSelect.appendChild(opt);
+      });
+
+      citySelect.innerHTML = "";
+      cityList.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c;
+        opt.textContent = c;
+        citySelect.appendChild(opt);
+      });
+
+      dirSelect.innerHTML = "";
+      directionList.forEach(d => {
+        const opt = document.createElement("option");
+        opt.value = d;
+        opt.textContent = d;
+        dirSelect.appendChild(opt);
+      });
+
+      if (degreeList.length && expList.length && cityList.length && directionList.length) {
+        const defaultDegree    = degreeList.includes("本科")        ? "本科"     : (degreeList[0]    || "");
+        const defaultExp       = expList.includes("1-3年")          ? "1-3年"    : (expList[0]       || "");
+        const defaultCity      = cityList.includes("上海")          ? "上海"     : (cityList[0]      || "");
+        const defaultDirection = directionList.includes("人工智能") ? "人工智能" : (directionList[0] || "");
+
+        degreeSelect.value = defaultDegree;
+        expSelect.value    = defaultExp;
+        citySelect.value   = defaultCity;
+        dirSelect.value    = defaultDirection;
+
+        updateAll();
+      } else {
+        filterMeta.textContent = "筛选维度数据不足，请检查 skill_cockpit.json。";
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      filterMeta.textContent = "skill_cockpit.json 加载失败，请检查文件路径和格式。";
+    });
+
+  // 下拉变化时也自动刷新（你刚说“换了数据之后没更新”，基本就是这里没绑）
+  [degreeSelect, expSelect, citySelect, dirSelect].forEach(el => {
+    el.addEventListener('change', updateAll);
+  });
+
+  runBtn.addEventListener("click", function(){
+    updateAll();
+  });
+
+  function updateAll(){
+    if (!globalData) return;
+    const degree    = degreeSelect.value;
+    const exp       = expSelect.value;
+    const city      = citySelect.value;
+    const direction = dirSelect.value;
+
+    const comboKey = `${degree}|${exp}|${city}|${direction}`;
+    const stats    = (globalData.combo_stats || {})[comboKey];
+
+    const jobs     = globalData.jobs || [];
+
+    const filtered = jobs.filter(j =>
+      j.degree === degree &&
+      j.exp === exp &&
+      j.city === city
+    );
+
+    filterMeta.textContent = `已匹配岗位样本：${filtered.length} 条（组合键：${comboKey}${stats ? '' : '，该方向样本偏少'}）`;
+
+    updateGauge(stats);
+    updateDirectionRecommend(filtered);
+    updateSkillRecommend(filtered);
+
+    logUserQuery(degree, exp, city, direction);
+  }
+
+  function updateGauge(stat){
+    if (!stat) {
+      gaugeChart.setOption({
+        title:{
+          text:'该精确组合样本不足',
+          left:'center',
+          top:'middle',
+          textStyle:{fontSize:12,color:'#9ca3af'}
+        },
+        series:[]
+      }, true);
+      return;
+    }
+
+    const maxVal = stat.max || stat.q3 || stat.median || 0;
+
+    const option = {
+      backgroundColor:'transparent',
+      series:[
+        {
+          type:'gauge',
+          min:0,
+          max:maxVal * 1.1,
+          splitNumber:5,
+          axisLine:{lineStyle:{width:10}},
+          axisTick:{show:false},
+          splitLine:{length:8,lineStyle:{color:'#e5e7eb'}},
+          axisLabel:{color:'#6b7280',fontSize:10},
+          pointer:{width:4},
+          detail:{
+            formatter: [
+              '{value} 元',
+              `中位：${stat.median.toFixed(0)} 元`,
+              `区间：${stat.q1.toFixed(0)} - ${stat.q3.toFixed(0)}`
+            ].join('\n'),
+            fontSize:12,
+            offsetCenter:[0,'65%'],
+            color:'#111827'
+          },
+          data:[{value: stat.median}]
+        }
+      ]
+    };
+    gaugeChart.setOption(option,true);
+  }
+
+  function updateDirectionRecommend(filteredJobs){
+    if (!filteredJobs.length) {
+      dirBarChart.setOption({
+        title:{
+          text:'当前城市下样本不足，无法推荐岗位方向',
+          left:'center',
+          top:'middle',
+          textStyle:{fontSize:12,color:'#9ca3af'}
+        },
+        series:[]
+      }, true);
+      return;
+    }
+
+    const agg = {};
+    filteredJobs.forEach(j => {
+      const d = j.direction || '未标注';
+      if (!agg[d]) agg[d] = {count:0, sumSalary:0};
+      agg[d].count += 1;
+      agg[d].sumSalary += j.salary || 0;
+    });
+
+    const items = Object.keys(agg).map(k => ({
+      direction: k,
+      count: agg[k].count,
+      avgSalary: agg[k].sumSalary / agg[k].count
+    }));
+
+    items.sort((a,b) => {
+      if (b.count !== a.count) return b.count - a.count;
+      return b.avgSalary - a.avgSalary;
+    });
+
+    const top3 = items.slice(0,3);
+
+    const names    = top3.map(i => `${i.direction}`);
+    const counts   = top3.map(i => i.count);
+    const salaries = top3.map(i => i.avgSalary.toFixed(0));
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'axis',
+        axisPointer:{type:'shadow'},
+        formatter: params => {
+          const p = params[0];
+          const s = salaries[p.dataIndex];
+          return [
+            `岗位方向：${p.name}`,
+            `岗位数：${p.value}`,
+            `平均中位月薪：${s} 元`
+          ].join('<br/>');
+        }
+      },
+      grid:{left:'24%',right:'8%',top:'10%',bottom:'12%'},
+      xAxis:{
+        type:'value',
+        axisLine:{show:false},
+        axisTick:{show:false},
+        splitLine:{lineStyle:{color:'#e5e7eb'}},
+        axisLabel:{color:'#6b7280',fontSize:11}
+      },
+      yAxis:{
+        type:'category',
+        data:names,
+        axisLine:{lineStyle:{color:'#e5e7eb'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#111827',fontSize:11}
+      },
+      series:[
+        {
+          type:'bar',
+          data:counts,
+          barWidth:14,
+          itemStyle:{borderRadius:[6,6,6,6]}
+        }
+      ]
+    };
+    dirBarChart.setOption(option,true);
+  }
+
+  function updateSkillRecommend(filteredJobs){
+    if (!filteredJobs.length) {
+      skillBarChart.setOption({
+        title:{
+          text:'当前条件下样本不足，无法统计技能建议',
+          left:'center',
+          top:'middle',
+          textStyle:{fontSize:12,color:'#9ca3af'}
+        },
+        series:[]
+      }, true);
+      return;
+    }
+
+    const skillCount = {};
+    filteredJobs.forEach(j => {
+      (j.skills || []).forEach(s => {
+        if (!s) return;
+        if (!skillCount[s]) skillCount[s] = 0;
+        skillCount[s] += 1;
+      });
+    });
+
+    const items = Object.keys(skillCount).map(k => ({
+      name:k,
+      value:skillCount[k]
+    }));
+
+    if (!items.length) {
+      skillBarChart.setOption({
+        title:{
+          text:'当前样本未提取到技能字段',
+          left:'center',
+          top:'middle',
+          textStyle:{fontSize:12,color:'#9ca3af'}
+        },
+        series:[]
+      }, true);
+      return;
+    }
+
+    items.sort((a,b) => b.value - a.value);
+    const topN = items.slice(0,10);
+    const names  = topN.map(i => i.name).reverse();
+    const values = topN.map(i => i.value).reverse();
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'axis',
+        axisPointer:{type:'shadow'},
+        formatter: params => {
+          const p = params[0];
+          return `技能：${p.name}<br/>出现次数：${p.value}`;
+        }
+      },
+      grid:{left:'22%',right:'6%',top:'10%',bottom:'10%'},
+      xAxis:{
+        type:'value',
+        axisLine:{show:false},
+        axisTick:{show:false},
+        splitLine:{lineStyle:{color:'#e5e7eb'}},
+        axisLabel:{color:'#6b7280',fontSize:11}
+      },
+      yAxis:{
+        type:'category',
+        data:names,
+        axisLine:{lineStyle:{color:'#e5e7eb'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#111827',fontSize:11}
+      },
+      series:[
+        {
+          type:'bar',
+          data:values,
+          barWidth:12,
+          itemStyle:{borderRadius:[4,4,4,4]}
+        }
+      ]
+    };
+    skillBarChart.setOption(option,true);
+  }
+
+
+  window.addEventListener('resize', function(){
+    gaugeChart.resize();
+    dirBarChart.resize();
+    skillBarChart.resize();
+  });
+})();
+
+    function logUserQuery(degree, exp, city, direction){
+    // 只做日志，不影响前端逻辑
+    fetch("/api/skill_cockpit_log", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+        degree: degree,
+        exp: exp,
+        city: city,
+        direction: direction
+        })
+    }).catch(err => {
+        console.error("logUserQuery error:", err);
+    });
+    }
+
+</script>
+{% endblock %}

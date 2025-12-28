@@ -1,0 +1,424 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}AI 职场智能问答{% endblock %}
+
+{% block content %}
+<style>
+  /* 整体页面：浅色科技感背景 + 几何网格 */
+  .chat-page {
+    position:relative;
+    background:radial-gradient(circle at 20% -10%, #e0f2fe 0%, #f8fafc 50%, #eef2ff 100%);
+    padding:16px 20px 24px;
+    min-height:calc(100vh - 60px);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+
+  /* 背景柔光 */
+  .chat-page::before{
+    content:"";
+    position:absolute;
+    inset:-40px;
+    background-image:
+      radial-gradient(circle at 0 0,rgba(125,211,252,0.35),transparent 60%),
+      radial-gradient(circle at 100% 100%,rgba(191,219,254,0.35),transparent 60%);
+    pointer-events:none;
+    z-index:-2;
+  }
+
+  /* 科技网格 */
+  .chat-page::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(203,213,225,0.2) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(203,213,225,0.2) 1px, transparent 1px);
+    background-size:38px 38px;
+    opacity:0.4;
+    pointer-events:none;
+    z-index:-1;
+  }
+
+  /* 标题 */
+  .chat-title-main {
+    font-size:20px;
+    font-weight:600;
+    color:#0f172a;
+  }
+  .chat-title-sub {
+    margin-top:4px;
+    font-size:12px;
+    color:#64748b;
+  }
+
+  /* 主容器 */
+  .chat-container {
+    flex:1;
+    display:flex;
+    gap:16px;
+    min-height:0;
+  }
+
+  /* 主聊天卡片：浅色磨砂玻璃态 */
+  .chat-panel {
+    flex:1;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(14px);
+    border-radius:16px;
+    border:1px solid rgba(148,163,184,0.35);
+    box-shadow:0 12px 28px rgba(148,163,184,0.25);
+    padding:14px 16px;
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+  }
+
+  /* 面板顶部 */
+  .chat-panel-title {
+    font-size:15px;
+    font-weight:600;
+    color:#0f172a;
+  }
+  .chat-panel-sub {
+    font-size:11px;
+    color:#64748b;
+    margin-top:2px;
+  }
+
+  /* 蓝色科技徽章 */
+  .chat-badge {
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #60a5fa;
+    background:linear-gradient(135deg,#dbeafe,#eff6ff);
+    color:#1e3a8a;
+    font-size:11px;
+    box-shadow:0 0 10px rgba(147,197,253,0.45);
+  }
+
+  /* 横线 */
+  .chat-line {
+    height:1px;
+    margin:10px 0;
+    background:linear-gradient(90deg,rgba(148,163,184,0),rgba(148,163,184,0.8),rgba(148,163,184,0));
+  }
+
+  /* 聊天记录区 */
+  .chat-messages {
+    flex:1;
+    overflow-y:auto;
+    padding-right:6px;
+  }
+
+  .chat-message {
+    margin-bottom:12px;
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .chat-message-user {
+    justify-content:flex-end;
+  }
+
+  /* 用户与 AI 的头像 */
+  .chat-avatar {
+    width:24px;
+    height:24px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#60a5fa,#3b82f6);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    box-shadow:0 0 8px rgba(96,165,250,0.6);
+  }
+  .chat-avatar-assistant {
+    background:linear-gradient(135deg,#a5b4fc,#6366f1);
+    box-shadow:0 0 8px rgba(165,180,252,0.6);
+  }
+
+  /* 对话气泡 */
+  .chat-bubble {
+    max-width:74%;
+    padding:9px 12px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    color:#0f172a;
+    border:1px solid rgba(148,163,184,0.3);
+    box-shadow:0 4px 10px rgba(148,163,184,0.25);
+    white-space:pre-wrap;
+  }
+  .chat-bubble-user {
+    background:linear-gradient(135deg,#93c5fd,#60a5fa);
+    color:white;
+    border:none;
+    box-shadow:0 4px 12px rgba(96,165,250,0.45);
+  }
+
+  /* 输入区 */
+  .chat-input-area {
+    margin-top:12px;
+    display:flex;
+    gap:10px;
+    align-items:flex-end;
+  }
+
+  .chat-input {
+    flex:1;
+    border-radius:14px;
+    border:1px solid rgba(148,163,184,0.5);
+    padding:10px 12px;
+    font-size:13px;
+    min-height:42px;
+    max-height:120px;
+    resize:vertical;
+    background:rgba(255,255,255,0.8);
+    color:#0f172a;
+    backdrop-filter:blur(6px);
+    outline:none;
+  }
+  .chat-input:focus{
+    border-color:#60a5fa;
+    box-shadow:0 0 0 2px rgba(96,165,250,0.25);
+  }
+
+  /* 发送按钮：科技蓝绿渐变 */
+  .chat-send-btn {
+    border:none;
+    border-radius:999px;
+    padding:10px 18px;
+    font-size:13px;
+    background:linear-gradient(135deg,#3b82f6,#22c55e);
+    color:white;
+    cursor:pointer;
+    white-space:nowrap;
+    box-shadow:0 8px 16px rgba(59,130,246,0.30);
+    transition:0.15s;
+  }
+  .chat-send-btn:hover:not([disabled]){
+    transform:translateY(-1px);
+    box-shadow:0 12px 20px rgba(59,130,246,0.45);
+  }
+  .chat-send-btn[disabled]{
+    opacity:0.55;
+    cursor:not-allowed;
+    box-shadow:none;
+  }
+
+  /* 状态提示 */
+  .chat-status {
+    margin-top:4px;
+    font-size:11px;
+    color:#64748b;
+  }
+
+  @media (max-width:768px){
+    .chat-page{padding:12px 10px 18px;}
+    .chat-container{flex-direction:column;}
+    .chat-bubble{max-width:100%;}
+  }
+</style>
+
+<div class="chat-page">
+  <header class="chat-header">
+    <div class="chat-title-main">AI 职场智能对话助手</div>
+    <div class="chat-title-sub">
+      基于本平台爬取与统计的 AI 就业数据，你可以用自然语言提问，例如：
+      “现在哪些城市机会最多？”、“我只有本科学历，应该更看哪些方向？”
+    </div>
+  </header>
+
+  <section class="chat-container">
+    <section class="chat-panel">
+      <!-- <div class="chat-panel-header">
+        <div>
+          <div class="chat-panel-title">数据驱动的对话助手</div>
+          <div class="chat-panel-sub">
+            回答时会优先参考当前大屏的数据摘要；如有超出数据范围的建议，会以「基于通用经验」标记。
+          </div>
+        </div>
+      </div>
+      <div class="chat-line"></div> -->
+
+      <div id="chat_messages" class="chat-messages">
+        <!-- 初始欢迎消息由 JS 渲染 -->
+      </div>
+
+      <div class="chat-input-area">
+        <textarea id="chat_input" class="chat-input" placeholder="试着问：目前 AI 岗位主要集中在哪些城市？"></textarea>
+        <button id="chat_send_btn" class="chat-send-btn">
+          <span>发送</span>
+        </button>
+      </div>
+      <div id="chat_status" class="chat-status">已就绪，可以开始提问。</div>
+    </section>
+  </section>
+</div>
+
+<script>
+  // 前端对话状态
+  const chatHistory = [];  // {role: 'user'|'assistant', content: string}
+  let currentStreamSource = null; // 当前 SSE 连接
+
+  function renderMessages() {
+    const container = document.getElementById("chat_messages");
+    container.innerHTML = "";
+
+    const all = [
+      {
+        role: "assistant",
+        content: "你好，我是AI职场问答助手。你可以问我关于城市、薪资、技能、学历要求等问题，我会基于现有数据进行回答。"
+      },
+      ...chatHistory
+    ];
+
+    all.forEach(msg => {
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("chat-message");
+      if (msg.role === "user") wrapper.classList.add("chat-message-user");
+
+      const avatar = document.createElement("div");
+      avatar.classList.add("chat-avatar");
+      if (msg.role === "assistant") {
+        avatar.classList.add("chat-avatar-assistant");
+        avatar.textContent = "AI";
+      } else {
+        avatar.textContent = "你";
+      }
+
+      const bubble = document.createElement("div");
+      bubble.classList.add("chat-bubble");
+      if (msg.role === "user") bubble.classList.add("chat-bubble-user");
+      bubble.textContent = msg.content;
+
+      if (msg.role === "assistant") {
+        wrapper.appendChild(avatar);
+        wrapper.appendChild(bubble);
+      } else {
+        wrapper.appendChild(bubble);
+        wrapper.appendChild(avatar);
+      }
+
+      container.appendChild(wrapper);
+    });
+
+    container.scrollTop = container.scrollHeight;
+  }
+
+  function updateLastAssistantBubble(text) {
+    const container = document.getElementById("chat_messages");
+    const bubbles = container.querySelectorAll(".chat-message");
+    if (!bubbles.length) return;
+
+    // 最后一个一定是刚刚 push 的 assistant 消息
+    const lastMsg = bubbles[bubbles.length - 1];
+    const bubbleEl = lastMsg.querySelector(".chat-bubble");
+    if (bubbleEl) bubbleEl.textContent = text;
+
+    container.scrollTop = container.scrollHeight;
+  }
+
+  function startStream(question) {
+    const statusEl = document.getElementById("chat_status");
+    const btnEl = document.getElementById("chat_send_btn");
+
+    // 关闭之前的流
+    if (currentStreamSource) {
+      currentStreamSource.close();
+      currentStreamSource = null;
+    }
+
+    btnEl.disabled = true;
+    statusEl.textContent = "正在基于当前大屏数据流式生成回答…";
+
+    const historyStr = encodeURIComponent(JSON.stringify(chatHistory));
+    const qStr = encodeURIComponent(question);
+
+    const url = "{{ url_for('api_chat_stream') }}" + "?q=" + qStr + "&history=" + historyStr;
+    const es = new EventSource(url);
+    currentStreamSource = es;
+
+    let streamingText = "";
+
+    es.onmessage = (event) => {
+      try {
+        const data = JSON.parse(event.data || "{}");
+        if (data.type === "start") {
+          return;
+        }
+        if (data.type === "chunk") {
+          streamingText += data.content;
+          // 更新最后一条 assistant 消息的内容
+          chatHistory[chatHistory.length - 1].content = streamingText;
+          updateLastAssistantBubble(streamingText);
+          return;
+        }
+        if (data.type === "end") {
+          statusEl.textContent = "回答已生成，可以继续追问。";
+          btnEl.disabled = false;
+          es.close();
+          currentStreamSource = null;
+          return;
+        }
+        if (data.type === "error") {
+          statusEl.textContent = data.content || "生成过程中出现错误。";
+          btnEl.disabled = false;
+          es.close();
+          currentStreamSource = null;
+        }
+      } catch (e) {
+        console.error("解析 SSE 数据失败:", e, event.data);
+      }
+    };
+
+    es.onerror = (err) => {
+      console.error("SSE 连接出错:", err);
+      statusEl.textContent = "与后端连接中断，请稍后再试。";
+      btnEl.disabled = false;
+      es.close();
+      currentStreamSource = null;
+    };
+  }
+
+  function sendMessage() {
+    const inputEl = document.getElementById("chat_input");
+    const text = (inputEl.value || "").trim();
+    if (!text) return;
+
+    // 用户消息入队
+    chatHistory.push({ role: "user", content: text });
+    renderMessages();
+    inputEl.value = "";
+
+    // 先插入一个空的 assistant 消息，用来承接流式内容
+    chatHistory.push({ role: "assistant", content: "" });
+    renderMessages();
+
+    // 启动流式
+    startStream(text);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    renderMessages();
+
+    const btnEl = document.getElementById("chat_send_btn");
+    const inputEl = document.getElementById("chat_input");
+
+    btnEl.addEventListener("click", sendMessage);
+    inputEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+  });
+</script>
+
+{% endblock %}

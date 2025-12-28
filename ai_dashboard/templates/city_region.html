@@ -1,0 +1,862 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}城市与区域洞察 · AI 职场智能洞察系统{% endblock %}
+
+{% block head_extra %}
+  <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+  <!-- 中国地图，注册 map: 'china' -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+<style>
+    .panel {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.08);
+      padding: 12px 14px 12px;
+      min-height: 600px;       /* 关键：给个最小高度 */
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      margin-bottom: 18px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .panel-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .panel-sub {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    .panel-line {
+      height: 1px;
+      width: 100%;
+      margin: 8px 0 6px;
+      background: linear-gradient(90deg,#e5e7eb,#f3f4f6);
+    }
+
+    .chart {
+      flex: 1;
+      width: 100%;
+      /* 如果你想更保险，可以直接定高，比如：
+      height: 320px;
+      */
+    }
+    .grid-wrapper {
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, #eef2ff 0, #f9fafb 40%, #f9fafb 100%);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    /* 关键：PC 端固定 3 列 */
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 固定 3 列 */
+    gap: 16px;
+    }
+
+    /* cell 样式不变，保持卡片感 */
+    .cell {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    padding: 10px 10px 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease,
+        background-color 0.18s ease;
+    }
+
+    .cell:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.10);
+    border-color: #c7d2fe;
+    background-color: #f9fafb;
+    }
+
+    .cell-header {
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    padding: 0 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    /* .cell-header .city-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+    } */
+     .cell-header .city-name {
+  max-width: 90%;       /* 调更大甚至 100% */
+  white-space: nowrap;  /* 不允许换行 */
+}
+
+.panel-title, .panel-sub {
+  white-space: nowrap; /* 都不换行 */
+  width:12%;        /* 直接撑满父容器 */
+  display: block;
+  overflow: visible;  /* 让长文本能显示，而不是被截断 */
+}
+
+    .cell-header span.badge {
+    font-size: 10px;
+    color: #6b7280;
+    background: #e5e7eb;
+    border-radius: 999px;
+    padding: 1px 6px;
+    }
+
+    /* 固定小图高度，避免高度炸裂 */
+    .cell-chart {
+    margin-top: 4px;
+    height: 200px;
+    }
+
+    /* 响应式：中屏 2 列，小屏 1 列 */
+    @media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    }
+
+    @media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .grid-wrapper {
+        padding: 10px;
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+    }
+    .cell-chart {
+        height: 110px;
+    }
+    }
+.panel.panel-grid {
+  min-height: 900px; 
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+  <!-- 1. Geo 图 -->
+  <section class="panel">
+    <div class="panel-header">
+      <div class="panel-title">全国岗位 Geo 气泡图</div>
+      <div class="panel-sub">用地图 + 气泡展示各城市 AI 岗位数量与薪资水平。</div>
+      <div class="panel-line"></div>
+    </div>
+    <div id="geo_chart" class="chart"></div>
+  </section>
+
+  <!-- 2. 城市岗位数量排名 -->
+  <section class="panel">
+    <div class="panel-header">
+      <div class="panel-title">城市岗位数量排名</div>
+      <div class="panel-sub">横向条形图呈现城市岗位数 Top 排名。</div>
+      <div class="panel-line"></div>
+    </div>
+    <div id="city_job_rank_chart" class="chart"></div>
+  </section>
+
+  <!-- 3. 城市平均薪资对比（先留容器，之后再加 JS） -->
+  <section class="panel">
+    <div class="panel-header">
+      <div class="panel-title">城市平均薪资对比</div>
+      <div class="panel-sub">对比核心城市 AI 岗位平均薪资梯度。</div>
+      <div class="panel-line"></div>
+    </div>
+    <div id="city_salary_chart" class="chart"></div>
+  </section>
+
+  <!-- 4. 城市 × 月份 九宫格趋势 -->
+  <section class="panel panel-grid">
+    <div class="panel-header">
+        <div class="panel-title">城市 × 月份九宫格趋势</div>
+        <div class="panel-sub">对比不同月份的招聘热度变化。</div>
+        <div class="panel-line"></div>
+    </div>
+
+    <div class="grid-wrapper">
+        <div class="grid">
+        {% for i in range(9) %}
+        <div class="cell">
+            <div class="cell-header">
+            <span class="city-name" data-index="{{ i }}">城市 {{ i+1 }}</span>
+            <span class="badge">jobs / month</span>
+            </div>
+            <div id="city-chart-{{ i }}" class="cell-chart"></div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <div class="panel-title">城市 → AI 方向 桑基图</div>
+      <div class="panel-sub">展示“哪些城市在重点布局哪些 AI 方向”。</div>
+      <div class="panel-line"></div>
+    </div>
+    <div id="city_sankey_chart" class="chart"></div>
+  </section>
+
+<div style="margin-top:18px; text-align:center;">
+  <a href="/city_detail">
+    <button style="
+      min-width: 300px;
+      padding: 20px 26px;
+      border-radius: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid rgba(37,99,235,0.35);
+      background: linear-gradient(135deg, #bfdbfe 0%, #60a5fa 50%, #3b82f6 100%);
+      color: #ffffff;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(37,99,235,0.22);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    ">
+      进入城市岗位深度分析
+    </button>
+  </a>
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script>
+// ========== 1. Geo 图 · 高亮能量点版 ==========
+const geoDom = document.getElementById('geo_chart');
+const geoChart = echarts.init(geoDom);
+
+const geoCoordMap = {
+  '北京': [116.40, 39.90],
+  '上海': [121.47, 31.23],
+  '广州': [113.27, 23.13],
+  '深圳': [114.05, 22.55],
+  '杭州': [120.16, 30.25],
+  '南京': [118.80, 32.06],
+  '武汉': [114.30, 30.60],
+  '成都': [104.06, 30.67],
+  '重庆': [106.55, 29.56],
+  '西安': [108.93, 34.27],
+  '郑州': [113.62, 34.75],
+  '长沙': [112.93, 28.23],
+  '合肥': [117.25, 31.83],
+  '苏州': [120.58, 31.30],
+  '无锡': [120.30, 31.57],
+  '佛山': [113.12, 23.02],
+  '东莞': [113.75, 23.05],
+  '天津': [117.20, 39.12],
+  '青岛': [120.38, 36.07],
+  '济南': [117.00, 36.65],
+  '宁波': [121.55, 29.88],
+  '厦门': [118.08, 24.48],
+  '福州': [119.30, 26.08],
+  '珠海': [113.57, 22.27],
+  '惠州': [114.42, 23.12],
+  '南宁': [108.37, 22.82],
+  '昆明': [102.83, 24.88],
+  '拉萨': [91.13, 29.65],
+  '乌鲁木齐': [87.62, 43.82],
+  '兰州': [103.82, 36.07],
+  '银川': [106.27, 38.47],
+  '呼和浩特': [111.67, 40.82],
+  '沈阳': [123.43, 41.80],
+  '大连': [121.62, 38.92],
+  '长春': [125.32, 43.90],
+  '哈尔滨': [126.53, 45.80],
+  '南昌': [115.85, 28.68],
+  '贵阳': [106.63, 26.65],
+  '太原': [112.55, 37.87],
+  '石家庄': [114.52, 38.05],
+  '烟台': [121.43, 37.45],
+  '温州': [120.70, 28.00],
+  '绍兴': [120.58, 30.00],
+  '嘉兴': [120.75, 30.75],
+  '常州': [119.95, 31.78],
+  '扬州': [119.40, 32.40],
+  '徐州': [117.18, 34.27],
+  '南通': [120.88, 31.98],
+  '泰州': [119.92, 32.45],
+  '镇江': [119.45, 32.20],
+  '洛阳': [112.45, 34.62],
+  '桂林': [110.28, 25.28],
+  '泉州': [118.67, 24.88],
+  '金华': [119.65, 29.08],
+  '赣州': [114.93, 25.83],
+  '常德': [111.68, 29.05],
+  '株洲': [113.13, 27.83],
+  '珠海': [113.57, 22.27],
+  '江门': [113.08, 22.58],
+  '汕头': [116.68, 23.35],
+  '湛江': [110.35, 21.27],
+  '肇庆': [112.47, 23.05],
+  '佛山': [113.12, 23.02],
+  '中山': [113.38, 22.52]
+};
+
+function convertData(data) {
+  const res = [];
+  for (let i = 0; i < data.length; i++) {
+    const cityName = data[i].name;
+    const geoCoord = geoCoordMap[cityName];
+    if (geoCoord) {
+      res.push({
+        name: cityName,
+        value: [
+          geoCoord[0],
+          geoCoord[1],
+          data[i].value || 0,
+          data[i].salary || null
+        ]
+      });
+    }
+  }
+  return res;
+}
+
+// 读取 geo.json
+fetch("{{ url_for('static', filename='data/geo.json') }}")
+  .then(r => r.json())
+  .then(rawData => {
+    const filtered = rawData.filter(d => !!geoCoordMap[d.name]);
+    const allData = convertData(filtered);
+
+    // 动态获取薪资 min/max
+    const salaries = filtered.map(d => d.salary).filter(v => v != null);
+    const minSalary = salaries.length ? Math.min(...salaries) : 3000;
+    const maxSalary = salaries.length ? Math.max(...salaries) : 30000;
+
+    const option = {
+      backgroundColor: '#f9fafb',  // 浅色底
+      tooltip: {
+        trigger: 'item',
+        formatter: params => {
+          const v = params.value;
+          if (v && v.length >= 4) {
+            const jobs = v[2];
+            const salary = v[3];
+            return (
+              params.name + '<br/>' +
+              '岗位数：' + jobs + '<br/>' +
+              (salary ? ('平均薪资：' + salary.toFixed(0) + ' 元/月') : '')
+            );
+          }
+          return params.name;
+        }
+      },
+      geo: {
+        map: 'china',
+        roam: true,
+        itemStyle: {
+          normal: {
+            areaColor: '#fff3e0',
+            borderColor: '#d1d5db',
+            borderWidth: 1
+          },
+          emphasis: {
+            areaColor: '#fff7ed'
+          }
+        }
+      },
+      visualMap: {
+        show: false,
+        min: minSalary,
+        max: maxSalary,
+        dimension: 3,
+        inRange: {}
+      },
+      series: [
+        {
+          name: '城市亮点',
+          type: 'scatter',
+          coordinateSystem: 'geo',
+          data: allData,
+          symbol: 'circle',
+          symbolSize: val => {
+            const jobs = val[2] || 0;
+            return Math.max(Math.sqrt(jobs) * 1.3, 5);
+          },
+          itemStyle: {
+            color: '#ff8c42',  // 主色橙（柔和但醒目）
+            opacity: 0.95,
+            shadowBlur: 10,
+            shadowColor: 'rgba(255,140,66,0.3)'
+          },
+          emphasis: {
+            itemStyle: {
+              color: '#ff6a00',
+              shadowBlur: 18,
+              shadowColor: 'rgba(255,106,0,0.4)'
+            }
+          }
+        }
+      ]
+    };
+
+    geoChart.setOption(option);
+    window.addEventListener('resize', () => geoChart.resize());
+  });
+  
+// ========== 2. 城市岗位数量排名（竖直柱状图版） ==========
+const rankDom = document.getElementById('city_job_rank_chart');
+const cityJobRankChart = echarts.init(rankDom);
+
+async function initCityJobRank() {
+  try {
+    const res = await fetch("{{ url_for('static', filename='data/city_job_rank copy.json') }}");
+    const data = await res.json();
+
+    const cities = data.cities || [];
+    const counts = data.job_counts || [];
+
+    const option = {
+      backgroundColor: 'transparent',
+      grid: {
+        left: 50,
+        right: 30,
+        top: 30,
+        bottom: 70
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: function (params) {
+          const p = params[0];
+          return p.name + '<br/>岗位数量：' + p.value;
+        }
+      },
+      xAxis: {
+        type: 'category',
+        data: cities,
+        axisLabel: {
+          color: '#6b7280',
+          fontSize: 11,
+          interval: 0,
+          rotate: 40   // 城市多的时候斜着放
+        },
+        axisTick: { show: false },
+        axisLine: { lineStyle: { color: '#d1d5db' } }
+      },
+      yAxis: {
+        type: 'value',
+        axisLine: { show: false },
+        axisTick: { show: false },
+        splitLine: { lineStyle: { color: '#e5e7eb' } },
+        axisLabel: { color: '#6b7280', fontSize: 11 }
+      },
+      series: [
+        {
+          name: '岗位数量',
+          type: 'bar',
+          data: counts,
+          barWidth: 22,
+          itemStyle: {
+            borderRadius: [6, 6, 0, 0],
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: '#4f46e5' },
+              { offset: 1, color: '#a5b4fc' }
+            ])
+          },
+          label: {
+            show: true,
+            position: 'top',
+            color: '#374151',
+            fontSize: 11
+          }
+        }
+      ]
+    };
+
+    cityJobRankChart.setOption(option);
+  } catch (e) {
+    console.error('加载 city_job_rank.json 失败', e);
+  }
+}
+
+initCityJobRank();
+
+
+  // ========== 3. 城市平均薪资对比 ==========
+  const salaryDom = document.getElementById('city_salary_chart');
+  const citySalaryChart = echarts.init(salaryDom);
+
+  async function initCitySalary() {
+    try {
+      const res = await fetch("{{ url_for('static', filename='data/city_avg_salary.json') }}");
+      const data = await res.json();
+
+      const cities = data.cities || [];
+      const salary = data.avg_salary || [];
+
+      const option = {
+        backgroundColor: 'transparent',
+        grid: {
+          left: 50,
+          right: 30,
+          top: 30,
+          bottom: 60
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { type: 'shadow' },
+          formatter: function (params) {
+            const p = params[0];
+            return (
+              p.name +
+              '<br/>平均中位月薪：' +
+              (p.value != null ? p.value.toFixed(0) + ' 元' : '暂无')
+            );
+          }
+        },
+        xAxis: {
+          type: 'category',
+          data: cities,
+          axisLabel: {
+            color: '#6b7280',
+            fontSize: 11,
+            interval: 0,
+            rotate: 40
+          },
+          axisTick: { show: false },
+          axisLine: { lineStyle: { color: '#d1d5db' } }
+        },
+        yAxis: {
+          type: 'value',
+          axisLine: { show: false },
+          splitLine: { lineStyle: { color: '#e5e7eb' } },
+          axisLabel: { color: '#6b7280' }
+        },
+        visualMap: {
+          show: false,
+          min: Math.min.apply(null, salary.filter(v => v != null)),
+          max: Math.max.apply(null, salary.filter(v => v != null)),
+          dimension: 0,
+          inRange: {}
+        },
+        series: [
+          {
+            name: '平均薪资',
+            type: 'bar',
+            data: salary,
+            barWidth: 20,
+            itemStyle: {
+              borderRadius: [6, 6, 0, 0],
+              color: function (params) {
+                return new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  { offset: 0, color: '#38bdf8' },
+                  { offset: 0.5, color: '#60a5fa' },
+                  { offset: 1, color: '#a5b4fc' }
+                ]);
+              }
+            },
+            label: {
+              show: false
+            }
+          }
+        ]
+      };
+
+      citySalaryChart.setOption(option);
+    } catch (e) {
+      console.error('加载 city_avg_salary.json 失败', e);
+    }
+  }
+
+  initCitySalary();
+
+
+  // ========== 4. 城市 × 月份 九宫格 ==========
+  let gridCharts = [];
+
+  async function initGrid() {
+    const res = await fetch("{{ url_for('static', filename='data/city_month_trend.json') }}");
+    const data = await res.json();
+
+    const months = data.months || [];
+    const seriesList = (data.series || []).slice(0, 9);
+    gridCharts = [];
+
+    const palette = ['#2563eb','#f97316','#22c55e','#a855f7','#0ea5e9','#e11d48','#10b981','#6366f1','#facc15'];
+
+    seriesList.forEach((s, idx) => {
+      const dom = document.getElementById('city-chart-' + idx);
+      if (!dom) return;
+
+      const span = document.querySelector(`.city-name[data-index="${idx}"]`);
+      if (span) span.textContent = s.name;
+
+      const chart = echarts.init(dom);
+      gridCharts.push(chart);
+
+      chart.setOption({
+        backgroundColor: 'transparent',
+        grid: {
+          left: 28,
+          right: 8,
+          top: 8,
+          bottom: 22
+        },
+        tooltip: {
+          trigger: 'axis',
+          formatter: function (params) {
+            const p = params[0];
+            return `${s.name}<br/>${p.axisValue}<br/>岗位数：${p.value}`;
+          },
+          axisPointer: { type: 'line' }
+        },
+        xAxis: {
+          type: 'category',
+          data: months,
+          boundaryGap: false,
+          axisLine: { lineStyle: { color: '#e5e7eb' } },
+          axisLabel: {
+            color: '#9ca3af',
+            fontSize: 9,
+            interval: months.length > 8 ? Math.ceil(months.length / 6) : 0
+          },
+          axisTick: { show: false }
+        },
+        yAxis: {
+          type: 'value',
+          axisLine: { show: false },
+          axisTick: { show: false },
+          splitLine: { lineStyle: { color: '#e5e7eb' } },
+          axisLabel: {
+            color: '#9ca3af',
+            fontSize: 9
+          }
+        },
+        series: [
+          {
+            name: s.name,
+            type: 'line',
+            smooth: true,
+            symbol: 'circle',
+            symbolSize: 3,
+            data: s.data,
+            lineStyle: {
+              width: 2,
+              color: palette[idx % palette.length]
+            },
+            itemStyle: {
+              color: palette[idx % palette.length]
+            },
+            areaStyle: {
+              opacity: 0.12,
+              color: palette[idx % palette.length]
+            }
+          }
+        ]
+      });
+    });
+
+    // 不足 9 个城市隐藏多余的格子
+    for (let i = seriesList.length; i < 9; i++) {
+      const span = document.querySelector(`.city-name[data-index="${i}"]`);
+      if (span) {
+        const cell = span.closest('.cell');
+        if (cell) cell.style.display = 'none';
+      }
+    }
+  }
+
+  initGrid();
+
+  // ========== 4. 自适应 ==========
+  window.addEventListener('resize', () => {
+    geoChart.resize();
+    cityJobRankChart.resize();
+    citySalaryChart.resize();  
+    gridCharts.forEach(c => c && c.resize());
+  });
+</script>
+
+<script>
+  function initCityDirectionSankey() {
+    const dom = document.getElementById("city_sankey_chart");
+    if (!dom) {
+      console.error("找不到 id 为 city_sankey_chart 的容器");
+      return;
+    }
+
+    const sankeyChart = echarts.init(dom);
+
+    const tooltipStyle = {
+      backgroundColor: "#020617",
+      borderColor: "#1f2937",
+      borderWidth: 1,
+      textStyle: { color: "#e5e7eb", fontSize: 12 },
+      padding: 8,
+    };
+
+    // 控制展示数量
+    const CITY_LIMIT = 8;   // 城市 Top N
+    const DIR_LIMIT = 10;   // AI 方向 Top N
+
+    fetch("{{ url_for('static', filename='data/city_direction_sankey.json') }}")
+      .then((r) => r.json())
+      .then((json) => {
+        // ---------- 1. 清洗数据 ----------
+        const rawLinks = (json.links || []).filter((l) => {
+          const s = String(l.source);
+          const t = String(l.target);
+          if (!s || !t) return false;
+          if (s === "nan" || t === "nan") return false;
+          if (s.trim() === "" || t.trim() === "") return false;
+          if (s === t) return false;
+          return true;
+        });
+
+        // ---------- 2. 聚合出城市 / 方向的岗位总数 ----------
+        const cityCount = {};
+        const dirCount = {};
+
+        rawLinks.forEach((l) => {
+          const s = String(l.source);
+          const t = String(l.target);
+          const v = Number(l.value) || 0;
+          cityCount[s] = (cityCount[s] || 0) + v;
+          dirCount[t] = (dirCount[t] || 0) + v;
+        });
+
+        const cityList = Object.keys(cityCount).sort((a, b) => cityCount[b] - cityCount[a]);
+        const dirList = Object.keys(dirCount).sort((a, b) => dirCount[b] - dirCount[a]);
+
+        const topCities = new Set(cityList.slice(0, CITY_LIMIT));
+        const topDirs = new Set(dirList.slice(0, DIR_LIMIT));
+
+        // ---------- 3. 过滤 links ----------
+        const filteredLinks = rawLinks.filter((l) =>
+          topCities.has(String(l.source)) && topDirs.has(String(l.target))
+        );
+
+        const finalLinks =
+          filteredLinks.length > 0
+            ? filteredLinks
+            : rawLinks.filter((l) => topCities.has(String(l.source)));
+
+        // ---------- 4. 重新提取节点 ----------
+        const citySet = new Set();
+        const dirSet = new Set();
+
+        finalLinks.forEach((l) => {
+          citySet.add(String(l.source));
+          dirSet.add(String(l.target));
+        });
+
+        const cityNames = Array.from(citySet);
+        const dirNames = Array.from(dirSet);
+
+        const nodes = [
+          ...cityNames.map((name) => ({ name, _type: "city" })),
+          ...dirNames.map((name) => ({ name, _type: "dir" })),
+        ];
+
+        // ---------- 5. 颜色 ----------
+        const cityColor = new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+          { offset: 0, color: "#bfdbfe" },
+          { offset: 1, color: "#60a5fa" },
+        ]);
+
+        const dirColor = new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+          { offset: 0, color: "#60a5fa" },
+          { offset: 1, color: "#1d4ed8" },
+        ]);
+
+        // ---------- 6. 设置图表 ----------
+        const option = {
+          backgroundColor: "transparent",
+          tooltip: {
+            ...tooltipStyle,
+            trigger: "item",
+            formatter: (params) => {
+              if (params.dataType === "edge") {
+                return `
+                  城市：${params.data.source}<br/>
+                  AI 方向：${params.data.target}<br/>
+                  岗位数：${params.data.value}
+                `;
+              }
+              return `节点：${params.data.name}`;
+            },
+          },
+          series: [
+            {
+              type: "sankey",
+              data: nodes.map((n) => ({
+                name: n.name,
+                itemStyle: {
+                  color: n._type === "city" ? cityColor : dirColor,
+                },
+                label: {
+                  color: "#111827",
+                  fontSize: 11,
+                  overflow: "truncate",
+                  width: 90,
+                },
+              })),
+              links: finalLinks.map((l) => ({
+                ...l,
+                lineStyle: {
+                  color: "source",
+                  opacity: 0.45,
+                },
+              })),
+              left: "8%",
+              right: "18%",
+              top: "8%",
+              bottom: "8%",
+              nodeWidth: 18,
+              nodeGap: 18,
+              layoutIterations: 32,
+              emphasis: {
+                focus: "adjacency",
+                lineStyle: { opacity: 0.9 },
+              },
+            },
+          ],
+        };
+
+        sankeyChart.setOption(option);
+      })
+      .catch((e) => {
+        console.error("城市 → AI 方向 桑基图加载失败:", e);
+      });
+
+    window.addEventListener("resize", () => sankeyChart.resize());
+  }
+
+  window.addEventListener("load", initCityDirectionSankey);
+</script>
+
+{% endblock %}

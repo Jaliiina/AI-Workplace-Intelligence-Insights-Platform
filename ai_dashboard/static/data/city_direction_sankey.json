@@ -1,0 +1,6825 @@
+{
+  "nodes": [
+    {
+      "name": "七台河"
+    },
+    {
+      "name": "三亚"
+    },
+    {
+      "name": "三明"
+    },
+    {
+      "name": "三门峡"
+    },
+    {
+      "name": "上海"
+    },
+    {
+      "name": "上海、常州"
+    },
+    {
+      "name": "上饶"
+    },
+    {
+      "name": "东莞"
+    },
+    {
+      "name": "东营"
+    },
+    {
+      "name": "中卫"
+    },
+    {
+      "name": "中山"
+    },
+    {
+      "name": "临夏"
+    },
+    {
+      "name": "临沂"
+    },
+    {
+      "name": "丹东"
+    },
+    {
+      "name": "丽水"
+    },
+    {
+      "name": "义乌"
+    },
+    {
+      "name": "乌兰察布"
+    },
+    {
+      "name": "乌鲁木齐"
+    },
+    {
+      "name": "九江"
+    },
+    {
+      "name": "云浮"
+    },
+    {
+      "name": "亳州"
+    },
+    {
+      "name": "伊春"
+    },
+    {
+      "name": "伊犁"
+    },
+    {
+      "name": "佛山"
+    },
+    {
+      "name": "保定"
+    },
+    {
+      "name": "信阳"
+    },
+    {
+      "name": "克孜勒苏"
+    },
+    {
+      "name": "克州"
+    },
+    {
+      "name": "克拉玛依"
+    },
+    {
+      "name": "六安"
+    },
+    {
+      "name": "六盘水"
+    },
+    {
+      "name": "兰州"
+    },
+    {
+      "name": "兴安盟"
+    },
+    {
+      "name": "北京"
+    },
+    {
+      "name": "北海"
+    },
+    {
+      "name": "十堰"
+    },
+    {
+      "name": "南京"
+    },
+    {
+      "name": "南宁"
+    },
+    {
+      "name": "南平"
+    },
+    {
+      "name": "南昌"
+    },
+    {
+      "name": "南通"
+    },
+    {
+      "name": "南阳"
+    },
+    {
+      "name": "厦门"
+    },
+    {
+      "name": "台州"
+    },
+    {
+      "name": "合肥"
+    },
+    {
+      "name": "吉安"
+    },
+    {
+      "name": "吕梁"
+    },
+    {
+      "name": "周口"
+    },
+    {
+      "name": "呼和浩特"
+    },
+    {
+      "name": "和田"
+    },
+    {
+      "name": "咸宁"
+    },
+    {
+      "name": "咸阳"
+    },
+    {
+      "name": "哈尔滨"
+    },
+    {
+      "name": "唐山"
+    },
+    {
+      "name": "商丘"
+    },
+    {
+      "name": "商洛"
+    },
+    {
+      "name": "喀什"
+    },
+    {
+      "name": "嘉兴"
+    },
+    {
+      "name": "塔城"
+    },
+    {
+      "name": "大兴安岭"
+    },
+    {
+      "name": "大同"
+    },
+    {
+      "name": "大庆"
+    },
+    {
+      "name": "大连"
+    },
+    {
+      "name": "天津"
+    },
+    {
+      "name": "太原"
+    },
+    {
+      "name": "威海"
+    },
+    {
+      "name": "娄底"
+    },
+    {
+      "name": "孝感"
+    },
+    {
+      "name": "宁德"
+    },
+    {
+      "name": "宁波"
+    },
+    {
+      "name": "安康"
+    },
+    {
+      "name": "安阳"
+    },
+    {
+      "name": "安顺"
+    },
+    {
+      "name": "宜宾"
+    },
+    {
+      "name": "宜昌"
+    },
+    {
+      "name": "宝鸡"
+    },
+    {
+      "name": "宣城"
+    },
+    {
+      "name": "宿州"
+    },
+    {
+      "name": "岳阳"
+    },
+    {
+      "name": "崇左"
+    },
+    {
+      "name": "巴彦淖尔"
+    },
+    {
+      "name": "巴音郭楞"
+    },
+    {
+      "name": "常州"
+    },
+    {
+      "name": "常德"
+    },
+    {
+      "name": "平凉"
+    },
+    {
+      "name": "平顶山"
+    },
+    {
+      "name": "广元"
+    },
+    {
+      "name": "广安"
+    },
+    {
+      "name": "广州"
+    },
+    {
+      "name": "庆阳"
+    },
+    {
+      "name": "廊坊"
+    },
+    {
+      "name": "延安"
+    },
+    {
+      "name": "开封"
+    },
+    {
+      "name": "张家口"
+    },
+    {
+      "name": "张家界"
+    },
+    {
+      "name": "徐州"
+    },
+    {
+      "name": "德州"
+    },
+    {
+      "name": "德阳"
+    },
+    {
+      "name": "怀化"
+    },
+    {
+      "name": "惠州"
+    },
+    {
+      "name": "成都"
+    },
+    {
+      "name": "扬州"
+    },
+    {
+      "name": "拉萨"
+    },
+    {
+      "name": "揭阳"
+    },
+    {
+      "name": "攀枝花"
+    },
+    {
+      "name": "新乡"
+    },
+    {
+      "name": "新余"
+    },
+    {
+      "name": "无锡"
+    },
+    {
+      "name": "日喀则"
+    },
+    {
+      "name": "日照"
+    },
+    {
+      "name": "昆明"
+    },
+    {
+      "name": "昌吉"
+    },
+    {
+      "name": "昌都"
+    },
+    {
+      "name": "昭通"
+    },
+    {
+      "name": "曲靖"
+    },
+    {
+      "name": "朝阳"
+    },
+    {
+      "name": "本溪"
+    },
+    {
+      "name": "来宾"
+    },
+    {
+      "name": "杭州"
+    },
+    {
+      "name": "林芝"
+    },
+    {
+      "name": "枣庄"
+    },
+    {
+      "name": "柳州"
+    },
+    {
+      "name": "株洲"
+    },
+    {
+      "name": "桂林"
+    },
+    {
+      "name": "梧州"
+    },
+    {
+      "name": "楚雄"
+    },
+    {
+      "name": "榆林"
+    },
+    {
+      "name": "武汉"
+    },
+    {
+      "name": "永州"
+    },
+    {
+      "name": "汉中"
+    },
+    {
+      "name": "汕头"
+    },
+    {
+      "name": "汕尾"
+    },
+    {
+      "name": "江门"
+    },
+    {
+      "name": "池州"
+    },
+    {
+      "name": "沈阳"
+    },
+    {
+      "name": "沧州"
+    },
+    {
+      "name": "河池"
+    },
+    {
+      "name": "河源"
+    },
+    {
+      "name": "泉州"
+    },
+    {
+      "name": "泰安"
+    },
+    {
+      "name": "泰州"
+    },
+    {
+      "name": "泸州"
+    },
+    {
+      "name": "洋浦经济开发区"
+    },
+    {
+      "name": "洛阳"
+    },
+    {
+      "name": "济南"
+    },
+    {
+      "name": "济宁"
+    },
+    {
+      "name": "海南"
+    },
+    {
+      "name": "海口"
+    },
+    {
+      "name": "淄博"
+    },
+    {
+      "name": "淮南"
+    },
+    {
+      "name": "淮安"
+    },
+    {
+      "name": "深圳"
+    },
+    {
+      "name": "清远"
+    },
+    {
+      "name": "温州"
+    },
+    {
+      "name": "渭南"
+    },
+    {
+      "name": "湖州"
+    },
+    {
+      "name": "湘潭"
+    },
+    {
+      "name": "湛江"
+    },
+    {
+      "name": "滁州"
+    },
+    {
+      "name": "滨州"
+    },
+    {
+      "name": "漯河"
+    },
+    {
+      "name": "漳州"
+    },
+    {
+      "name": "潍坊"
+    },
+    {
+      "name": "潮州"
+    },
+    {
+      "name": "澄迈"
+    },
+    {
+      "name": "烟台"
+    },
+    {
+      "name": "玉林"
+    },
+    {
+      "name": "玉溪"
+    },
+    {
+      "name": "珠海"
+    },
+    {
+      "name": "甘南"
+    },
+    {
+      "name": "百色"
+    },
+    {
+      "name": "益阳"
+    },
+    {
+      "name": "盐城"
+    },
+    {
+      "name": "眉山"
+    },
+    {
+      "name": "石嘴山"
+    },
+    {
+      "name": "石家庄"
+    },
+    {
+      "name": "福州"
+    },
+    {
+      "name": "秦皇岛"
+    },
+    {
+      "name": "红河州"
+    },
+    {
+      "name": "绍兴"
+    },
+    {
+      "name": "绵阳"
+    },
+    {
+      "name": "聊城"
+    },
+    {
+      "name": "肇庆"
+    },
+    {
+      "name": "自贡"
+    },
+    {
+      "name": "舟山"
+    },
+    {
+      "name": "芜湖"
+    },
+    {
+      "name": "苏州"
+    },
+    {
+      "name": "茂名"
+    },
+    {
+      "name": "荆州"
+    },
+    {
+      "name": "荆门"
+    },
+    {
+      "name": "菏泽"
+    },
+    {
+      "name": "营口"
+    },
+    {
+      "name": "葫芦岛"
+    },
+    {
+      "name": "蚌埠"
+    },
+    {
+      "name": "衡水"
+    },
+    {
+      "name": "衡阳"
+    },
+    {
+      "name": "襄阳"
+    },
+    {
+      "name": "西宁"
+    },
+    {
+      "name": "西安"
+    },
+    {
+      "name": "西昌"
+    },
+    {
+      "name": "许昌"
+    },
+    {
+      "name": "贵港"
+    },
+    {
+      "name": "贵阳"
+    },
+    {
+      "name": "贺州"
+    },
+    {
+      "name": "赣州"
+    },
+    {
+      "name": "赤峰"
+    },
+    {
+      "name": "辽阳"
+    },
+    {
+      "name": "达州"
+    },
+    {
+      "name": "运城"
+    },
+    {
+      "name": "连云港"
+    },
+    {
+      "name": "迪庆"
+    },
+    {
+      "name": "通辽"
+    },
+    {
+      "name": "邢台"
+    },
+    {
+      "name": "那曲"
+    },
+    {
+      "name": "邯郸"
+    },
+    {
+      "name": "邵阳"
+    },
+    {
+      "name": "郑州"
+    },
+    {
+      "name": "郴州"
+    },
+    {
+      "name": "鄂尔多斯"
+    },
+    {
+      "name": "鄂州"
+    },
+    {
+      "name": "酒泉"
+    },
+    {
+      "name": "重庆"
+    },
+    {
+      "name": "金华"
+    },
+    {
+      "name": "钦州"
+    },
+    {
+      "name": "铜川"
+    },
+    {
+      "name": "银川"
+    },
+    {
+      "name": "镇江"
+    },
+    {
+      "name": "长春"
+    },
+    {
+      "name": "长沙"
+    },
+    {
+      "name": "长治"
+    },
+    {
+      "name": "阜新"
+    },
+    {
+      "name": "阜阳"
+    },
+    {
+      "name": "阳江"
+    },
+    {
+      "name": "阿克苏"
+    },
+    {
+      "name": "阿里"
+    },
+    {
+      "name": "陇南"
+    },
+    {
+      "name": "陕西"
+    },
+    {
+      "name": "随州"
+    },
+    {
+      "name": "雄安新区"
+    },
+    {
+      "name": "青岛"
+    },
+    {
+      "name": "韶关"
+    },
+    {
+      "name": "香港"
+    },
+    {
+      "name": "马鞍山"
+    },
+    {
+      "name": "驻马店"
+    },
+    {
+      "name": "鸡西"
+    },
+    {
+      "name": "鹤岗"
+    },
+    {
+      "name": "鹰潭"
+    },
+    {
+      "name": "黄冈"
+    },
+    {
+      "name": "黄山"
+    },
+    {
+      "name": "黄石"
+    },
+    {
+      "name": "黑河"
+    },
+    {
+      "name": "龙岩"
+    },
+    {
+      "name": "AI产品"
+    },
+    {
+      "name": "云计算"
+    },
+    {
+      "name": "人工智能"
+    },
+    {
+      "name": "人机交互"
+    },
+    {
+      "name": "数据挖掘"
+    },
+    {
+      "name": "智能家居"
+    },
+    {
+      "name": "机器学习"
+    },
+    {
+      "name": "自动驾驶"
+    },
+    {
+      "name": "自然语言处理"
+    },
+    {
+      "name": "机器人自动化"
+    },
+    {
+      "name": "分布式计算"
+    },
+    {
+      "name": "商业智能"
+    },
+    {
+      "name": "图像识别"
+    },
+    {
+      "name": "大数据分析"
+    },
+    {
+      "name": "大数据处理"
+    },
+    {
+      "name": "大数据平台"
+    },
+    {
+      "name": "强化学习"
+    },
+    {
+      "name": "无人驾驶"
+    },
+    {
+      "name": "智能传感器"
+    },
+    {
+      "name": "智能客服"
+    },
+    {
+      "name": "智能环保"
+    },
+    {
+      "name": "智能计算"
+    },
+    {
+      "name": "智能语音"
+    },
+    {
+      "name": "智能音箱"
+    },
+    {
+      "name": "模式识别"
+    },
+    {
+      "name": "深度学习"
+    },
+    {
+      "name": "特征识别"
+    },
+    {
+      "name": "神经网络"
+    },
+    {
+      "name": "计算机视觉"
+    },
+    {
+      "name": "语音交互"
+    },
+    {
+      "name": "语音合成"
+    },
+    {
+      "name": "边缘计算"
+    },
+    {
+      "name": "特征提取"
+    },
+    {
+      "name": "可穿戴产品"
+    },
+    {
+      "name": "大数据营销"
+    },
+    {
+      "name": "智能医疗"
+    },
+    {
+      "name": "语音识别"
+    },
+    {
+      "name": "大数据管理"
+    },
+    {
+      "name": "ai产品"
+    },
+    {
+      "name": "人脸识别"
+    },
+    {
+      "name": "增强现实"
+    },
+    {
+      "name": "智能教育"
+    },
+    {
+      "name": "知识图谱"
+    },
+    {
+      "name": "虚拟现实"
+    },
+    {
+      "name": "AI芯片"
+    },
+    {
+      "name": "智能芯片"
+    },
+    {
+      "name": "智能农业"
+    },
+    {
+      "name": "智能养老"
+    },
+    {
+      "name": "智能运输"
+    },
+    {
+      "name": "深度神经网络"
+    },
+    {
+      "name": "生物识别"
+    },
+    {
+      "name": "大数据运营"
+    },
+    {
+      "name": "智能零售"
+    },
+    {
+      "name": "智慧金融"
+    },
+    {
+      "name": "智能搜索"
+    },
+    {
+      "name": "机器翻译"
+    }
+  ],
+  "links": [
+    {
+      "source": "七台河",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "三亚",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "三亚",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "三亚",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "三明",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "三门峡",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "三门峡",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "AI产品",
+      "value": 6
+    },
+    {
+      "source": "上海",
+      "target": "云计算",
+      "value": 28
+    },
+    {
+      "source": "上海",
+      "target": "人工智能",
+      "value": 116
+    },
+    {
+      "source": "上海",
+      "target": "人机交互",
+      "value": 8
+    },
+    {
+      "source": "上海",
+      "target": "分布式计算",
+      "value": 3
+    },
+    {
+      "source": "上海",
+      "target": "商业智能",
+      "value": 5
+    },
+    {
+      "source": "上海",
+      "target": "图像识别",
+      "value": 2
+    },
+    {
+      "source": "上海",
+      "target": "大数据分析",
+      "value": 14
+    },
+    {
+      "source": "上海",
+      "target": "大数据处理",
+      "value": 9
+    },
+    {
+      "source": "上海",
+      "target": "大数据平台",
+      "value": 17
+    },
+    {
+      "source": "上海",
+      "target": "强化学习",
+      "value": 5
+    },
+    {
+      "source": "上海",
+      "target": "数据挖掘",
+      "value": 74
+    },
+    {
+      "source": "上海",
+      "target": "无人驾驶",
+      "value": 4
+    },
+    {
+      "source": "上海",
+      "target": "智能传感器",
+      "value": 2
+    },
+    {
+      "source": "上海",
+      "target": "智能客服",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "智能家居",
+      "value": 7
+    },
+    {
+      "source": "上海",
+      "target": "智能环保",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "智能语音",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "智能音箱",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "机器人自动化",
+      "value": 20
+    },
+    {
+      "source": "上海",
+      "target": "机器学习",
+      "value": 78
+    },
+    {
+      "source": "上海",
+      "target": "模式识别",
+      "value": 2
+    },
+    {
+      "source": "上海",
+      "target": "深度学习",
+      "value": 40
+    },
+    {
+      "source": "上海",
+      "target": "特征识别",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "自动驾驶",
+      "value": 7
+    },
+    {
+      "source": "上海",
+      "target": "自然语言处理",
+      "value": 8
+    },
+    {
+      "source": "上海",
+      "target": "计算机视觉",
+      "value": 5
+    },
+    {
+      "source": "上海",
+      "target": "语音交互",
+      "value": 4
+    },
+    {
+      "source": "上海",
+      "target": "语音合成",
+      "value": 1
+    },
+    {
+      "source": "上海",
+      "target": "边缘计算",
+      "value": 2
+    },
+    {
+      "source": "上海、常州",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "上饶",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "上饶",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "上饶",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "上饶",
+      "target": "特征提取",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "云计算",
+      "value": 4
+    },
+    {
+      "source": "东莞",
+      "target": "人工智能",
+      "value": 36
+    },
+    {
+      "source": "东莞",
+      "target": "人机交互",
+      "value": 4
+    },
+    {
+      "source": "东莞",
+      "target": "可穿戴产品",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "大数据分析",
+      "value": 4
+    },
+    {
+      "source": "东莞",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "大数据营销",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "数据挖掘",
+      "value": 12
+    },
+    {
+      "source": "东莞",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "东莞",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "智能家居",
+      "value": 3
+    },
+    {
+      "source": "东莞",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "智能音箱",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "机器人自动化",
+      "value": 4
+    },
+    {
+      "source": "东莞",
+      "target": "机器学习",
+      "value": 7
+    },
+    {
+      "source": "东莞",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "深度学习",
+      "value": 17
+    },
+    {
+      "source": "东莞",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "东莞",
+      "target": "计算机视觉",
+      "value": 4
+    },
+    {
+      "source": "东营",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "中卫",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "中卫",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "中卫",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "中山",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "中山",
+      "target": "人工智能",
+      "value": 53
+    },
+    {
+      "source": "中山",
+      "target": "大数据营销",
+      "value": 1
+    },
+    {
+      "source": "中山",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "中山",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "临夏",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "临夏",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "临沂",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "临沂",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "临沂",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "临沂",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "临沂",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "临沂",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "丹东",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "丽水",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "丽水",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "义乌",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "乌兰察布",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "乌兰察布",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "乌鲁木齐",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "乌鲁木齐",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "乌鲁木齐",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "乌鲁木齐",
+      "target": "数据挖掘",
+      "value": 3
+    },
+    {
+      "source": "九江",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "九江",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "云浮",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "云浮",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "亳州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "亳州",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "亳州",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "伊春",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "伊犁",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "佛山",
+      "target": "人工智能",
+      "value": 49
+    },
+    {
+      "source": "佛山",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "佛山",
+      "target": "图像识别",
+      "value": 2
+    },
+    {
+      "source": "佛山",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "佛山",
+      "target": "大数据处理",
+      "value": 3
+    },
+    {
+      "source": "佛山",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "佛山",
+      "target": "数据挖掘",
+      "value": 18
+    },
+    {
+      "source": "佛山",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "佛山",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "佛山",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "佛山",
+      "target": "智能家居",
+      "value": 23
+    },
+    {
+      "source": "佛山",
+      "target": "智能环保",
+      "value": 3
+    },
+    {
+      "source": "佛山",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "佛山",
+      "target": "机器人自动化",
+      "value": 5
+    },
+    {
+      "source": "佛山",
+      "target": "机器学习",
+      "value": 4
+    },
+    {
+      "source": "佛山",
+      "target": "深度学习",
+      "value": 4
+    },
+    {
+      "source": "佛山",
+      "target": "自动驾驶",
+      "value": 2
+    },
+    {
+      "source": "佛山",
+      "target": "计算机视觉",
+      "value": 3
+    },
+    {
+      "source": "佛山",
+      "target": "语音交互",
+      "value": 1
+    },
+    {
+      "source": "佛山",
+      "target": "语音识别",
+      "value": 1
+    },
+    {
+      "source": "佛山",
+      "target": "边缘计算",
+      "value": 1
+    },
+    {
+      "source": "保定",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "保定",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "信阳",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "克孜勒苏",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "克州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "克拉玛依",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "六安",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "六安",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "六盘水",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "兰州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "兰州",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "兰州",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "兴安盟",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "AI产品",
+      "value": 9
+    },
+    {
+      "source": "北京",
+      "target": "ai产品",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "云计算",
+      "value": 38
+    },
+    {
+      "source": "北京",
+      "target": "人工智能",
+      "value": 178
+    },
+    {
+      "source": "北京",
+      "target": "人机交互",
+      "value": 10
+    },
+    {
+      "source": "北京",
+      "target": "人脸识别",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "分布式计算",
+      "value": 6
+    },
+    {
+      "source": "北京",
+      "target": "可穿戴产品",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "商业智能",
+      "value": 5
+    },
+    {
+      "source": "北京",
+      "target": "图像识别",
+      "value": 3
+    },
+    {
+      "source": "北京",
+      "target": "增强现实",
+      "value": 3
+    },
+    {
+      "source": "北京",
+      "target": "大数据分析",
+      "value": 18
+    },
+    {
+      "source": "北京",
+      "target": "大数据处理",
+      "value": 39
+    },
+    {
+      "source": "北京",
+      "target": "大数据平台",
+      "value": 24
+    },
+    {
+      "source": "北京",
+      "target": "大数据营销",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "强化学习",
+      "value": 4
+    },
+    {
+      "source": "北京",
+      "target": "数据挖掘",
+      "value": 106
+    },
+    {
+      "source": "北京",
+      "target": "无人驾驶",
+      "value": 4
+    },
+    {
+      "source": "北京",
+      "target": "智能客服",
+      "value": 2
+    },
+    {
+      "source": "北京",
+      "target": "智能家居",
+      "value": 8
+    },
+    {
+      "source": "北京",
+      "target": "智能教育",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "智能语音",
+      "value": 2
+    },
+    {
+      "source": "北京",
+      "target": "智能音箱",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "机器人自动化",
+      "value": 7
+    },
+    {
+      "source": "北京",
+      "target": "机器学习",
+      "value": 164
+    },
+    {
+      "source": "北京",
+      "target": "模式识别",
+      "value": 2
+    },
+    {
+      "source": "北京",
+      "target": "深度学习",
+      "value": 80
+    },
+    {
+      "source": "北京",
+      "target": "特征提取",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "知识图谱",
+      "value": 5
+    },
+    {
+      "source": "北京",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "北京",
+      "target": "自动驾驶",
+      "value": 6
+    },
+    {
+      "source": "北京",
+      "target": "自然语言处理",
+      "value": 19
+    },
+    {
+      "source": "北京",
+      "target": "虚拟现实",
+      "value": 2
+    },
+    {
+      "source": "北京",
+      "target": "计算机视觉",
+      "value": 5
+    },
+    {
+      "source": "北京",
+      "target": "语音交互",
+      "value": 14
+    },
+    {
+      "source": "北京",
+      "target": "语音识别",
+      "value": 2
+    },
+    {
+      "source": "北京",
+      "target": "边缘计算",
+      "value": 2
+    },
+    {
+      "source": "北海",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "十堰",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "十堰",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "AI芯片",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "云计算",
+      "value": 12
+    },
+    {
+      "source": "南京",
+      "target": "人工智能",
+      "value": 83
+    },
+    {
+      "source": "南京",
+      "target": "人脸识别",
+      "value": 3
+    },
+    {
+      "source": "南京",
+      "target": "图像识别",
+      "value": 2
+    },
+    {
+      "source": "南京",
+      "target": "大数据分析",
+      "value": 4
+    },
+    {
+      "source": "南京",
+      "target": "大数据处理",
+      "value": 7
+    },
+    {
+      "source": "南京",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "南京",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "强化学习",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "数据挖掘",
+      "value": 11
+    },
+    {
+      "source": "南京",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "智能医疗",
+      "value": 3
+    },
+    {
+      "source": "南京",
+      "target": "智能家居",
+      "value": 5
+    },
+    {
+      "source": "南京",
+      "target": "智能芯片",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "机器人自动化",
+      "value": 5
+    },
+    {
+      "source": "南京",
+      "target": "机器学习",
+      "value": 22
+    },
+    {
+      "source": "南京",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "深度学习",
+      "value": 26
+    },
+    {
+      "source": "南京",
+      "target": "知识图谱",
+      "value": 2
+    },
+    {
+      "source": "南京",
+      "target": "自动驾驶",
+      "value": 13
+    },
+    {
+      "source": "南京",
+      "target": "自然语言处理",
+      "value": 4
+    },
+    {
+      "source": "南京",
+      "target": "虚拟现实",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "计算机视觉",
+      "value": 5
+    },
+    {
+      "source": "南京",
+      "target": "语音交互",
+      "value": 1
+    },
+    {
+      "source": "南京",
+      "target": "语音识别",
+      "value": 1
+    },
+    {
+      "source": "南宁",
+      "target": "云计算",
+      "value": 5
+    },
+    {
+      "source": "南宁",
+      "target": "人工智能",
+      "value": 13
+    },
+    {
+      "source": "南宁",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "南宁",
+      "target": "大数据处理",
+      "value": 2
+    },
+    {
+      "source": "南宁",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "南宁",
+      "target": "智能农业",
+      "value": 1
+    },
+    {
+      "source": "南宁",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "南宁",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "南宁",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "南平",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "南平",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "云计算",
+      "value": 4
+    },
+    {
+      "source": "南昌",
+      "target": "人工智能",
+      "value": 5
+    },
+    {
+      "source": "南昌",
+      "target": "人机交互",
+      "value": 2
+    },
+    {
+      "source": "南昌",
+      "target": "大数据分析",
+      "value": 4
+    },
+    {
+      "source": "南昌",
+      "target": "大数据处理",
+      "value": 2
+    },
+    {
+      "source": "南昌",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "南昌",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "数据挖掘",
+      "value": 4
+    },
+    {
+      "source": "南昌",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "南昌",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "南昌",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "虚拟现实",
+      "value": 1
+    },
+    {
+      "source": "南昌",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "南通",
+      "target": "人工智能",
+      "value": 5
+    },
+    {
+      "source": "南通",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "南通",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "南通",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "南通",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "南通",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "南通",
+      "target": "机器学习",
+      "value": 3
+    },
+    {
+      "source": "南通",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "南阳",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "AI产品",
+      "value": 2
+    },
+    {
+      "source": "厦门",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "人工智能",
+      "value": 6
+    },
+    {
+      "source": "厦门",
+      "target": "商业智能",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "大数据处理",
+      "value": 2
+    },
+    {
+      "source": "厦门",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "数据挖掘",
+      "value": 4
+    },
+    {
+      "source": "厦门",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "智能家居",
+      "value": 3
+    },
+    {
+      "source": "厦门",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "厦门",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "厦门",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "厦门",
+      "target": "边缘计算",
+      "value": 1
+    },
+    {
+      "source": "台州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "台州",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "台州",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "台州",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "台州",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "台州",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "台州",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "合肥",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "合肥",
+      "target": "云计算",
+      "value": 6
+    },
+    {
+      "source": "合肥",
+      "target": "人工智能",
+      "value": 27
+    },
+    {
+      "source": "合肥",
+      "target": "人机交互",
+      "value": 2
+    },
+    {
+      "source": "合肥",
+      "target": "图像识别",
+      "value": 3
+    },
+    {
+      "source": "合肥",
+      "target": "大数据分析",
+      "value": 3
+    },
+    {
+      "source": "合肥",
+      "target": "大数据处理",
+      "value": 4
+    },
+    {
+      "source": "合肥",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "合肥",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "合肥",
+      "target": "无人驾驶",
+      "value": 3
+    },
+    {
+      "source": "合肥",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "合肥",
+      "target": "智能养老",
+      "value": 1
+    },
+    {
+      "source": "合肥",
+      "target": "智能家居",
+      "value": 4
+    },
+    {
+      "source": "合肥",
+      "target": "机器人自动化",
+      "value": 3
+    },
+    {
+      "source": "合肥",
+      "target": "机器学习",
+      "value": 9
+    },
+    {
+      "source": "合肥",
+      "target": "模式识别",
+      "value": 2
+    },
+    {
+      "source": "合肥",
+      "target": "深度学习",
+      "value": 12
+    },
+    {
+      "source": "合肥",
+      "target": "知识图谱",
+      "value": 2
+    },
+    {
+      "source": "合肥",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "合肥",
+      "target": "自动驾驶",
+      "value": 3
+    },
+    {
+      "source": "合肥",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "合肥",
+      "target": "计算机视觉",
+      "value": 4
+    },
+    {
+      "source": "吉安",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "吉安",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "吉安",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "吕梁",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "周口",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "呼和浩特",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "呼和浩特",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "呼和浩特",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "呼和浩特",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "和田",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "和田",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "咸宁",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "咸阳",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "咸阳",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "咸阳",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "哈尔滨",
+      "target": "云计算",
+      "value": 5
+    },
+    {
+      "source": "哈尔滨",
+      "target": "人工智能",
+      "value": 7
+    },
+    {
+      "source": "哈尔滨",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "哈尔滨",
+      "target": "大数据平台",
+      "value": 5
+    },
+    {
+      "source": "哈尔滨",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "哈尔滨",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "哈尔滨",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "哈尔滨",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "哈尔滨",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "唐山",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "唐山",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "商丘",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "商丘",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "商丘",
+      "target": "智能家居",
+      "value": 3
+    },
+    {
+      "source": "商洛",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "商洛",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "喀什",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "喀什",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "嘉兴",
+      "target": "人工智能",
+      "value": 5
+    },
+    {
+      "source": "嘉兴",
+      "target": "商业智能",
+      "value": 1
+    },
+    {
+      "source": "嘉兴",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "嘉兴",
+      "target": "数据挖掘",
+      "value": 4
+    },
+    {
+      "source": "嘉兴",
+      "target": "机器人自动化",
+      "value": 3
+    },
+    {
+      "source": "嘉兴",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "嘉兴",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "嘉兴",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "嘉兴",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "塔城",
+      "target": "云计算",
+      "value": 4
+    },
+    {
+      "source": "大兴安岭",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "大同",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "大同",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "大庆",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "大庆",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "大连",
+      "target": "云计算",
+      "value": 8
+    },
+    {
+      "source": "大连",
+      "target": "人工智能",
+      "value": 11
+    },
+    {
+      "source": "大连",
+      "target": "图像识别",
+      "value": 2
+    },
+    {
+      "source": "大连",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "大连",
+      "target": "大数据处理",
+      "value": 3
+    },
+    {
+      "source": "大连",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "大连",
+      "target": "数据挖掘",
+      "value": 3
+    },
+    {
+      "source": "大连",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "大连",
+      "target": "智能运输",
+      "value": 1
+    },
+    {
+      "source": "大连",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "大连",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "大连",
+      "target": "深度学习",
+      "value": 3
+    },
+    {
+      "source": "天津",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "天津",
+      "target": "云计算",
+      "value": 5
+    },
+    {
+      "source": "天津",
+      "target": "人工智能",
+      "value": 9
+    },
+    {
+      "source": "天津",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "天津",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "天津",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "天津",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "天津",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "天津",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "天津",
+      "target": "机器学习",
+      "value": 4
+    },
+    {
+      "source": "天津",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "天津",
+      "target": "深度学习",
+      "value": 3
+    },
+    {
+      "source": "天津",
+      "target": "自动驾驶",
+      "value": 3
+    },
+    {
+      "source": "天津",
+      "target": "边缘计算",
+      "value": 1
+    },
+    {
+      "source": "太原",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "太原",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "太原",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "太原",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "太原",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "威海",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "威海",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "威海",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "威海",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "娄底",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "娄底",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "娄底",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "孝感",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "孝感",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "孝感",
+      "target": "虚拟现实",
+      "value": 1
+    },
+    {
+      "source": "宁德",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "宁波",
+      "target": "AI芯片",
+      "value": 1
+    },
+    {
+      "source": "宁波",
+      "target": "云计算",
+      "value": 4
+    },
+    {
+      "source": "宁波",
+      "target": "人工智能",
+      "value": 30
+    },
+    {
+      "source": "宁波",
+      "target": "人机交互",
+      "value": 4
+    },
+    {
+      "source": "宁波",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "宁波",
+      "target": "大数据处理",
+      "value": 4
+    },
+    {
+      "source": "宁波",
+      "target": "大数据平台",
+      "value": 4
+    },
+    {
+      "source": "宁波",
+      "target": "数据挖掘",
+      "value": 12
+    },
+    {
+      "source": "宁波",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "宁波",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "宁波",
+      "target": "智能家居",
+      "value": 6
+    },
+    {
+      "source": "宁波",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "宁波",
+      "target": "机器人自动化",
+      "value": 11
+    },
+    {
+      "source": "宁波",
+      "target": "机器学习",
+      "value": 5
+    },
+    {
+      "source": "宁波",
+      "target": "深度学习",
+      "value": 6
+    },
+    {
+      "source": "宁波",
+      "target": "深度神经网络",
+      "value": 1
+    },
+    {
+      "source": "宁波",
+      "target": "生物识别",
+      "value": 1
+    },
+    {
+      "source": "宁波",
+      "target": "知识图谱",
+      "value": 1
+    },
+    {
+      "source": "宁波",
+      "target": "计算机视觉",
+      "value": 3
+    },
+    {
+      "source": "宁波",
+      "target": "边缘计算",
+      "value": 1
+    },
+    {
+      "source": "安康",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "安康",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "安阳",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "安阳",
+      "target": "大数据处理",
+      "value": 2
+    },
+    {
+      "source": "安顺",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "宜宾",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "宜宾",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "宜宾",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "宜昌",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "宜昌",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "宜昌",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "宝鸡",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "宝鸡",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "宣城",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "宿州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "岳阳",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "岳阳",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "岳阳",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "崇左",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "崇左",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "巴彦淖尔",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "巴音郭楞",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "常州",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "常州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "常州",
+      "target": "人工智能",
+      "value": 7
+    },
+    {
+      "source": "常州",
+      "target": "人机交互",
+      "value": 3
+    },
+    {
+      "source": "常州",
+      "target": "大数据分析",
+      "value": 3
+    },
+    {
+      "source": "常州",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "常州",
+      "target": "数据挖掘",
+      "value": 9
+    },
+    {
+      "source": "常州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "常州",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "常州",
+      "target": "机器人自动化",
+      "value": 5
+    },
+    {
+      "source": "常州",
+      "target": "机器学习",
+      "value": 4
+    },
+    {
+      "source": "常州",
+      "target": "深度学习",
+      "value": 3
+    },
+    {
+      "source": "常州",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "常州",
+      "target": "计算机视觉",
+      "value": 2
+    },
+    {
+      "source": "常德",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "平凉",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "平顶山",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "平顶山",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "平顶山",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "广元",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "广元",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "广安",
+      "target": "机器学习",
+      "value": 3
+    },
+    {
+      "source": "广州",
+      "target": "AI产品",
+      "value": 2
+    },
+    {
+      "source": "广州",
+      "target": "云计算",
+      "value": 22
+    },
+    {
+      "source": "广州",
+      "target": "人工智能",
+      "value": 90
+    },
+    {
+      "source": "广州",
+      "target": "人机交互",
+      "value": 6
+    },
+    {
+      "source": "广州",
+      "target": "人脸识别",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "分布式计算",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "商业智能",
+      "value": 3
+    },
+    {
+      "source": "广州",
+      "target": "图像识别",
+      "value": 2
+    },
+    {
+      "source": "广州",
+      "target": "大数据分析",
+      "value": 7
+    },
+    {
+      "source": "广州",
+      "target": "大数据处理",
+      "value": 13
+    },
+    {
+      "source": "广州",
+      "target": "大数据平台",
+      "value": 13
+    },
+    {
+      "source": "广州",
+      "target": "强化学习",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "数据挖掘",
+      "value": 60
+    },
+    {
+      "source": "广州",
+      "target": "无人驾驶",
+      "value": 6
+    },
+    {
+      "source": "广州",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "智能客服",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "智能家居",
+      "value": 9
+    },
+    {
+      "source": "广州",
+      "target": "智能计算",
+      "value": 2
+    },
+    {
+      "source": "广州",
+      "target": "智能音箱",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "机器人自动化",
+      "value": 6
+    },
+    {
+      "source": "广州",
+      "target": "机器学习",
+      "value": 24
+    },
+    {
+      "source": "广州",
+      "target": "模式识别",
+      "value": 2
+    },
+    {
+      "source": "广州",
+      "target": "深度学习",
+      "value": 25
+    },
+    {
+      "source": "广州",
+      "target": "特征提取",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "神经网络",
+      "value": 2
+    },
+    {
+      "source": "广州",
+      "target": "自动驾驶",
+      "value": 5
+    },
+    {
+      "source": "广州",
+      "target": "自然语言处理",
+      "value": 3
+    },
+    {
+      "source": "广州",
+      "target": "虚拟现实",
+      "value": 2
+    },
+    {
+      "source": "广州",
+      "target": "计算机视觉",
+      "value": 2
+    },
+    {
+      "source": "广州",
+      "target": "语音交互",
+      "value": 1
+    },
+    {
+      "source": "广州",
+      "target": "边缘计算",
+      "value": 2
+    },
+    {
+      "source": "庆阳",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "廊坊",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "廊坊",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "廊坊",
+      "target": "深度学习",
+      "value": 3
+    },
+    {
+      "source": "延安",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "延安",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "开封",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "开封",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "张家口",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "张家口",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "张家界",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "徐州",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "徐州",
+      "target": "大数据分析",
+      "value": 3
+    },
+    {
+      "source": "徐州",
+      "target": "数据挖掘",
+      "value": 4
+    },
+    {
+      "source": "徐州",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "徐州",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "德州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "德阳",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "德阳",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "德阳",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "德阳",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "怀化",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "怀化",
+      "target": "智能环保",
+      "value": 1
+    },
+    {
+      "source": "惠州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "惠州",
+      "target": "人工智能",
+      "value": 16
+    },
+    {
+      "source": "惠州",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "惠州",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "惠州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "惠州",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "惠州",
+      "target": "智能家居",
+      "value": 7
+    },
+    {
+      "source": "惠州",
+      "target": "机器人自动化",
+      "value": 3
+    },
+    {
+      "source": "惠州",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "惠州",
+      "target": "深度学习",
+      "value": 3
+    },
+    {
+      "source": "惠州",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "惠州",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "AI产品",
+      "value": 3
+    },
+    {
+      "source": "成都",
+      "target": "云计算",
+      "value": 21
+    },
+    {
+      "source": "成都",
+      "target": "人工智能",
+      "value": 67
+    },
+    {
+      "source": "成都",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "人脸识别",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "分布式计算",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "图像识别",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "大数据分析",
+      "value": 5
+    },
+    {
+      "source": "成都",
+      "target": "大数据处理",
+      "value": 7
+    },
+    {
+      "source": "成都",
+      "target": "大数据平台",
+      "value": 5
+    },
+    {
+      "source": "成都",
+      "target": "大数据管理",
+      "value": 3
+    },
+    {
+      "source": "成都",
+      "target": "强化学习",
+      "value": 2
+    },
+    {
+      "source": "成都",
+      "target": "数据挖掘",
+      "value": 26
+    },
+    {
+      "source": "成都",
+      "target": "无人驾驶",
+      "value": 5
+    },
+    {
+      "source": "成都",
+      "target": "智能家居",
+      "value": 5
+    },
+    {
+      "source": "成都",
+      "target": "机器人自动化",
+      "value": 8
+    },
+    {
+      "source": "成都",
+      "target": "机器学习",
+      "value": 25
+    },
+    {
+      "source": "成都",
+      "target": "深度学习",
+      "value": 17
+    },
+    {
+      "source": "成都",
+      "target": "知识图谱",
+      "value": 2
+    },
+    {
+      "source": "成都",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "自动驾驶",
+      "value": 2
+    },
+    {
+      "source": "成都",
+      "target": "自然语言处理",
+      "value": 4
+    },
+    {
+      "source": "成都",
+      "target": "虚拟现实",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "计算机视觉",
+      "value": 2
+    },
+    {
+      "source": "成都",
+      "target": "语音交互",
+      "value": 1
+    },
+    {
+      "source": "成都",
+      "target": "边缘计算",
+      "value": 2
+    },
+    {
+      "source": "扬州",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "扬州",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "扬州",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "扬州",
+      "target": "生物识别",
+      "value": 1
+    },
+    {
+      "source": "拉萨",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "拉萨",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "揭阳",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "攀枝花",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "新乡",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "新乡",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "新乡",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "新余",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "新余",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "新余",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "无锡",
+      "target": "AI芯片",
+      "value": 1
+    },
+    {
+      "source": "无锡",
+      "target": "ai产品",
+      "value": 1
+    },
+    {
+      "source": "无锡",
+      "target": "云计算",
+      "value": 9
+    },
+    {
+      "source": "无锡",
+      "target": "人工智能",
+      "value": 32
+    },
+    {
+      "source": "无锡",
+      "target": "人机交互",
+      "value": 2
+    },
+    {
+      "source": "无锡",
+      "target": "大数据分析",
+      "value": 4
+    },
+    {
+      "source": "无锡",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "无锡",
+      "target": "数据挖掘",
+      "value": 11
+    },
+    {
+      "source": "无锡",
+      "target": "无人驾驶",
+      "value": 4
+    },
+    {
+      "source": "无锡",
+      "target": "智能传感器",
+      "value": 2
+    },
+    {
+      "source": "无锡",
+      "target": "智能医疗",
+      "value": 4
+    },
+    {
+      "source": "无锡",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "无锡",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "无锡",
+      "target": "机器人自动化",
+      "value": 6
+    },
+    {
+      "source": "无锡",
+      "target": "机器学习",
+      "value": 9
+    },
+    {
+      "source": "无锡",
+      "target": "模式识别",
+      "value": 2
+    },
+    {
+      "source": "无锡",
+      "target": "深度学习",
+      "value": 13
+    },
+    {
+      "source": "无锡",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "无锡",
+      "target": "自动驾驶",
+      "value": 4
+    },
+    {
+      "source": "无锡",
+      "target": "计算机视觉",
+      "value": 3
+    },
+    {
+      "source": "无锡",
+      "target": "语音识别",
+      "value": 1
+    },
+    {
+      "source": "无锡",
+      "target": "边缘计算",
+      "value": 3
+    },
+    {
+      "source": "日喀则",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "日照",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "昆明",
+      "target": "云计算",
+      "value": 8
+    },
+    {
+      "source": "昆明",
+      "target": "人工智能",
+      "value": 25
+    },
+    {
+      "source": "昆明",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "昆明",
+      "target": "人脸识别",
+      "value": 1
+    },
+    {
+      "source": "昆明",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "昆明",
+      "target": "大数据处理",
+      "value": 3
+    },
+    {
+      "source": "昆明",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "昆明",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "昆明",
+      "target": "数据挖掘",
+      "value": 15
+    },
+    {
+      "source": "昆明",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "昆明",
+      "target": "机器学习",
+      "value": 5
+    },
+    {
+      "source": "昆明",
+      "target": "深度学习",
+      "value": 6
+    },
+    {
+      "source": "昆明",
+      "target": "特征识别",
+      "value": 1
+    },
+    {
+      "source": "昆明",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "昆明",
+      "target": "虚拟现实",
+      "value": 2
+    },
+    {
+      "source": "昌吉",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "昌都",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "昭通",
+      "target": "大数据运营",
+      "value": 1
+    },
+    {
+      "source": "曲靖",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "曲靖",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "曲靖",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "朝阳",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "朝阳",
+      "target": "深度神经网络",
+      "value": 1
+    },
+    {
+      "source": "本溪",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "来宾",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "云计算",
+      "value": 18
+    },
+    {
+      "source": "杭州",
+      "target": "人工智能",
+      "value": 63
+    },
+    {
+      "source": "杭州",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "分布式计算",
+      "value": 2
+    },
+    {
+      "source": "杭州",
+      "target": "可穿戴产品",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "图像识别",
+      "value": 2
+    },
+    {
+      "source": "杭州",
+      "target": "大数据分析",
+      "value": 7
+    },
+    {
+      "source": "杭州",
+      "target": "大数据处理",
+      "value": 6
+    },
+    {
+      "source": "杭州",
+      "target": "大数据平台",
+      "value": 8
+    },
+    {
+      "source": "杭州",
+      "target": "强化学习",
+      "value": 2
+    },
+    {
+      "source": "杭州",
+      "target": "数据挖掘",
+      "value": 46
+    },
+    {
+      "source": "杭州",
+      "target": "无人驾驶",
+      "value": 6
+    },
+    {
+      "source": "杭州",
+      "target": "智能客服",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "智能家居",
+      "value": 12
+    },
+    {
+      "source": "杭州",
+      "target": "智能语音",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "杭州",
+      "target": "机器学习",
+      "value": 28
+    },
+    {
+      "source": "杭州",
+      "target": "模式识别",
+      "value": 4
+    },
+    {
+      "source": "杭州",
+      "target": "深度学习",
+      "value": 29
+    },
+    {
+      "source": "杭州",
+      "target": "特征识别",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "神经网络",
+      "value": 3
+    },
+    {
+      "source": "杭州",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "杭州",
+      "target": "自然语言处理",
+      "value": 6
+    },
+    {
+      "source": "杭州",
+      "target": "计算机视觉",
+      "value": 6
+    },
+    {
+      "source": "杭州",
+      "target": "语音识别",
+      "value": 1
+    },
+    {
+      "source": "林芝",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "枣庄",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "枣庄",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "枣庄",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "柳州",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "柳州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "柳州",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "柳州",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "株洲",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "株洲",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "株洲",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "桂林",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "桂林",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "桂林",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "桂林",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "桂林",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "桂林",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "梧州",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "楚雄",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "榆林",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "榆林",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "榆林",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "AI产品",
+      "value": 3
+    },
+    {
+      "source": "武汉",
+      "target": "AI芯片",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "云计算",
+      "value": 16
+    },
+    {
+      "source": "武汉",
+      "target": "人工智能",
+      "value": 72
+    },
+    {
+      "source": "武汉",
+      "target": "人机交互",
+      "value": 4
+    },
+    {
+      "source": "武汉",
+      "target": "人脸识别",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "分布式计算",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "图像识别",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "大数据分析",
+      "value": 12
+    },
+    {
+      "source": "武汉",
+      "target": "大数据处理",
+      "value": 5
+    },
+    {
+      "source": "武汉",
+      "target": "大数据平台",
+      "value": 8
+    },
+    {
+      "source": "武汉",
+      "target": "数据挖掘",
+      "value": 17
+    },
+    {
+      "source": "武汉",
+      "target": "无人驾驶",
+      "value": 5
+    },
+    {
+      "source": "武汉",
+      "target": "智能家居",
+      "value": 4
+    },
+    {
+      "source": "武汉",
+      "target": "智能计算",
+      "value": 2
+    },
+    {
+      "source": "武汉",
+      "target": "机器人自动化",
+      "value": 4
+    },
+    {
+      "source": "武汉",
+      "target": "机器学习",
+      "value": 15
+    },
+    {
+      "source": "武汉",
+      "target": "模式识别",
+      "value": 2
+    },
+    {
+      "source": "武汉",
+      "target": "深度学习",
+      "value": 15
+    },
+    {
+      "source": "武汉",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "自动驾驶",
+      "value": 4
+    },
+    {
+      "source": "武汉",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "虚拟现实",
+      "value": 1
+    },
+    {
+      "source": "武汉",
+      "target": "计算机视觉",
+      "value": 6
+    },
+    {
+      "source": "武汉",
+      "target": "边缘计算",
+      "value": 1
+    },
+    {
+      "source": "永州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "汉中",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "汉中",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "汕头",
+      "target": "大数据处理",
+      "value": 2
+    },
+    {
+      "source": "汕头",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "汕头",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "汕头",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "汕头",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "汕尾",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "汕尾",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "江门",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "江门",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "江门",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "江门",
+      "target": "智能家居",
+      "value": 3
+    },
+    {
+      "source": "江门",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "池州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "沈阳",
+      "target": "云计算",
+      "value": 8
+    },
+    {
+      "source": "沈阳",
+      "target": "人工智能",
+      "value": 12
+    },
+    {
+      "source": "沈阳",
+      "target": "大数据处理",
+      "value": 2
+    },
+    {
+      "source": "沈阳",
+      "target": "数据挖掘",
+      "value": 3
+    },
+    {
+      "source": "沈阳",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "沈阳",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "沈阳",
+      "target": "机器人自动化",
+      "value": 4
+    },
+    {
+      "source": "沈阳",
+      "target": "机器学习",
+      "value": 3
+    },
+    {
+      "source": "沈阳",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "沈阳",
+      "target": "自动驾驶",
+      "value": 2
+    },
+    {
+      "source": "沈阳",
+      "target": "计算机视觉",
+      "value": 2
+    },
+    {
+      "source": "沧州",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "沧州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "沧州",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "沧州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "河池",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "河池",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "河源",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "河源",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "泉州",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "泉州",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "泉州",
+      "target": "数据挖掘",
+      "value": 3
+    },
+    {
+      "source": "泉州",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "泰安",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "泰安",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "泰安",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "泰安",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "泰州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "泰州",
+      "target": "数据挖掘",
+      "value": 3
+    },
+    {
+      "source": "泰州",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "泰州",
+      "target": "深度学习",
+      "value": 3
+    },
+    {
+      "source": "泸州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "泸州",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "泸州",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "洋浦经济开发区",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "洛阳",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "洛阳",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "济南",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "济南",
+      "target": "云计算",
+      "value": 4
+    },
+    {
+      "source": "济南",
+      "target": "人工智能",
+      "value": 10
+    },
+    {
+      "source": "济南",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "济南",
+      "target": "大数据处理",
+      "value": 3
+    },
+    {
+      "source": "济南",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "济南",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "济南",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "济南",
+      "target": "智能医疗",
+      "value": 2
+    },
+    {
+      "source": "济南",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "济南",
+      "target": "机器学习",
+      "value": 4
+    },
+    {
+      "source": "济南",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "济南",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "济南",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "济南",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "济宁",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "济宁",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "济宁",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "济宁",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "海南",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "海口",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "海口",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "海口",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "淄博",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "淄博",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "淄博",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "淮南",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "淮安",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "淮安",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "淮安",
+      "target": "智能客服",
+      "value": 2
+    },
+    {
+      "source": "深圳",
+      "target": "AI产品",
+      "value": 4
+    },
+    {
+      "source": "深圳",
+      "target": "AI芯片",
+      "value": 1
+    },
+    {
+      "source": "深圳",
+      "target": "云计算",
+      "value": 23
+    },
+    {
+      "source": "深圳",
+      "target": "人工智能",
+      "value": 168
+    },
+    {
+      "source": "深圳",
+      "target": "人机交互",
+      "value": 10
+    },
+    {
+      "source": "深圳",
+      "target": "人脸识别",
+      "value": 4
+    },
+    {
+      "source": "深圳",
+      "target": "分布式计算",
+      "value": 2
+    },
+    {
+      "source": "深圳",
+      "target": "图像识别",
+      "value": 1
+    },
+    {
+      "source": "深圳",
+      "target": "大数据分析",
+      "value": 19
+    },
+    {
+      "source": "深圳",
+      "target": "大数据处理",
+      "value": 17
+    },
+    {
+      "source": "深圳",
+      "target": "大数据平台",
+      "value": 24
+    },
+    {
+      "source": "深圳",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "深圳",
+      "target": "数据挖掘",
+      "value": 81
+    },
+    {
+      "source": "深圳",
+      "target": "无人驾驶",
+      "value": 6
+    },
+    {
+      "source": "深圳",
+      "target": "智能医疗",
+      "value": 3
+    },
+    {
+      "source": "深圳",
+      "target": "智能客服",
+      "value": 2
+    },
+    {
+      "source": "深圳",
+      "target": "智能家居",
+      "value": 44
+    },
+    {
+      "source": "深圳",
+      "target": "智能环保",
+      "value": 2
+    },
+    {
+      "source": "深圳",
+      "target": "智能芯片",
+      "value": 1
+    },
+    {
+      "source": "深圳",
+      "target": "智能零售",
+      "value": 1
+    },
+    {
+      "source": "深圳",
+      "target": "智能音箱",
+      "value": 5
+    },
+    {
+      "source": "深圳",
+      "target": "机器人自动化",
+      "value": 6
+    },
+    {
+      "source": "深圳",
+      "target": "机器学习",
+      "value": 67
+    },
+    {
+      "source": "深圳",
+      "target": "模式识别",
+      "value": 5
+    },
+    {
+      "source": "深圳",
+      "target": "深度学习",
+      "value": 43
+    },
+    {
+      "source": "深圳",
+      "target": "知识图谱",
+      "value": 4
+    },
+    {
+      "source": "深圳",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "深圳",
+      "target": "自动驾驶",
+      "value": 9
+    },
+    {
+      "source": "深圳",
+      "target": "自然语言处理",
+      "value": 9
+    },
+    {
+      "source": "深圳",
+      "target": "计算机视觉",
+      "value": 12
+    },
+    {
+      "source": "深圳",
+      "target": "语音识别",
+      "value": 3
+    },
+    {
+      "source": "深圳",
+      "target": "边缘计算",
+      "value": 4
+    },
+    {
+      "source": "清远",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "清远",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "清远",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "清远",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "温州",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "温州",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "温州",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "温州",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "温州",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "温州",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "温州",
+      "target": "机器人自动化",
+      "value": 3
+    },
+    {
+      "source": "温州",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "温州",
+      "target": "计算机视觉",
+      "value": 2
+    },
+    {
+      "source": "渭南",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "渭南",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "渭南",
+      "target": "智慧金融",
+      "value": 1
+    },
+    {
+      "source": "湖州",
+      "target": "人工智能",
+      "value": 6
+    },
+    {
+      "source": "湖州",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "湖州",
+      "target": "数据挖掘",
+      "value": 5
+    },
+    {
+      "source": "湖州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "湖州",
+      "target": "机器人自动化",
+      "value": 3
+    },
+    {
+      "source": "湖州",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "湖州",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "湘潭",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "湘潭",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "湘潭",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "湘潭",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "湛江",
+      "target": "人工智能",
+      "value": 8
+    },
+    {
+      "source": "湛江",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "湛江",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "湛江",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "滁州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "滁州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "滁州",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "滨州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "滨州",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "滨州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "漯河",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "漯河",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "漳州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "漳州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "潍坊",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "潍坊",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "潍坊",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "潍坊",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "潍坊",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "潮州",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "潮州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "澄迈",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "烟台",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "烟台",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "烟台",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "烟台",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "烟台",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "烟台",
+      "target": "智能农业",
+      "value": 1
+    },
+    {
+      "source": "玉林",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "玉溪",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "玉溪",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "玉溪",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "珠海",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "珠海",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "珠海",
+      "target": "人工智能",
+      "value": 23
+    },
+    {
+      "source": "珠海",
+      "target": "人机交互",
+      "value": 3
+    },
+    {
+      "source": "珠海",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "珠海",
+      "target": "数据挖掘",
+      "value": 5
+    },
+    {
+      "source": "珠海",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "珠海",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "珠海",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "珠海",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "珠海",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "珠海",
+      "target": "深度学习",
+      "value": 9
+    },
+    {
+      "source": "珠海",
+      "target": "神经网络",
+      "value": 2
+    },
+    {
+      "source": "珠海",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "珠海",
+      "target": "计算机视觉",
+      "value": 3
+    },
+    {
+      "source": "甘南",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "百色",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "百色",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "益阳",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "盐城",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "盐城",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "盐城",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "盐城",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "眉山",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "眉山",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "眉山",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "石嘴山",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "石家庄",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "石家庄",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "石家庄",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "石家庄",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "石家庄",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "石家庄",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "福州",
+      "target": "云计算",
+      "value": 6
+    },
+    {
+      "source": "福州",
+      "target": "人工智能",
+      "value": 7
+    },
+    {
+      "source": "福州",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "福州",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "福州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "福州",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "福州",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "福州",
+      "target": "机器学习",
+      "value": 5
+    },
+    {
+      "source": "福州",
+      "target": "深度学习",
+      "value": 4
+    },
+    {
+      "source": "福州",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "福州",
+      "target": "虚拟现实",
+      "value": 1
+    },
+    {
+      "source": "秦皇岛",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "秦皇岛",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "红河州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "绍兴",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "绍兴",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "绍兴",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "绍兴",
+      "target": "大数据管理",
+      "value": 2
+    },
+    {
+      "source": "绍兴",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "绍兴",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "绍兴",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "绵阳",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "绵阳",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "绵阳",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "绵阳",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "绵阳",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "聊城",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "聊城",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "聊城",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "聊城",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "肇庆",
+      "target": "云计算",
+      "value": 4
+    },
+    {
+      "source": "肇庆",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "肇庆",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "肇庆",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "肇庆",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "肇庆",
+      "target": "智能环保",
+      "value": 1
+    },
+    {
+      "source": "肇庆",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "自贡",
+      "target": "人工智能",
+      "value": 8
+    },
+    {
+      "source": "舟山",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "舟山",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "舟山",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "芜湖",
+      "target": "人工智能",
+      "value": 8
+    },
+    {
+      "source": "芜湖",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "芜湖",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "芜湖",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "芜湖",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "芜湖",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "芜湖",
+      "target": "机器人自动化",
+      "value": 5
+    },
+    {
+      "source": "芜湖",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "芜湖",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "芜湖",
+      "target": "自动驾驶",
+      "value": 2
+    },
+    {
+      "source": "苏州",
+      "target": "AI产品",
+      "value": 3
+    },
+    {
+      "source": "苏州",
+      "target": "AI芯片",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "云计算",
+      "value": 19
+    },
+    {
+      "source": "苏州",
+      "target": "人工智能",
+      "value": 53
+    },
+    {
+      "source": "苏州",
+      "target": "人机交互",
+      "value": 2
+    },
+    {
+      "source": "苏州",
+      "target": "图像识别",
+      "value": 3
+    },
+    {
+      "source": "苏州",
+      "target": "大数据分析",
+      "value": 6
+    },
+    {
+      "source": "苏州",
+      "target": "大数据处理",
+      "value": 5
+    },
+    {
+      "source": "苏州",
+      "target": "大数据平台",
+      "value": 5
+    },
+    {
+      "source": "苏州",
+      "target": "大数据管理",
+      "value": 4
+    },
+    {
+      "source": "苏州",
+      "target": "数据挖掘",
+      "value": 19
+    },
+    {
+      "source": "苏州",
+      "target": "无人驾驶",
+      "value": 6
+    },
+    {
+      "source": "苏州",
+      "target": "智能传感器",
+      "value": 2
+    },
+    {
+      "source": "苏州",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "智能家居",
+      "value": 10
+    },
+    {
+      "source": "苏州",
+      "target": "智能搜索",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "机器人自动化",
+      "value": 16
+    },
+    {
+      "source": "苏州",
+      "target": "机器学习",
+      "value": 19
+    },
+    {
+      "source": "苏州",
+      "target": "模式识别",
+      "value": 3
+    },
+    {
+      "source": "苏州",
+      "target": "深度学习",
+      "value": 17
+    },
+    {
+      "source": "苏州",
+      "target": "特征识别",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "知识图谱",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "自动驾驶",
+      "value": 9
+    },
+    {
+      "source": "苏州",
+      "target": "虚拟现实",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "计算机视觉",
+      "value": 14
+    },
+    {
+      "source": "苏州",
+      "target": "语音交互",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "语音合成",
+      "value": 1
+    },
+    {
+      "source": "苏州",
+      "target": "边缘计算",
+      "value": 1
+    },
+    {
+      "source": "茂名",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "茂名",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "荆州",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "荆州",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "荆门",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "荆门",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "荆门",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "荆门",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "菏泽",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "菏泽",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "菏泽",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "菏泽",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "菏泽",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "营口",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "营口",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "葫芦岛",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "蚌埠",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "衡水",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "衡阳",
+      "target": "人工智能",
+      "value": 5
+    },
+    {
+      "source": "衡阳",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "衡阳",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "襄阳",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "襄阳",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "西宁",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "西宁",
+      "target": "人工智能",
+      "value": 5
+    },
+    {
+      "source": "西宁",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "西宁",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "云计算",
+      "value": 11
+    },
+    {
+      "source": "西安",
+      "target": "人工智能",
+      "value": 43
+    },
+    {
+      "source": "西安",
+      "target": "人机交互",
+      "value": 3
+    },
+    {
+      "source": "西安",
+      "target": "图像识别",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "大数据分析",
+      "value": 4
+    },
+    {
+      "source": "西安",
+      "target": "大数据处理",
+      "value": 4
+    },
+    {
+      "source": "西安",
+      "target": "大数据平台",
+      "value": 3
+    },
+    {
+      "source": "西安",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "强化学习",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "数据挖掘",
+      "value": 10
+    },
+    {
+      "source": "西安",
+      "target": "无人驾驶",
+      "value": 2
+    },
+    {
+      "source": "西安",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "西安",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "机器人自动化",
+      "value": 3
+    },
+    {
+      "source": "西安",
+      "target": "机器学习",
+      "value": 8
+    },
+    {
+      "source": "西安",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "深度学习",
+      "value": 8
+    },
+    {
+      "source": "西安",
+      "target": "知识图谱",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "西安",
+      "target": "计算机视觉",
+      "value": 2
+    },
+    {
+      "source": "西安",
+      "target": "语音识别",
+      "value": 1
+    },
+    {
+      "source": "西昌",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "许昌",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "贵港",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "贵阳",
+      "target": "AI产品",
+      "value": 2
+    },
+    {
+      "source": "贵阳",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "贵阳",
+      "target": "人工智能",
+      "value": 5
+    },
+    {
+      "source": "贵阳",
+      "target": "商业智能",
+      "value": 1
+    },
+    {
+      "source": "贵阳",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "贵阳",
+      "target": "大数据处理",
+      "value": 2
+    },
+    {
+      "source": "贵阳",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "贵阳",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "贵阳",
+      "target": "智能家居",
+      "value": 2
+    },
+    {
+      "source": "贵阳",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "贵阳",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "贵阳",
+      "target": "知识图谱",
+      "value": 1
+    },
+    {
+      "source": "贺州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "赣州",
+      "target": "云计算",
+      "value": 3
+    },
+    {
+      "source": "赣州",
+      "target": "人工智能",
+      "value": 4
+    },
+    {
+      "source": "赣州",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "赣州",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "赣州",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "赤峰",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "辽阳",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "达州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "运城",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "运城",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "连云港",
+      "target": "人工智能",
+      "value": 6
+    },
+    {
+      "source": "连云港",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "迪庆",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "迪庆",
+      "target": "人脸识别",
+      "value": 1
+    },
+    {
+      "source": "通辽",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "邢台",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "那曲",
+      "target": "人工智能",
+      "value": 7
+    },
+    {
+      "source": "邯郸",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "邯郸",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "邯郸",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "邵阳",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "邵阳",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "郑州",
+      "target": "云计算",
+      "value": 7
+    },
+    {
+      "source": "郑州",
+      "target": "人工智能",
+      "value": 24
+    },
+    {
+      "source": "郑州",
+      "target": "大数据分析",
+      "value": 3
+    },
+    {
+      "source": "郑州",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "郑州",
+      "target": "大数据平台",
+      "value": 7
+    },
+    {
+      "source": "郑州",
+      "target": "强化学习",
+      "value": 2
+    },
+    {
+      "source": "郑州",
+      "target": "数据挖掘",
+      "value": 11
+    },
+    {
+      "source": "郑州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "郑州",
+      "target": "智能家居",
+      "value": 4
+    },
+    {
+      "source": "郑州",
+      "target": "机器学习",
+      "value": 5
+    },
+    {
+      "source": "郑州",
+      "target": "深度学习",
+      "value": 6
+    },
+    {
+      "source": "郑州",
+      "target": "自动驾驶",
+      "value": 2
+    },
+    {
+      "source": "郑州",
+      "target": "自然语言处理",
+      "value": 2
+    },
+    {
+      "source": "郴州",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "鄂尔多斯",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "鄂尔多斯",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "鄂尔多斯",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "鄂州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "鄂州",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "鄂州",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "酒泉",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "云计算",
+      "value": 19
+    },
+    {
+      "source": "重庆",
+      "target": "人工智能",
+      "value": 46
+    },
+    {
+      "source": "重庆",
+      "target": "人机交互",
+      "value": 4
+    },
+    {
+      "source": "重庆",
+      "target": "图像识别",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "大数据分析",
+      "value": 8
+    },
+    {
+      "source": "重庆",
+      "target": "大数据处理",
+      "value": 7
+    },
+    {
+      "source": "重庆",
+      "target": "大数据平台",
+      "value": 3
+    },
+    {
+      "source": "重庆",
+      "target": "数据挖掘",
+      "value": 25
+    },
+    {
+      "source": "重庆",
+      "target": "智能传感器",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "智能医疗",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "智能客服",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "智能家居",
+      "value": 4
+    },
+    {
+      "source": "重庆",
+      "target": "智能计算",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "机器人自动化",
+      "value": 4
+    },
+    {
+      "source": "重庆",
+      "target": "机器学习",
+      "value": 6
+    },
+    {
+      "source": "重庆",
+      "target": "深度学习",
+      "value": 5
+    },
+    {
+      "source": "重庆",
+      "target": "神经网络",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "自动驾驶",
+      "value": 2
+    },
+    {
+      "source": "重庆",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "重庆",
+      "target": "虚拟现实",
+      "value": 2
+    },
+    {
+      "source": "重庆",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "金华",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "金华",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "金华",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "金华",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "金华",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "金华",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "钦州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "钦州",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "钦州",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "铜川",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "铜川",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "铜川",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "银川",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "银川",
+      "target": "人工智能",
+      "value": 3
+    },
+    {
+      "source": "银川",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "镇江",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "镇江",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "镇江",
+      "target": "数据挖掘",
+      "value": 2
+    },
+    {
+      "source": "镇江",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "长春",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "长春",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "长春",
+      "target": "大数据分析",
+      "value": 1
+    },
+    {
+      "source": "长春",
+      "target": "数据挖掘",
+      "value": 6
+    },
+    {
+      "source": "长春",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "长春",
+      "target": "深度学习",
+      "value": 2
+    },
+    {
+      "source": "长春",
+      "target": "自动驾驶",
+      "value": 1
+    },
+    {
+      "source": "长春",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "云计算",
+      "value": 11
+    },
+    {
+      "source": "长沙",
+      "target": "人工智能",
+      "value": 19
+    },
+    {
+      "source": "长沙",
+      "target": "人机交互",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "人脸识别",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "商业智能",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "长沙",
+      "target": "大数据处理",
+      "value": 8
+    },
+    {
+      "source": "长沙",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "数据挖掘",
+      "value": 10
+    },
+    {
+      "source": "长沙",
+      "target": "无人驾驶",
+      "value": 7
+    },
+    {
+      "source": "长沙",
+      "target": "智能农业",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "智能家居",
+      "value": 5
+    },
+    {
+      "source": "长沙",
+      "target": "机器人自动化",
+      "value": 5
+    },
+    {
+      "source": "长沙",
+      "target": "机器学习",
+      "value": 12
+    },
+    {
+      "source": "长沙",
+      "target": "机器翻译",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "深度学习",
+      "value": 12
+    },
+    {
+      "source": "长沙",
+      "target": "深度神经网络",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "自动驾驶",
+      "value": 8
+    },
+    {
+      "source": "长沙",
+      "target": "自然语言处理",
+      "value": 1
+    },
+    {
+      "source": "长沙",
+      "target": "计算机视觉",
+      "value": 7
+    },
+    {
+      "source": "长沙",
+      "target": "边缘计算",
+      "value": 1
+    },
+    {
+      "source": "长治",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "阜新",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "阜阳",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "阜阳",
+      "target": "大数据平台",
+      "value": 1
+    },
+    {
+      "source": "阳江",
+      "target": "云计算",
+      "value": 2
+    },
+    {
+      "source": "阿克苏",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "阿里",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "陇南",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "陕西",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "随州",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "雄安新区",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "雄安新区",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "雄安新区",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "雄安新区",
+      "target": "机器学习",
+      "value": 2
+    },
+    {
+      "source": "青岛",
+      "target": "AI产品",
+      "value": 1
+    },
+    {
+      "source": "青岛",
+      "target": "云计算",
+      "value": 6
+    },
+    {
+      "source": "青岛",
+      "target": "人工智能",
+      "value": 16
+    },
+    {
+      "source": "青岛",
+      "target": "人机交互",
+      "value": 3
+    },
+    {
+      "source": "青岛",
+      "target": "大数据分析",
+      "value": 2
+    },
+    {
+      "source": "青岛",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "青岛",
+      "target": "大数据平台",
+      "value": 2
+    },
+    {
+      "source": "青岛",
+      "target": "大数据管理",
+      "value": 1
+    },
+    {
+      "source": "青岛",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "青岛",
+      "target": "深度学习",
+      "value": 4
+    },
+    {
+      "source": "青岛",
+      "target": "计算机视觉",
+      "value": 1
+    },
+    {
+      "source": "韶关",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "韶关",
+      "target": "大数据处理",
+      "value": 1
+    },
+    {
+      "source": "香港",
+      "target": "机器学习",
+      "value": 1
+    },
+    {
+      "source": "马鞍山",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "马鞍山",
+      "target": "机器人自动化",
+      "value": 1
+    },
+    {
+      "source": "马鞍山",
+      "target": "深度学习",
+      "value": 1
+    },
+    {
+      "source": "驻马店",
+      "target": "人工智能",
+      "value": 2
+    },
+    {
+      "source": "驻马店",
+      "target": "数据挖掘",
+      "value": 1
+    },
+    {
+      "source": "驻马店",
+      "target": "机器人自动化",
+      "value": 2
+    },
+    {
+      "source": "驻马店",
+      "target": "模式识别",
+      "value": 1
+    },
+    {
+      "source": "鸡西",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "鹤岗",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "鹰潭",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "鹰潭",
+      "target": "智能家居",
+      "value": 1
+    },
+    {
+      "source": "黄冈",
+      "target": "无人驾驶",
+      "value": 1
+    },
+    {
+      "source": "黄山",
+      "target": "云计算",
+      "value": 1
+    },
+    {
+      "source": "黄山",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "黄石",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "黑河",
+      "target": "人工智能",
+      "value": 1
+    },
+    {
+      "source": "龙岩",
+      "target": "无人驾驶",
+      "value": 1
+    }
+  ]
+}

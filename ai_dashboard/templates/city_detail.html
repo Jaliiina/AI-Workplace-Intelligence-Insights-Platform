@@ -1,0 +1,533 @@
+{% extends "base_dashboard.html" %}
+
+{% block title %}城市下钻洞察 · AI 职场{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+<style>
+  .city-detail-page {
+    background:#f5f5f7;
+    padding:16px 20px 32px;
+    min-height:calc(100vh - 60px);
+  }
+
+  .city-detail-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:14px;
+  }
+
+  .city-detail-title-main {
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .city-detail-title-sub {
+    margin-top:4px;
+    font-size:12px;
+    color:#6b7280;
+    line-height:1.6;
+  }
+
+  .city-detail-badge {
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#ffffff;
+    font-size:11px;
+    color:#4b5563;
+  }
+
+  .city-detail-grid {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+  }
+
+  .city-detail-page .panel {
+    background:#ffffff;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 24px rgba(15,23,42,0.08);
+    padding:12px 14px 12px;
+    min-height:360px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .panel-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:6px;
+  }
+
+  .panel-title {
+    font-size:14px;
+    font-weight:600;
+    color:#111827;
+  }
+
+  .panel-sub {
+    font-size:11px;
+    color:#6b7280;
+    margin-top:2px;
+    line-height:1.5;
+  }
+
+  .panel-right {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11px;
+    color:#9ca3af;
+  }
+
+  .panel-pill {
+    padding:3px 8px;
+    border-radius:999px;
+    border:1px solid #e5e7eb;
+    background:#f9fafb;
+    color:#6b7280;
+    font-size:11px;
+  }
+
+  .panel-line {
+    height:1px;
+    width:100%;
+    margin:8px 0 6px;
+    background:linear-gradient(90deg,#e5e7eb,#f3f4f6);
+  }
+
+  .chart {
+    flex:1;
+    width:100%;
+  }
+
+  .span-6{grid-column:span 6;}
+  .span-12{grid-column:span 12;}
+
+  @media (max-width:1200px){
+    .city-detail-grid{grid-template-columns:repeat(2,1fr);}
+    .span-6,.span-12{grid-column:span 2;}
+  }
+  @media (max-width:720px){
+    .city-detail-page{padding:12px 10px 24px;}
+    .city-detail-grid{grid-template-columns:1fr;}
+    .span-6,.span-12{grid-column:span 1;}
+  }
+
+  .city-select-wrapper {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    color:#4b5563;
+  }
+
+  #city_select {
+    min-width:160px;
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid #d1d5db;
+    background:#fff;
+    font-size:12px;
+    color:#111827;
+    outline:none;
+  }
+
+  #city_select:focus {
+    border-color:#2563eb;
+    box-shadow:0 0 0 1px rgba(37,99,235,.2);
+  }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="city-detail-page">
+  <header class="city-detail-header">
+    <div>
+      <div class="city-detail-title-main">城市下钻洞察</div>
+      <div class="city-detail-title-sub">
+        通过下拉选择城市，查看该城市的岗位趋势、薪资分布、方向结构与技能画像。
+      </div>
+    </div>
+    <div class="city-detail-badge">
+      City Drill-down · AI Job Insight
+    </div>
+  </header>
+
+  <!-- 城市选择 -->
+  <section style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+    <div class="city-select-wrapper">
+      <span>选择城市：</span>
+      <select id="city_select">
+        <option value="">加载中…</option>
+      </select>
+    </div>
+    <div style="font-size:11px; color:#9ca3af;" id="city_meta_text">
+      请选择一个城市查看详情
+    </div>
+  </section>
+
+  <section class="city-detail-grid">
+    <!-- 趋势图：岗位数 + 平均薪资 -->
+    <section class="panel span-12">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">城市月度趋势 · 岗位数 & 平均薪资</div>
+          <div class="panel-sub">
+            上面折线表示每月岗位数量，下面折线表示该城市当月 AI 岗位的平均中位月薪。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">Trend</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="city_trend_chart" class="chart"></div>
+    </section>
+
+    <!-- 左：薪资箱线图 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">薪资分布 · 箱线图</div>
+          <div class="panel-sub">
+            使用中位月薪构建箱线，观察该城市整体薪资水平和离散程度。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">Salary Boxplot</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="city_salary_box_chart" class="chart"></div>
+    </section>
+
+    <!-- 右：岗位方向玫瑰图 -->
+    <section class="panel span-6">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">AI 方向结构 · 玫瑰图</div>
+          <div class="panel-sub">
+            展示该城市在“算法 / 平台 / 应用 / 大数据”等 AI 方向上的岗位结构重心。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">Direction</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="city_category_rose_chart" class="chart"></div>
+    </section>
+
+    <!-- 下：技能 Top15 -->
+    <section class="panel span-12">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">核心技能 Top15 · 横向条形图</div>
+          <div class="panel-sub">
+            统计该城市招聘信息中出现次数最多的技能关键词，刻画本地 AI 岗位的能力画像。
+          </div>
+        </div>
+        <div class="panel-right">
+          <span class="panel-pill">Skill Demand</span>
+        </div>
+      </div>
+      <div class="panel-line"></div>
+      <div id="city_skill_top_chart" class="chart"></div>
+    </section>
+  </section>
+</div>
+
+<div style="margin-top:24px; text-align:center;">
+  <a href="/city_region">
+    <button style="
+      min-width:180px;
+      padding:20px 26px;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:500;
+      border:1px solid #d1d5db;
+      background:#ffffff;
+      color:#374151;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(15,23,42,0.05);
+      transition:.15s;">
+      返回城市与区域大屏
+    </button>
+  </a>
+</div>
+
+<script>
+(function(){
+  const trendDom = document.getElementById('city_trend_chart');
+  const boxDom   = document.getElementById('city_salary_box_chart');
+  const catDom   = document.getElementById('city_category_rose_chart');
+  const skillDom = document.getElementById('city_skill_top_chart');
+
+  const trendChart = echarts.init(trendDom);
+  const boxChart   = echarts.init(boxDom);
+  const catChart   = echarts.init(catDom);
+  const skillChart = echarts.init(skillDom);
+
+  const citySelect = document.getElementById('city_select');
+  const metaText   = document.getElementById('city_meta_text');
+
+  let globalData = null;
+
+  fetch("{{ url_for('static', filename='data/city_drill.json') }}")
+    .then(r => r.json())
+    .then(data => {
+      globalData = data || {};
+      const cities = globalData.cities || [];
+      citySelect.innerHTML = "";
+
+      // 填充下拉
+      if (cities.length === 0) {
+        const opt = document.createElement("option");
+        opt.value = "";
+        opt.textContent = "暂无城市数据";
+        citySelect.appendChild(opt);
+        return;
+      }
+
+      cities.forEach((c, idx) => {
+        const opt = document.createElement("option");
+        opt.value = c;
+        opt.textContent = c;
+        citySelect.appendChild(opt);
+      });
+
+      // 默认选第一个城市
+      citySelect.value = "上海";
+      updateAllCharts("上海");
+    })
+    .catch(err => {
+      console.error(err);
+      citySelect.innerHTML = "";
+      const opt = document.createElement("option");
+      opt.value = "";
+      opt.textContent = "数据加载失败";
+      citySelect.appendChild(opt);
+      metaText.textContent = "城市数据加载失败，请检查 city_drill.json";
+    });
+
+  citySelect.addEventListener("change", function(){
+    const city = this.value;
+    if (!city) return;
+    updateAllCharts(city);
+  });
+
+  function updateAllCharts(city) {
+    if (!globalData) return;
+    const months = globalData.months || [];
+    const cityData = (globalData.city_data || {})[city];
+    if (!cityData) return;
+
+    metaText.textContent = `${city} · 共 ${cityData.total_jobs || 0} 条岗位`;
+
+    updateTrendChart(months, cityData);
+    updateBoxChart(city, cityData);
+    updateCategoryChart(cityData);
+    updateSkillChart(cityData);
+  }
+
+  function updateTrendChart(months, cityData){
+    const jobs = cityData.trend_jobs || [];
+    const sal  = cityData.trend_salary || [];
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'axis'
+      },
+      legend:{
+        data:['岗位数','平均中位月薪'],
+        top:4,
+        textStyle:{fontSize:11,color:'#374151'}
+      },
+      grid:{left:'8%',right:'10%',top:32,bottom:24},
+      xAxis:{
+        type:'category',
+        data:months,
+        axisLine:{lineStyle:{color:'#d1d5db'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#4b5563',fontSize:11}
+      },
+      yAxis:[
+        {
+          type:'value',
+          name:'岗位数',
+          axisLine:{lineStyle:{color:'#d1d5db'}},
+          axisTick:{show:false},
+          axisLabel:{color:'#4b5563',fontSize:11},
+          splitLine:{lineStyle:{color:'#e5e7eb'}}
+        },
+        {
+          type:'value',
+          name:'平均中位月薪',
+          axisLine:{lineStyle:{color:'#d1d5db'}},
+          axisTick:{show:false},
+          axisLabel:{color:'#4b5563',fontSize:11},
+          splitLine:{show:false}
+        }
+      ],
+      series:[
+        {
+          name:'岗位数',
+          type:'line',
+          smooth:true,
+          data:jobs,
+          areaStyle:{
+            opacity:0.22
+          }
+        },
+        {
+          name:'平均中位月薪',
+          type:'line',
+          yAxisIndex:1,
+          smooth:true,
+          data:sal
+        }
+      ]
+    };
+    trendChart.setOption(option,true);
+  }
+
+  function updateBoxChart(city, cityData){
+    const box = cityData.salary_box;
+    if (!box || box.length !== 5) {
+      boxChart.setOption({
+        title:{text:'数据不足',left:'center',top:'middle',textStyle:{color:'#9ca3af',fontSize:12}},
+        xAxis:{show:false},
+        yAxis:{show:false},
+        series:[]
+      },true);
+      return;
+    }
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'item',
+        formatter: params => {
+          const v = params.data;
+          if (!v) return '';
+          return [
+            `${city} 薪资箱线`,
+            `最小值：${v[0]}`,
+            `Q1：${v[1]}`,
+            `中位数：${v[2]}`,
+            `Q3：${v[3]}`,
+            `最大值：${v[4]}`
+          ].join('<br/>');
+        }
+      },
+      grid:{left:'20%',right:'12%',top:'10%',bottom:'12%'},
+      xAxis:{
+        type:'category',
+        data:[city],
+        axisLine:{lineStyle:{color:'#d1d5db'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#4b5563',fontSize:11}
+      },
+      yAxis:{
+        type:'value',
+        axisLine:{lineStyle:{color:'#d1d5db'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#4b5563',fontSize:11},
+        splitLine:{lineStyle:{color:'#e5e7eb'}}
+      },
+      series:[
+        {
+          name:'薪资箱线',
+          type:'boxplot',
+          data:[box]
+        }
+      ]
+    };
+    boxChart.setOption(option,true);
+  }
+
+  function updateCategoryChart(cityData){
+    const data = cityData.categories || [];
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'item',
+        formatter: '{b}：{c} 个岗位（{d}%）'
+      },
+      legend:{
+        top:6,
+        left:'center',
+        textStyle:{fontSize:11,color:'#4b5563'}
+      },
+      series:[
+        {
+          name:'AI方向',
+          type:'pie',
+          radius:['25%','65%'],
+          center:['50%','58%'],
+          roseType:'radius',
+          data:data
+        }
+      ]
+    };
+    catChart.setOption(option,true);
+  }
+
+  function updateSkillChart(cityData){
+    const skills = cityData.skills || [];
+    const names  = skills.map(d => d.name);
+    const values = skills.map(d => d.value);
+
+    const option = {
+      backgroundColor:'transparent',
+      tooltip:{
+        trigger:'axis',
+        axisPointer:{type:'shadow'},
+        formatter: params => {
+          const p = params[0];
+          return `技能：${p.name}<br/>出现次数：${p.value}`;
+        }
+      },
+      grid:{left:'20%',right:'8%',top:'8%',bottom:'10%'},
+      xAxis:{
+        type:'value',
+        axisLine:{lineStyle:{color:'#d1d5db'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#4b5563',fontSize:11},
+        splitLine:{lineStyle:{color:'#e5e7eb'}}
+      },
+      yAxis:{
+        type:'category',
+        data:names.slice().reverse(),
+        axisLine:{lineStyle:{color:'#e5e7eb'}},
+        axisTick:{show:false},
+        axisLabel:{color:'#111827',fontSize:11}
+      },
+      series:[
+        {
+          type:'bar',
+          data:values.slice().reverse(),
+          barWidth:12
+        }
+      ]
+    };
+    skillChart.setOption(option,true);
+  }
+
+  window.addEventListener('resize', function(){
+    trendChart.resize();
+    boxChart.resize();
+    catChart.resize();
+    skillChart.resize();
+  });
+})();
+</script>
+{% endblock %}
